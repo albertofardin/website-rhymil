@@ -1,0 +1,56 @@
+{
+	"name": "⚔️ Ordine dei Cavalieri",
+	"text": "Non sono semplici soldati. Sono strateghi, duellanti e comandanti temprati dal dovere. Essere cavaliere è tracciare la linea tra il caos e l’ordine, tra la parola data e il tradimento. Alcuni combattono in sella, altri a piedi, altri ancora vincono guerre con i loro piani prima che la battaglia inizi. Dietro ogni volto c’è un giuramento: difendere, proteggere, mantenere la legge. Le loro spade e i loro scudi non inseguono gloria, ma la pace che solo la giustizia può donare.",
+	"players": [
+		{
+			"name": "Simon Ashen",
+			"text": "Cavaliere di seconda generazione, all'apparenza serioso e corrucciato, in realtà lo è davvero. Abile spadaccino a due lame, è il primo a gettarsi a capofitto nelle battaglie. In lui arde un forte senso di giustizia.",
+			"owner": "Eddy Berardi",
+			"image": "simon"
+		},
+		{
+			"name": "Sander",
+			"text": "",
+			"owner": "",
+			"image": "sander"
+		},
+		{
+			"name": "Rodrigo",
+			"text": "",
+			"owner": "",
+			"image": "rodrigo"
+		},
+		{
+			"name": "Beruthiel",
+			"text": "",
+			"owner": "",
+			"image": "beruthiel"
+		},
+	],
+	"masters": [
+		{
+			"name": "Eleonor De Lervis",
+			"text": "Capitana del Corpo Navale dell' Ordine dei Cavalieri",
+			"owner": "",
+			"image": "_eleonor"
+		},
+		{
+			"name": "Gildarts Solcoferreo",
+			"text": "Capitano",
+			"owner": "",
+			"image": "_gildarts"
+		},
+		{
+			"name": "Alexander Deimont",
+			"text": "Capitano",
+			"owner": "master Lorenzo",
+			"image": "_alexander"
+		},
+		{
+			"name": "Leonard Winford",
+			"text": "Primo Capo",
+			"owner": "",
+			"image": "_leonard"
+		},
+	]
+}

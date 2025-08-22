@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<title>Rhymil</title>
+		<link rel="manifest" href="./_icons/manifest.webmanifest">
+		<link rel="icon" href="./_icons/favicon.ico" type="image/x-icon">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="./_home/main.css" />
+	</head>
+
+	<script>
+	if ('serviceWorker' in navigator) {navigator.serviceWorker.register('./_icons/serviceworker.js')}
+	</script>
+
+	<body class="is-preload">
+
+		<!-- Header -->
+		<header id="header">
+			<div class="inner">
+				<a href="#" class="image avatar"><img src="./_home/avatar.png" /></a>
+			</div>
+		</header>
+
+		<!-- Main -->
+		<div id="main">
+			<section id="one">
+				<header class="major"><h2>
+				RHYMIL - VOLTI DEL LARP</h2>
+				</header>
+				<p>
+				Benvenuto! Questo portale raccoglie le illustrazioni dei personaggi della campagna LARP, così puoi avere sempre un punto di riferimento per ricordare volti e nomi tra un evento e l’altro.
+				<br/>
+				Non è il sito ufficiale della campagna e non contiene ambientazione o regolamento: per quello ti invitiamo a visitare direttamente il portale ufficiale di Arcana Domine.
+				<br/>
+				Per domande o curiosità su Rhymil puoi rivolgerti all’headmaster, mentre se vuoi aggiungere o modificare un personaggio contatta l’autore di questo portale.
+				</p>
+				<ul class="actions">
+					<li id="installBtn" hidden><a class="button"><span class="icon solid fa-download"></span>
+						Installa l'app</a></li>
+					<li><a
+						href="https://rhymil.arcanadomine.it/dashboard.php" class="button"><span class="icon solid fa-globe-americas"></span>
+						Rhymil in ArcanaDomine</a></li>
+					<li><a 
+						href="https://wa.me/3453293560" class="button"><span class="icon brands fa-whatsapp"></span>
+						Lorenzo - HeadMaster di Rhymil</a></li>
+					<li><a
+						href="https://wa.me/3488638006" class="button"><span class="icon brands fa-whatsapp"></span>
+						Alberto - Autore del Portale</a></li>
+				</ul>
+			</section>
+			<section id="two">
+				<div class="row">
+					<article class="col-6 col-12-xsmall">
+						<a href="./stato-del-popolo-libero.html" class="image fit thumb"><img src="./_home/stato-del-popolo-libero.png" /></a>
+					</article>
+					<article class="col-6 col-12-xsmall">
+						<a href="./nuova-fratellanza-dei-pirati.html" class="image fit thumb"><img src="./_home/nuova-fratellanza-dei-pirati.png" /></a>
+					</article>
+					<article class="col-6 col-12-xsmall">
+						<a href="./ordine-clericale.html" class="image fit thumb"><img src="./_home/ordine-clericale.png" /></a>
+					</article>
+					<article class="col-6 col-12-xsmall">
+						<a href="./ordine-dei-maghi.html" class="image fit thumb"><img src="./_home/ordine-dei-maghi.png" /></a>
+					</article>
+					<article class="col-6 col-12-xsmall">
+						<a href="./ordine-dei-paladini.html" class="image fit thumb"><img src="./_home/ordine-dei-paladini.png" /></a>
+					</article>
+					<article class="col-6 col-12-xsmall">
+						<a href="./ordine-dei-cavalieri.html" class="image fit thumb"><img src="./_home/ordine-dei-cavalieri.png" /></a>
+					</article>
+					<article class="col-6 col-12-xsmall">
+						<a href="./terre-barbariche.html" class="image fit thumb"><img src="./_home/terre-barbariche.png" /></a>
+					</article>
+				</div>
+			</section>
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<ul class="icons">
+					<li><a
+						href="https://www.instagram.com/rhymil_/"
+						class="icon brands fa-instagram"><span class="label">
+						Instagram</span></a></li>
+					<li><a
+						href="https://www.facebook.com/profile.php?id=100063593580176"
+						class="icon brands fa-facebook-square"><span class="label">
+						Facebook</span></a></li>
+					<li><a
+						href="https://wa.me/3453293560"
+						class="icon brands fa-whatsapp"><span class="label">
+						Whatsapp</span></a></li>
+					<li><a
+						href="https://rhymil.arcanadomine.it/dashboard.php"
+						class="icon solid fa-globe-americas"><span class="label">
+						website</span></a></li>
+					<li><a
+						href="mailto:rhymil.info@gmail.com"
+						class="icon solid fa-envelope"><span class="label">
+						Email</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; <a href="https://www.arcanadomine.it/">Arcana Domine</a></li>
+					<li>design by <a href="https://www.mandragora.ws/">Mandragora Web Studio</a></li>
+				</ul>
+			</div>
+		</footer>
+
+		<!-- Scripts -->
+		<script src="./_home/js/jquery.min.js"></script>
+		<script src="./_home/js/jquery.poptrox.min.js"></script>
+		<script src="./_home/js/browser.min.js"></script>
+		<script src="./_home/js/breakpoints.min.js"></script>
+		<script src="./_home/js/util.js"></script>
+		<script src="./_home/js/main.js"></script>
+
+
+		<!-- Script installBtn -->
+		<script>
+		const btn = document.getElementById('installBtn');
+		function isInStandaloneMode() {
+		  return (window.matchMedia('(display-mode: standalone)').matches)
+		      || (window.navigator.standalone === true); // Safari iOS
+		}
+
+		// Controllo se il device è mobile
+		function isMobile() {
+		  return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+		}
+
+		// Nascondi o mostra in base alle condizioni
+		if (!isInStandaloneMode() && isMobile()) {
+		  btn.hidden = false;
+		} else {
+		  btn.hidden = true;
+		}
+
+		// Gestione installazione
+		let deferredPrompt;
+		window.addEventListener('beforeinstallprompt', (e) => {
+		  e.preventDefault();
+		  deferredPrompt = e;
+		  console.log(":::1", {deferredPrompt})
+		  if (isMobile() && !isInStandaloneMode()) {
+		    btn.hidden = false;
+		  }
+		});
+
+		btn.addEventListener('click', async () => {
+		  if (!deferredPrompt) return;
+		  deferredPrompt.prompt();
+		  const { outcome } = await deferredPrompt.userChoice;
+		  deferredPrompt = null;
+		});
+		</script>
+	</body>
+</html>
