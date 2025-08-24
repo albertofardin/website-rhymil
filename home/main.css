@@ -1,5 +1,6 @@
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Lora:400,700");
+@import url("customs.css");
 
 
 html, body, div, span, applet, object,
@@ -114,12 +115,6 @@ input, select, textarea {
 		color: #ff0000;
 		text-decoration: none;
 	}
-
-		a:hover {
-			border-bottom-color: transparent;
-			color: #ff0000 !important;
-			text-decoration: none;
-		}
 
 	strong, b {
 		color: #787878;
@@ -2142,7 +2137,8 @@ input, select, textarea {
 			}
 
 			.image.avatar img {
-				width: 100%;
+				width: 80%;
+    			margin: 0 auto;
 			}
 
 /* List */
@@ -2244,7 +2240,7 @@ input, select, textarea {
 		margin: 0;
 	}
 	ul.actions li {
-		padding: 1em 0 0 0;
+		padding: 0 0 0 0;
 		width: 100%;
 	    list-style: none;
 	}
@@ -2261,7 +2257,10 @@ input, select, textarea {
     	text-overflow: ellipsis;
 	}
 	ul.actions li .icon {
-		margin-right: 15px;
+		margin-right: 0.5em;
+	}
+	ul.actions li *:hover {
+		border-color: rgb(120, 120, 120);
 	}
 
 /* Table */
@@ -2357,28 +2356,12 @@ input, select, textarea {
 		height: calc(2.75em + 6px);
 		line-height: 2.75em;
 		min-width: 10em;
-		padding: 0 1.5em;
+		padding: 0 1em;
 		text-align: center;
 		text-decoration: none;
 		white-space: nowrap;
 	}
 
-		input[type="submit"]:hover,
-		input[type="reset"]:hover,
-		input[type="button"]:hover,
-		.button:hover {
-			border-color: #ff0000;
-			color: #ff0000 !important;
-		}
-
-		input[type="submit"]:active,
-		input[type="reset"]:active,
-		input[type="button"]:active,
-		.button:active {
-			background-color: rgba(191, 73, 73, 0.1);
-			border-color: #ff0000;
-			color: #ff0000 !important;
-		}
 
 		input[type="submit"].icon,
 		input[type="reset"].icon,
@@ -2416,43 +2399,6 @@ input, select, textarea {
 			font-size: 1.35em;
 		}
 
-		input[type="submit"].primary,
-		input[type="reset"].primary,
-		input[type="button"].primary,
-		.button.primary {
-			background-color: #ff0000;
-			border-color: #ff0000;
-			color: #ffffff !important;
-		}
-
-			input[type="submit"].primary:hover,
-			input[type="reset"].primary:hover,
-			input[type="button"].primary:hover,
-			.button.primary:hover {
-				background-color: #5cc6a7;
-				border-color: #5cc6a7;
-			}
-
-			input[type="submit"].primary:active,
-			input[type="reset"].primary:active,
-			input[type="button"].primary:active,
-			.button.primary:active {
-				background-color: #3eb08f;
-				border-color: #3eb08f;
-			}
-
-		input[type="submit"].disabled, input[type="submit"]:disabled,
-		input[type="reset"].disabled,
-		input[type="reset"]:disabled,
-		input[type="button"].disabled,
-		input[type="button"]:disabled,
-		.button.disabled,
-		.button:disabled {
-			background-color: #e7e7e7 !important;
-			border-color: #e7e7e7 !important;
-			color: #b2b2b2 !important;
-			cursor: default;
-		}
 
 /* Work Item */
 
@@ -2543,8 +2489,7 @@ input, select, textarea {
 
 		#header .image.avatar {
 			// fard
-			margin: 0 0 1em 0;
-			width: 20em;
+			width: 15em;
 		}
 
 /* Footer */
@@ -2588,7 +2533,7 @@ input, select, textarea {
 	#main {
 		margin-left: 35%;
 		max-width: 54em;
-		padding: 4em 4em 4em 4em;
+		padding: 2em 4em 1em 4em;
 		width: calc(100% - 35%);
 	}
 
@@ -3077,7 +3022,7 @@ input, select, textarea {
 		/* Main */
 
 			#main {
-				padding: 2.25em 1.5em 0.25em 1.5em;
+				padding: 2.25em 1.5em 2.25em 1.5em;
 			}
 
 				#main > section {

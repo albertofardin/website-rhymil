@@ -1,160 +1,212 @@
 <!DOCTYPE HTML>
 <html>
-
 	<head>
-		<title>Rhymil</title>
-		<link rel="manifest" href="./_icons/manifest.webmanifest">
-		<link rel="icon" href="./_icons/favicon.ico" type="image/x-icon">
+		<title>Rhymil Hub</title>
+		<link rel="manifest" href="./icons/manifest.webmanifest">
+		<link rel="icon" href="./icons/favicon.ico" type="image/x-icon">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="./_home/main.css" />
+		<link rel="stylesheet" href="./home/main.css" />
+		<!-- favicon -->
+		<link rel="apple-touch-icon" sizes="57x57" href="./icons/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="./icons/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="./icons/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="./icons/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="./icons/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="./icons/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="./icons/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="./icons/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="./icons/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="./icons/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png">
+		<meta name="msapplication-TileColor" content="#000000">
+		<meta name="msapplication-TileImage" content="./icons/ms-icon-144x144.png">
+		<meta name="theme-color" content="#000000">
+		<!-- Base -->
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://rhymil.netlify.app/">
+		<meta property="og:title" content="RHYMIL HUB">
+		<meta property="og:description" content="Centralizzatore dei link ed illustrazioni della campagna Rhymil.">
+		<meta property="og:image" content="https://rhymil.netlify.app/icons/og-image.jpg">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+		<!-- (opzionale ma utile) Twitter card -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="RHYMIL HUB">
+		<meta name="twitter:description" content="Centralizzatore dei link ed illustrazioni della campagna Rhymil.">
+		<meta name="twitter:image" content="https://rhymil.netlify.app/icons/og-image.jpg">
 	</head>
-
-	<script>
-	if ('serviceWorker' in navigator) {navigator.serviceWorker.register('./_icons/serviceworker.js')}
-	</script>
-
-	<body class="is-preload">
-
-		<!-- Header -->
+	<body>
 		<header id="header">
 			<div class="inner">
-				<a href="#" class="image avatar"><img src="./_home/avatar.png" /></a>
+				<p id="version" style="display:none">RhymilHub v1.1.8</p>
+				<a href="#" class="image avatar"><img src="./home/avatar.png" /></a>
+				<p class="description">
+					Benvenuto su RhymilHub. Questo HUB è un progetto nato dall’iniziativa dei giocatori, in collaborazione con l’autore dell’ambientazione e i master della campagna LARP “Rhymil, una nuova era”. Qui puoi trovare tutto in un’unica pagina, semplice e accessibile a tutti.
+				</p>
 			</div>
 		</header>
-
-		<!-- Main -->
 		<div id="main">
-			<section id="one">
-				<header class="major"><h2>
-				RHYMIL - VOLTI DEL LARP</h2>
+			<ul class="actions">
+				<li id="installBtn" hidden><a class="button button--primary">
+					<span class="icon solid fa-download"></span>
+					<span>Installa l'App</span></a>
+				</li>
+				<li id="listDocuments"><a class="button">
+					<span class="icon regular fa-file-alt"></span>
+					<span>Tomi ufficiali</span></a>
+				</li>
+				<li><a
+					href="https://rhymil.arcanadomine.it/assets/pdf/QUESTIONARIO-PER-CAPIRE-IN-CHE-REALTA-POLITICA-GIOCARE.pdf" class="button"  target="_blank">
+					<span class="icon solid fa-question-circle"></span>
+					<span>Quiz "Quale realtà politica appartieni?"</span></a>
+				<li><a
+					href="https://rhymil.arcanadomine.it/dashboard.php" class="button"  target="_blank">
+					<span class="icon solid fa-globe-americas"></span>
+					<span>Dashboard di ArcanaDomine</span></a>
+				</li>
+				<li class="instagram"><a 
+					href="https://www.instagram.com/rhymil_/" class="button"  target="_blank">
+					<span class="icon brands fa-instagram"></span>
+					<span>Instagram</span></a>
+				</li>
+				<li class="facebook"><a 
+					href="https://www.facebook.com/profile.php?id=100063593580176" class="button">
+					<span class="icon brands fa-facebook-square"></span>
+					<span>Facebook</span></a>
+				</li>
+				<li class="whatsapp"><a 
+					href="https://wa.me/3453293560" class="button"  target="_blank">
+					<span class="icon brands fa-whatsapp"></span>
+					<span>Lorenzo - HeadMaster di Rhymil</span></a>
+				</li>
+				<li class="whatsapp"><a
+					href="https://wa.me/3488638006" class="button"  target="_blank">
+					<span class="icon brands fa-whatsapp"></span>
+					<span>Alberto - Sviluppatore del HUB</span></a>
+				</li>
+			</ul>
+			<section>
+				<header class="major">
+					<h2>
+						Personaggi e Realtà Politiche
+					</h2>
 				</header>
-				<p>
-				Benvenuto! Questo portale raccoglie le illustrazioni dei personaggi della campagna LARP, così puoi avere sempre un punto di riferimento per ricordare volti e nomi tra un evento e l’altro.
-				<br/>
-				Non è il sito ufficiale della campagna e non contiene ambientazione o regolamento: per quello ti invitiamo a visitare direttamente il portale ufficiale di Arcana Domine.
-				<br/>
-				Per domande o curiosità su Rhymil puoi rivolgerti all’headmaster, mentre se vuoi aggiungere o modificare un personaggio contatta l’autore di questo portale.
-				</p>
-				<ul class="actions">
-					<li id="installBtn" hidden><a class="button"><span class="icon solid fa-download"></span>
-						Installa l'app</a></li>
-					<li><a
-						href="https://rhymil.arcanadomine.it/dashboard.php" class="button"><span class="icon solid fa-globe-americas"></span>
-						Rhymil in ArcanaDomine</a></li>
-					<li><a 
-						href="https://wa.me/3453293560" class="button"><span class="icon brands fa-whatsapp"></span>
-						Lorenzo - HeadMaster di Rhymil</a></li>
-					<li><a
-						href="https://wa.me/3488638006" class="button"><span class="icon brands fa-whatsapp"></span>
-						Alberto - Autore del Portale</a></li>
-				</ul>
-			</section>
-			<section id="two">
 				<div class="row">
 					<article class="col-6 col-12-xsmall">
-						<a href="./stato-del-popolo-libero.html" class="image fit thumb"><img src="./_home/stato-del-popolo-libero.png" /></a>
+						<a href="./illustrations/nuova-fratellanza-dei-pirati.html" class="image fit thumb"><img src="./home/nuova-fratellanza-dei-pirati.png" /></a>
 					</article>
 					<article class="col-6 col-12-xsmall">
-						<a href="./nuova-fratellanza-dei-pirati.html" class="image fit thumb"><img src="./_home/nuova-fratellanza-dei-pirati.png" /></a>
+						<a href="./illustrations/stato-del-popolo-libero.html" class="image fit thumb"><img src="./home/stato-del-popolo-libero.png" /></a>
 					</article>
 					<article class="col-6 col-12-xsmall">
-						<a href="./ordine-clericale.html" class="image fit thumb"><img src="./_home/ordine-clericale.png" /></a>
+						<a href="./illustrations/ordine-clericale.html" class="image fit thumb"><img src="./home/ordine-clericale.png" /></a>
 					</article>
 					<article class="col-6 col-12-xsmall">
-						<a href="./ordine-dei-maghi.html" class="image fit thumb"><img src="./_home/ordine-dei-maghi.png" /></a>
+						<a href="./illustrations/ordine-dei-maghi.html" class="image fit thumb"><img src="./home/ordine-dei-maghi.png" /></a>
 					</article>
 					<article class="col-6 col-12-xsmall">
-						<a href="./ordine-dei-paladini.html" class="image fit thumb"><img src="./_home/ordine-dei-paladini.png" /></a>
+						<a href="./illustrations/ordine-dei-paladini.html" class="image fit thumb"><img src="./home/ordine-dei-paladini.png" /></a>
 					</article>
 					<article class="col-6 col-12-xsmall">
-						<a href="./ordine-dei-cavalieri.html" class="image fit thumb"><img src="./_home/ordine-dei-cavalieri.png" /></a>
+						<a href="./illustrations/ordine-dei-cavalieri.html" class="image fit thumb"><img src="./home/ordine-dei-cavalieri.png" /></a>
 					</article>
 					<article class="col-6 col-12-xsmall">
-						<a href="./terre-barbariche.html" class="image fit thumb"><img src="./_home/terre-barbariche.png" /></a>
+						<a href="./illustrations/terre-barbariche.html" class="image fit thumb"><img src="./home/terre-barbariche.png" /></a>
 					</article>
 				</div>
 			</section>
+			<section>
+				<div>
+					<p>
+						<a href="https://rhymil.arcanadomine.it/dashboard.php">&copy; Rhymil - campagna di Arcana Domine</a>
+					</p>
+				</div>
+			</section>
 		</div>
-
-		<!-- Footer -->
-		<footer id="footer">
-			<div class="inner">
-				<ul class="icons">
-					<li><a
-						href="https://www.instagram.com/rhymil_/"
-						class="icon brands fa-instagram"><span class="label">
-						Instagram</span></a></li>
-					<li><a
-						href="https://www.facebook.com/profile.php?id=100063593580176"
-						class="icon brands fa-facebook-square"><span class="label">
-						Facebook</span></a></li>
-					<li><a
-						href="https://wa.me/3453293560"
-						class="icon brands fa-whatsapp"><span class="label">
-						Whatsapp</span></a></li>
-					<li><a
-						href="https://rhymil.arcanadomine.it/dashboard.php"
-						class="icon solid fa-globe-americas"><span class="label">
-						website</span></a></li>
-					<li><a
-						href="mailto:rhymil.info@gmail.com"
-						class="icon solid fa-envelope"><span class="label">
-						Email</span></a></li>
-				</ul>
-				<ul class="copyright">
-					<li>&copy; <a href="https://www.arcanadomine.it/">Arcana Domine</a></li>
-					<li>design by <a href="https://www.mandragora.ws/">Mandragora Web Studio</a></li>
-				</ul>
-			</div>
-		</footer>
-
-		<!-- Scripts -->
-		<script src="./_home/js/jquery.min.js"></script>
-		<script src="./_home/js/jquery.poptrox.min.js"></script>
-		<script src="./_home/js/browser.min.js"></script>
-		<script src="./_home/js/breakpoints.min.js"></script>
-		<script src="./_home/js/util.js"></script>
-		<script src="./_home/js/main.js"></script>
-
-
-		<!-- Script installBtn -->
+		<!-- Script -->
 		<script>
-		const btn = document.getElementById('installBtn');
-		function isInStandaloneMode() {
-		  return (window.matchMedia('(display-mode: standalone)').matches)
-		      || (window.navigator.standalone === true); // Safari iOS
-		}
-
-		// Controllo se il device è mobile
-		function isMobile() {
-		  return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-		}
-
-		// Nascondi o mostra in base alle condizioni
-		if (!isInStandaloneMode() && isMobile()) {
-		  btn.hidden = false;
-		} else {
-		  btn.hidden = true;
-		}
-
-		// Gestione installazione
-		let deferredPrompt;
-		window.addEventListener('beforeinstallprompt', (e) => {
-		  e.preventDefault();
-		  deferredPrompt = e;
-		  console.log(":::1", {deferredPrompt})
-		  if (isMobile() && !isInStandaloneMode()) {
-		    btn.hidden = false;
-		  }
-		});
-
-		btn.addEventListener('click', async () => {
-		  if (!deferredPrompt) return;
-		  deferredPrompt.prompt();
-		  const { outcome } = await deferredPrompt.userChoice;
-		  deferredPrompt = null;
-		});
+			// Service worker (lasciato invariato)
+			if ('serviceWorker' in navigator) {
+			  navigator.serviceWorker.register('./icons/serviceworker.js');
+			}
+			
+			// Riferimenti
+			const btn = document.getElementById('installBtn');
+			const version = document.getElementById('version');
+			
+			function isInStandaloneMode() {
+			  return (window.matchMedia('(display-mode: standalone)').matches) || (window.navigator.standalone === true);
+			}
+			function isMobile() {
+			  return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+			}
+			
+			// Mostra/Nascondi bottone installazione
+			if (!isInStandaloneMode() && isMobile()) {
+			  btn.hidden = false;
+			  version.style.display = 'none';
+			} else {
+			  btn.hidden = true;
+			  version.style.display = 'block';
+			}
+			
+			
+			// banner nativo (non disponibile su tutti i dispositivi)
+			 let deferredPrompt = null;
+			 window.addEventListener('beforeinstallprompt', (e) => {
+			   e.preventDefault();
+			   deferredPrompt = e;
+			   if(isMobile()) btn.hidden = false; // assicurati che il bottone si veda
+			 });
+		</script>
+		<div id="modal-container"></div>
+		<script>
+			// Importa il markup del modale
+			fetch('./home/install-modal.html')
+			  .then(res =>res.text())
+			  .then(html => {
+			    const container = document.getElementById('modal-container');
+			    container.innerHTML = html;
+			
+			    // "Ri-idrata" gli <script> inseriti via innerHTML
+			    const scripts = Array.from(container.querySelectorAll('script'));
+			    for (const oldScript of scripts) {
+			      const s = document.createElement('script');
+			      // copia type/nomodule/defer ecc. se presenti
+			      for (const { name, value } of Array.from(oldScript.attributes)) {
+			        s.setAttribute(name, value);
+			      }
+			      if (oldScript.src) {
+			        s.src = oldScript.src;
+			      } else {
+			        s.textContent = oldScript.textContent;
+			      }
+			      document.body.appendChild(s);
+			      oldScript.remove();
+			    }
+			  });
+		</script>
+		<div id="docs-container"></div>
+		<script>
+			fetch('./home/documents-menu.html')
+			  .then(r => r.text())
+			  .then(html => {
+			    const container = document.getElementById('docs-container');
+			    container.innerHTML = html;
+			
+			    // Ri-idrata gli <script> del parziale
+			    const scripts = Array.from(container.querySelectorAll('script'));
+			    for (const oldScript of scripts) {
+			      const s = document.createElement('script');
+			      for (const { name, value } of Array.from(oldScript.attributes)) s.setAttribute(name, value);
+			      if (oldScript.src) s.src = oldScript.src; else s.textContent = oldScript.textContent;
+			      document.body.appendChild(s);
+			      oldScript.remove();
+			    }
+			  });
 		</script>
 	</body>
 </html>

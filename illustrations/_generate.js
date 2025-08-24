@@ -52,11 +52,11 @@ function buildHtml({ title, intro, playersHTML, mastersHTML }) {
 <html>
   <head>
     <title>Rhymil | ${escapeHtml(title)}</title>
-    <link rel="manifest" href="./_icons/manifest.webmanifest">
-    <link rel="icon" href="./_icons/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="../icons/manifest.webmanifest">
+    <link rel="icon" href="../icons/favicon.ico" type="image/x-icon">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="./_page/page.css" />
+    <link rel="stylesheet" href="./assets/main.css" />
   </head>
   <body class="is-preload-0 is-preload-1 is-preload-2">
     <!-- Main -->
@@ -110,10 +110,10 @@ function buildHtml({ title, intro, playersHTML, mastersHTML }) {
     </div>
 
     <!-- Scripts -->
-    <script src="./_page/js/jquery.min.js"></script>
-    <script src="./_page/js/browser.min.js"></script>
-    <script src="./_page/js/breakpoints.min.js"></script>
-    <script src="./_page/js/main.js"></script>
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/browser.min.js"></script>
+    <script src="./assets/js/breakpoints.min.js"></script>
+    <script src="./assets/js/main.js"></script>
   </body>
 </html>
 `;
