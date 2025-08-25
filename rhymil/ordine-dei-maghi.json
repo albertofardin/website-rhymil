@@ -1,0 +1,56 @@
+{
+	"name": "🔮 Ordine dei Maghi",
+	"text": "Non sono semplici studiosi. Sono custodi di segreti, interpreti di simboli e ricercatori di verità. L’Ordine non vive solo nei tomi polverosi: nasce tra le stelle scrutate, tra formule che piegano la realtà e tra parole che possono cambiare il mondo. Essere mago significa tessere il filo invisibile che unisce il visibile all’invisibile. Hanno lasciato la sicurezza delle biblioteche per sfidare l’ignoto. Alcuni cercano potere, altri risposte, altri ancora solo la verità. Ma tutti portano la conoscenza della Trama dove il mondo ne ha bisogno.",
+	"players": [
+		{
+			"name": "Julius",
+			"text": "",
+			"owner": "Samuele Lamon",
+			"image": "julius"
+		},
+		{
+			"name": "Gwin",
+			"text": "",
+			"owner": "",
+			"image": "gwin"
+		},
+		{
+			"name": "Cordelia",
+			"text": "",
+			"owner": "Nicole Caligari",
+			"image": "cordelia"
+		},
+		{
+			"name": "Cedric Throne",
+			"text": "",
+			"owner": "Gianmarco Crozzolin",
+			"image": "cedric"
+		},
+		{
+			"name": "Iseth Somberlain",
+			"text": "",
+			"owner": "Marco Foffano",
+			"image": "iseth"
+		}
+	],
+	"masters": [
+		{
+			"name": "Geor Dun",
+			"text": "Meastro della Via del Tempo",
+			"owner": "master Alessio",
+			"image": "_geor"
+		},
+		{
+			"name": "Agnes Roboris",
+			"text": "Meastro della Via della Vita",
+			"owner": "",
+			"image": "_agnes"
+		},
+		{
+			"name": "Felitya",
+			"text": "Meastro della Via della Conoscenza",
+			"owner": "",
+			"image": "_felitya"
+		}
+	]
+}

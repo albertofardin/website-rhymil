@@ -1,0 +1,69 @@
+
+/* ================== Panel sheet (tema bianco) ================== */
+.panel-sheet { position: fixed; inset: 0; z-index: 9998; visibility: hidden; opacity: 0; pointer-events: none; transition: opacity .22s ease; }
+.panel-sheet.is-open { visibility: visible; opacity: 1; pointer-events: auto; }
+.panel-backdrop { position:absolute; inset:0; background:rgba(0,0,0,.55); opacity:0; transition:opacity .22s ease; backdrop-filter: blur(2px); }
+.panel-sheet.is-open .panel-backdrop { opacity:1; }
+.panel-panel {
+  position:absolute; left:0; right:0; bottom:0; background:#fff; color:#111827; border-top-left-radius:16px; border-top-right-radius:16px;
+  border:1px solid #e5e7eb; padding:12px 16px calc(16px + env(safe-area-inset-bottom));
+  max-height:80vh; overflow:auto; transform: translateY(100%); transition: transform .32s cubic-bezier(.2,.8,.2,1); box-shadow: 0 -10px 30px rgba(0,0,0,.12);
+}
+.panel-sheet.is-open .panel-panel { transform: translateY(0); }
+.panel-title { margin: 0 0 6px; font-size: 1.1rem; }
+.panel-desc { margin: 0 0 12px; color:#6b7280; }
+.panel-content { display:block; }
+.panel-section { display:none; }
+.panel-section.is-active { display:block; }
+.panel-list { list-style:none; padding:0; margin:0; display:grid; gap:8px; }
+.panel-item a {
+  display:flex; align-items:center; gap:10px; padding:12px; border-radius:12px; background:#f8fafc; border:1px solid #e5e7eb; color:#111827; text-decoration:none;
+}
+.panel-item a:hover { background:#f1f5f9; }
+.panel-close {
+  position:absolute; right:10px; top:8px; border:1px solid #e5e7eb; background:rgba(17,24,39,.06);
+  color:#111827; font-size:18px; padding:6px 10px; border-radius:10px; cursor:pointer;
+}
+
+.myimage-name {
+  color: #ffffff;
+  font-size: 1em;
+  line-height: 1em;
+}
+.myimage-owner {
+  color: #ffffff;
+  font-size: 0.75em;
+  line-height: 1em;
+}
+.myimage-desc {
+  color: #ccc;
+  font-size: 0.75em;
+  line-height: 1em;
+}
+
+@media (min-width: 800px) {
+  .panel-panel { left:50%; width: 720px; transform: translateY(100%) translateX(-50%); }
+  .panel-sheet.is-open .panel-panel { transform: translateY(0) translateX(-50%); }
+}
+
+/* Focus accessibile ma sobrio */
+.panel-item a:focus, .install-tabs .tab:focus { outline:none; }
+.panel-item a:focus-visible, .install-tabs .tab:focus-visible { box-shadow: 0 0 0 3px rgba(59,130,246,.35); }
+
+/* ================== Install modal full-screen ================== */
+.install-modal { position: fixed; inset: 0; z-index: 9999; display:none; }
+.install-modal.is-open { display:block; }
+.install-backdrop { position:absolute; inset:0; background: rgba(0,0,0,.6); backdrop-filter: blur(2px); }
+.install-dialog { position:relative; margin:0; inset:0; width:100%; height:100%; background:#0b0b0b; color:#fff; overflow:auto; padding:18px 16px 28px; }
+.install-close { position:sticky; top:0; float:right; border:none; background:rgba(255,255,255,.08); color:#fff; font-size:22px; line-height:1; padding:8px 12px; border-radius:10px; cursor:pointer; }
+.install-tabs { display:flex; gap:8px; margin:12px 0 16px; }
+.install-tabs .tab { flex:0 0 auto; padding:8px 12px; border-radius:999px; border:1px solid rgba(255,255,255,.2); background:transparent; color:#fff; cursor:pointer; font-weight:600; }
+.install-tabs .tab.is-active { background:#fff; color:#000; }
+.install-panel { max-width:960px; margin:0 auto; }
+.install-panel[hidden] { display:none !important; }
+.install-panel.is-active { display:block; }
+.steps { margin:0 0 12px 0; padding-left: 1.2em; }
+.steps li { margin:6px 0; }
+.shots { display:grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap:10px; margin-top:12px; }
+.shots img { width:100%; height:auto; border-radius:14px; border:1px solid rgba(255,255,255,.15); box-shadow:0 6px 18px rgba(0,0,0,.35); }
+@media (max-width: 640px) { .shots { grid-template-columns:1fr; } }

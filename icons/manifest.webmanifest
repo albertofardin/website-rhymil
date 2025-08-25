@@ -3,7 +3,7 @@
   "short_name": "RhymilHub",
   "description":"centralizzatore dei link ed illustrazioni della campagna Rhymil",
   "start_url": "/index.html",
-  "scope": "./",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#000000",

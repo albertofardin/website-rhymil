@@ -354,13 +354,12 @@
           </section>
 
           
-  
   <section id="section-stato-del-popolo-libero" class="panel-section">
     <header class="major">
       <p>Non sono semplici ribelli. Sono madri, figli, artigiani e soldati che hanno detto “basta”. Hanno visto crollare torri, bruciare promesse e spezzare catene, eppure si sono rialzati. Lo Stato del Popolo Libero non ha una corona né un dogma, ma ha memoria, orgoglio e fame di giustizia. C’è chi guida con la parola, chi difende con la lama, chi trama nell’ombra per il bene comune. Con mani callose, cuori testardi e sogni che non vogliono più nascondere, hanno trasformato la rinuncia in coraggio.</p>
     </header>
-    <div class="pswp-gallery" id="gallery--stato-del-popolo-libero">
-      
+  <div class="pswp-gallery" id="gallery--stato-del-popolo-libero">
+    
   <a href="/rhymil/stato-del-popolo-libero/savannah.jpg" data-pswp-width="1200" data-pswp-height="750" title="Savannah Morr">
     <img src="/rhymil/stato-del-popolo-libero/savannah.jpg" width="150" alt="Savannah Morr" loading="lazy" />
     <span class="pswp-caption-content">
@@ -414,7 +413,10 @@
       <span class="myimage-desc"></span>
     </span>
   </a>
-      
+  </div>
+  <hr/>
+  <div class="pswp-gallery" id="gallery--stato-del-popolo-libero-masters">
+    
   <a href="/rhymil/stato-del-popolo-libero/_edgard.jpg" data-pswp-width="1200" data-pswp-height="750" title="Edgard Holsch">
     <img src="/rhymil/stato-del-popolo-libero/_edgard.jpg" width="150" alt="Edgard Holsch" loading="lazy" />
     <span class="pswp-caption-content">
@@ -450,17 +452,16 @@
       <span class="myimage-desc"></span>
     </span>
   </a>
-    </div>
+  </div>
   </section>
 
           
-  
   <section id="section-terre-barbariche" class="panel-section">
     <header class="major">
       <p>Non sono semplici guerrieri. Sono capi clan, sciamani e campioni temprati da sabbia, gelo e sole implacabile. Un tempo divise, le Terre Sabbiose, le Terre Calde e le Terre Fredde si sono temporaneamente unite in una sola forza. Essere della tribù non è solo sopravvivere, ma guidare e proteggere un popolo tra lande ostili. Alcuni parlano con gli spiriti, altri brandiscono la lama. Ogni volto porta con sé una promessa: resistere e mantenere viva la propria gente.</p>
     </header>
-    <div class="pswp-gallery" id="gallery--terre-barbariche">
-      
+  <div class="pswp-gallery" id="gallery--terre-barbariche">
+    
   <a href="/rhymil/terre-barbariche/reis.jpg" data-pswp-width="1200" data-pswp-height="750" title="Reis">
     <img src="/rhymil/terre-barbariche/reis.jpg" width="150" alt="Reis" loading="lazy" />
     <span class="pswp-caption-content">
@@ -550,7 +551,10 @@
       <span class="myimage-desc"></span>
     </span>
   </a>
-      
+  </div>
+  <hr/>
+  <div class="pswp-gallery" id="gallery--terre-barbariche-masters">
+    
   <a href="/rhymil/terre-barbariche/_hathor.jpg" data-pswp-width="1200" data-pswp-height="750" title="Hathor">
     <img src="/rhymil/terre-barbariche/_hathor.jpg" width="150" alt="Hathor" loading="lazy" />
     <span class="pswp-caption-content">
@@ -604,17 +608,16 @@
       <span class="myimage-desc">Sommo Sciamano delle Terre Calde</span>
     </span>
   </a>
-    </div>
+  </div>
   </section>
 
           
-  
   <section id="section-ordine-clericale" class="panel-section">
     <header class="major">
       <p>Non sono semplici predicatori. Sono eruditi, curatori e custodi della parola divina. Essere sacerdote significa fede, studio e sacrificio. Alcuni scrivono, altri guariscono, altri guidano con voce ferma. Hanno lasciato case e certezze per servire Ewylion, portando la sua luce dove regnava l’ombra. Non brandiscono lame, ma parole più taglienti dell’acciaio, e mani che curano anche quando il corpo è stanco. Sono la voce della Dea Madre, lì dove serve essere ascoltata.</p>
     </header>
-    <div class="pswp-gallery" id="gallery--ordine-clericale">
-      
+  <div class="pswp-gallery" id="gallery--ordine-clericale">
+    
   <a href="/rhymil/ordine-clericale/delphine.jpg" data-pswp-width="1200" data-pswp-height="750" title="Delphine Belinfer">
     <img src="/rhymil/ordine-clericale/delphine.jpg" width="150" alt="Delphine Belinfer" loading="lazy" />
     <span class="pswp-caption-content">
@@ -650,7 +653,10 @@
       <span class="myimage-desc"></span>
     </span>
   </a>
-      
+  </div>
+  <hr/>
+  <div class="pswp-gallery" id="gallery--ordine-clericale-masters">
+    
   <a href="/rhymil/ordine-clericale/_ezekiel.jpg" data-pswp-width="1200" data-pswp-height="750" title="Padre Ezekiel">
     <img src="/rhymil/ordine-clericale/_ezekiel.jpg" width="150" alt="Padre Ezekiel" loading="lazy" />
     <span class="pswp-caption-content">
@@ -686,17 +692,16 @@
       <span class="myimage-desc">Capo del corpo degli inquisitori</span>
     </span>
   </a>
-    </div>
+  </div>
   </section>
 
           
-  
   <section id="section-ordine-dei-maghi" class="panel-section">
     <header class="major">
       <p>Non sono semplici studiosi. Sono custodi di segreti, interpreti di simboli e ricercatori di verità. L’Ordine non vive solo nei tomi polverosi: nasce tra le stelle scrutate, tra formule che piegano la realtà e tra parole che possono cambiare il mondo. Essere mago significa tessere il filo invisibile che unisce il visibile all’invisibile. Hanno lasciato la sicurezza delle biblioteche per sfidare l’ignoto. Alcuni cercano potere, altri risposte, altri ancora solo la verità. Ma tutti portano la conoscenza della Trama dove il mondo ne ha bisogno.</p>
     </header>
-    <div class="pswp-gallery" id="gallery--ordine-dei-maghi">
-      
+  <div class="pswp-gallery" id="gallery--ordine-dei-maghi">
+    
   <a href="/rhymil/ordine-dei-maghi/julius.jpg" data-pswp-width="1200" data-pswp-height="750" title="Julius">
     <img src="/rhymil/ordine-dei-maghi/julius.jpg" width="150" alt="Julius" loading="lazy" />
     <span class="pswp-caption-content">
@@ -741,7 +746,10 @@
       <span class="myimage-desc"></span>
     </span>
   </a>
-      
+  </div>
+  <hr/>
+  <div class="pswp-gallery" id="gallery--ordine-dei-maghi-masters">
+    
   <a href="/rhymil/ordine-dei-maghi/_geor.jpg" data-pswp-width="1200" data-pswp-height="750" title="Geor Dun">
     <img src="/rhymil/ordine-dei-maghi/_geor.jpg" width="150" alt="Geor Dun" loading="lazy" />
     <span class="pswp-caption-content">
@@ -768,17 +776,16 @@
       <span class="myimage-desc">Meastro della Via della Conoscenza</span>
     </span>
   </a>
-    </div>
+  </div>
   </section>
 
           
-  
   <section id="section-ordine-dei-paladini" class="panel-section">
     <header class="major">
       <p>Non sono semplici guerrieri. Sono voti viventi, scudi santi e mani tese nel buio. Essere paladino significa alzare lo sguardo e giurare “Io ci sarò”, anche quando nessuno lo chiede. Alcuni portano sollievo, altri fiamma, altri silenzio, ma tutti combattono per qualcosa di più grande di loro. Non sono santi, né eroi: sono persone che hanno scelto la luce, sono spade che proteggono e mani che sollevano, perché la giustizia possa brillare dove il buio pensava di aver vinto.</p>
     </header>
-    <div class="pswp-gallery" id="gallery--ordine-dei-paladini">
-      
+  <div class="pswp-gallery" id="gallery--ordine-dei-paladini">
+    
   <a href="/rhymil/ordine-dei-paladini/hermes.jpg" data-pswp-width="1200" data-pswp-height="750" title="Hermes Calighe">
     <img src="/rhymil/ordine-dei-paladini/hermes.jpg" width="150" alt="Hermes Calighe" loading="lazy" />
     <span class="pswp-caption-content">
@@ -823,7 +830,10 @@
       <span class="myimage-desc"></span>
     </span>
   </a>
-      
+  </div>
+  <hr/>
+  <div class="pswp-gallery" id="gallery--ordine-dei-paladini-masters">
+    
   <a href="/rhymil/ordine-dei-paladini/_teodor.jpg" data-pswp-width="1200" data-pswp-height="750" title="Teodor Kilkan">
     <img src="/rhymil/ordine-dei-paladini/_teodor.jpg" width="150" alt="Teodor Kilkan" loading="lazy" />
     <span class="pswp-caption-content">
@@ -859,17 +869,16 @@
       <span class="myimage-desc">Sacrestano</span>
     </span>
   </a>
-    </div>
+  </div>
   </section>
 
           
-  
   <section id="section-ordine-dei-cavalieri" class="panel-section">
     <header class="major">
       <p>Non sono semplici soldati. Sono strateghi, duellanti e comandanti temprati dal dovere. Essere cavaliere è tracciare la linea tra il caos e l’ordine, tra la parola data e il tradimento. Alcuni combattono in sella, altri a piedi, altri ancora vincono guerre con i loro piani prima che la battaglia inizi. Dietro ogni volto c’è un giuramento: difendere, proteggere, mantenere la legge. Le loro spade e i loro scudi non inseguono gloria, ma la pace che solo la giustizia può donare.</p>
     </header>
-    <div class="pswp-gallery" id="gallery--ordine-dei-cavalieri">
-      
+  <div class="pswp-gallery" id="gallery--ordine-dei-cavalieri">
+    
   <a href="/rhymil/ordine-dei-cavalieri/simon.jpg" data-pswp-width="1200" data-pswp-height="750" title="Simon Ashen">
     <img src="/rhymil/ordine-dei-cavalieri/simon.jpg" width="150" alt="Simon Ashen" loading="lazy" />
     <span class="pswp-caption-content">
@@ -905,7 +914,10 @@
       <span class="myimage-desc"></span>
     </span>
   </a>
-      
+  </div>
+  <hr/>
+  <div class="pswp-gallery" id="gallery--ordine-dei-cavalieri-masters">
+    
   <a href="/rhymil/ordine-dei-cavalieri/_eleonor.jpg" data-pswp-width="1200" data-pswp-height="750" title="Eleonor De Lervis">
     <img src="/rhymil/ordine-dei-cavalieri/_eleonor.jpg" width="150" alt="Eleonor De Lervis" loading="lazy" />
     <span class="pswp-caption-content">
@@ -941,17 +953,16 @@
       <span class="myimage-desc">Primo Capo</span>
     </span>
   </a>
-    </div>
+  </div>
   </section>
 
           
-  
   <section id="section-fratellanza-dei-pirati" class="panel-section">
     <header class="major">
       <p>Non sono semplici pirati. Sono capitani, strateghi, visionari e avventurieri pronti a rischiare tutto. La Fratellanza non è solo una bandiera, ma una realtà politica nata dalle onde. Alcuni governano con l’astuzia, altri con la sciabola. Scrivono la leggenda vivendo ogni battaglia, ogni intrigo e ogni rotta proibita. Uniti per dare vita ai mari, ai porti e a ogni storia che inizia con una vela all’orizzonte.</p>
     </header>
-    <div class="pswp-gallery" id="gallery--fratellanza-dei-pirati">
-      
+  <div class="pswp-gallery" id="gallery--fratellanza-dei-pirati">
+    
   <a href="/rhymil/fratellanza-dei-pirati/barbabrace.jpg" data-pswp-width="1200" data-pswp-height="750" title="Barbabrace">
     <img src="/rhymil/fratellanza-dei-pirati/barbabrace.jpg" width="150" alt="Barbabrace" loading="lazy" />
     <span class="pswp-caption-content">
@@ -1041,7 +1052,10 @@
       <span class="myimage-desc">Figlio di un costruttore di barche si è aggregato alla Fratellanza dei Pirati per trovare vendetta contro chi gli ha ucciso i genitori. Da allora si è specializzato nell&#39;arte della spada e dello scudo.</span>
     </span>
   </a>
-      
+  </div>
+  <hr/>
+  <div class="pswp-gallery" id="gallery--fratellanza-dei-pirati-masters">
+    
   <a href="/rhymil/fratellanza-dei-pirati/_taritas.jpg" data-pswp-width="1200" data-pswp-height="750" title="Taritas">
     <img src="/rhymil/fratellanza-dei-pirati/_taritas.jpg" width="150" alt="Taritas" loading="lazy" />
     <span class="pswp-caption-content">
@@ -1104,7 +1118,7 @@
       <span class="myimage-desc">È una giovane mezzelfa oscura,lo si può notare dalla sua pelle dal grigio chiaro con qualche punto tendente al rosa rispetto ad un Kiuth puro. Non si sa molto su di lei tranne che è una donna fidata di Re Taritas.</span>
     </span>
   </a>
-    </div>
+  </div>
   </section>
         </div>
       </div>

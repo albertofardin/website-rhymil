@@ -1,0 +1,110 @@
+{
+	"name": "🏴‍☠️ Nuova Fratellanza dei Pirati",
+	"text": "Non sono semplici pirati. Sono capitani, strateghi, visionari e avventurieri pronti a rischiare tutto. La Fratellanza non è solo una bandiera, ma una realtà politica nata dalle onde. Alcuni governano con l’astuzia, altri con la sciabola. Scrivono la leggenda vivendo ogni battaglia, ogni intrigo e ogni rotta proibita. Uniti per dare vita ai mari, ai porti e a ogni storia che inizia con una vela all’orizzonte.",
+	"players": [
+		{
+			"name": "Barbabrace",
+			"text": "Un corsaro più che un pirata che ama raccogliere qualunque informazione prima di prendere una decisione ed agire. La sfortuna lo ha colpito più volte, facendolo inciampare in situazioni difficili, ma è sempre riuscito a uscirne indenne. Il soprannome 'Barbabrace' gli è stato dato dopo essere sopravvissuto a un incendio su una nave, che lui stesso aveva scatenato. Solo pochi conoscono il suo vero nome.",
+			"owner": "Alberto Fardin",
+			"image": "barbabrace"
+		},
+		{
+			"name": "Fred Rayles",
+			"text": "Mercante che adora sperimentare nella creazione di nuove sostanze. Adora essere al centro di tutto anche se non lo da a vedere. Fa parte della fazione pirati per via delle similitudini ma non sembra per nulla un pirata. Adora contrattare e sbalordire con “io sono arrivato prima”.",
+			"owner": "Daniele De Castro",
+			"image": "fred"
+		},
+		{
+			"name": "Roy Backler",
+			"text": "Mercante prima che pirata, adora i soldi e farebbe qualsiasi cosa per ottenerli. Il suo motto, non che linea guida, è “Tutto e tutti hanno un prezzo”. ",
+			"owner": "Davide Zanon",
+			"image": "roy"
+		},
+		{
+			"name": "Elira Varnem",
+			"text": "Guaritrice ed alchimista cresciuta nell’Ordine degli Eruditi, ha abbandonato una vita di studio per seguire il richiamo del mare e l’amore per un giovane pirata. Rimasta segnata dalla perdita e dalla corruzione che ha travolto il mondo, ora cerca vendetta e redenzione.",
+			"owner": "Laura Cameran",
+			"image": "elira"
+		},
+		{
+			"name": "Virma",
+			"text": "Pirata che adora distruggere le cose. E’ scappata dalla famiglia da qualche anno e da allora fa parte della ciurma della Medusa. Ha il vizio di bere e per questo non è sempre lucida nei combattimenti, preferisce sguainare l’ascia piuttosto che avere una conversazione civile.",
+			"owner": "Anita Greggio",
+			"image": "virma"
+		},
+		{
+			"name": "Thomas Avery",
+			"text": "Nato su di una scialuppa in mezzo al mare da una prostituta, Avery cresce fra le cime e i flutti, saltando da un ponte all'altro, persona affidabile anche per essere un pirata e dalla mente molto pratica per risolvere ogni tipo di questione. Il nome `zampa-corta` e la moneta che porta al collo raccontano una storia che stenta a raccontare.",
+			"owner": "Omar Corona",
+			"image": "thomas"
+		},
+		{
+			"name": "Lucky il `Senza Paura",
+			"text": "Cresciuto tra i pirati, ha sviluppato un’ossessione per la fortuna e le superstizioni. Pavido e sempre pronto a evitare il pericolo, è un maestro nell’inventare storie e prendersi meriti che non ha. Eppure, grazie al suo talento nel raccontare gesta epiche, si è guadagnato un posto nella ciurma e, chissà come, la sopravvivenza.",
+			"owner": "Mattia Rupil",
+			"image": "lucky"
+		},
+		{
+			"name": "Rakael `Sega-Ossa`",
+			"text": "Giovane elfa fuggita dalla rigida sorveglianza familiare per abbracciare la vita avventurosa della pirateria. Grazie agli insegnamenti di medicina trasmessile dalla madre, si è rapidamente distinta a bordo, guadagnandosi un ruolo di rispetto all'interno dell'equipaggio.",
+			"owner": "Asia Celin",
+			"image": "rakael"
+		},
+		{
+			"name": "Zuleika",
+			"text": "Gnoma progettatrice ritrovata su una spiaggia con una ferita sulla testa e senza memoria. Lei pensa che la ferita le sia stata inferta da un giro sulla Ruota, ma il motivo le è ignoto.",
+			"owner": "Lisa Daniele",
+			"image": "zuleika"
+		},
+		{
+			"name": "Valor Jarkun",
+			"text": "Figlio di un costruttore di barche si è aggregato alla Fratellanza dei Pirati per trovare vendetta contro chi gli ha ucciso i genitori. Da allora si è specializzato nell'arte della spada e dello scudo.",
+			"owner": "Michele Bonazza",
+			"image": "valor"
+		}
+	],
+	"masters": [
+		{
+			"name": "Taritas",
+			"text": "l'unico Re",
+			"owner": "master Lorenzo",
+			"image": "_taritas"
+		},
+		{
+			"name": "Kess",
+			"text": "la Regina",
+			"owner": "master Jennifer",
+			"image": "_kess"
+		},
+		{
+			"name": "Isabela",
+			"text": "Capitano Maggiore, detta la Sirena. Impulsiva,ironica  testarda e manipoltrice. Ama il Rhum e i soldi più di qualsiasi altra cosa. Ha avuto diversi amanti, sia uomini che donne, ma gira voce che solo uno sia riuscito a rapire il suo cuore e non è il defunto marito. La sua nave è un Galeone totalmente fatto di legno scurissimo e vele nere chiamato 'Lo Smeraldo nero' la sua polena una sirena con un arpione in mano. Attualmente portatrice e custode di un artefatto di manifattura elfica.",
+			"owner": "master Silvia",
+			"image": "_isabela"
+		},
+		{
+			"name": "Vane",
+			"text": "Capitano Maggiore, detto la Murena.",
+			"owner": "",
+			"image": "_vane"
+		},
+		{
+			"name": "Akkor",
+			"text": "Capitano Maggiore, detto lo Squalo Bianco.",
+			"owner": "master Tobi",
+			"image": "_akkor"
+		},
+		{
+			"name": "Sarmana",
+			"text": "Capitano Maggiore, detta l'Orca.",
+			"owner": "master Jennifer",
+			"image": "_sarmana"
+		},
+		{
+			"name": "Rey",
+			"text": "È una giovane mezzelfa oscura,lo si può notare dalla sua pelle dal grigio chiaro con qualche punto tendente al rosa rispetto ad un Kiuth puro. Non si sa molto su di lei tranne che è una donna fidata di Re Taritas.",
+			"owner": "master Silvia",
+			"image": "_rey"
+		}
+	]
+}
