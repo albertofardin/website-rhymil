@@ -11,12 +11,11 @@
     />
 
     <!-- style -->
-    <link rel="stylesheet" href="./home/main.css" />
-    <link rel="stylesheet" href="./panels/panel.css" />
-
-    <!-- script -->
-    <script src="/app.js" defer></script>
-    <script src="./panels/panel.js" defer></script>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/panel.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="photoswipe/photoswipe.css" />
+    <link rel="stylesheet" href="/photoswipe/photoswipe-caption-plugin.css" />
 
     <!-- favicon -->
     <link
@@ -94,6 +93,7 @@
       content="./icons/ms-icon-144x144.png"
     />
     <meta name="theme-color" content="#000000" />
+
     <!-- Base -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://rhymil.netlify.app/" />
@@ -123,8 +123,8 @@
   <body>
     <header id="header">
       <div class="inner">
-        <p class="version">RhymilHub v1.2.0</p>
-        <a href="#" class="image avatar"><img src="./home/avatar.png" /></a>
+        <p class="version">RhymilHub v2.0</p>
+        <a href="#" class="image avatar"><img src="./images/avatar.png" /></a>
         <p class="description">
           Benvenuto su RhymilHub. Questo HUB è un progetto nato dall’iniziativa
           dei giocatori, in collaborazione con l’autore dell’ambientazione e i
@@ -133,15 +133,11 @@
         </p>
       </div>
     </header>
+
     <div id="main">
       <ul class="actions">
         <li id="installBtn" hidden>
-          <a
-            class="button button--primary"
-            data-panel-open
-            data-panel-title="⬇️ Installare RhymilHub"
-            data-panel-src="./panels/install-app.html"
-          >
+          <a class="button button--primary">
             <span class="icon solid fa-download"></span>
             <span>Installa l'App</span></a
           >
@@ -150,11 +146,13 @@
           <a
             class="button"
             data-panel-open
-            data-panel-title="Tomi di Rhymil"
+            data-panel-title="Tomi Ufficiali"
             data-panel-src="./panels/tomi.html"
+            data-panel-target="#section-docs"
+            href="#"
           >
             <span class="icon regular fa-file-alt"></span>
-            <span>Tomi - Ambientazione e Regolamento</span>
+            <span>Tomi Ufficiali</span>
           </a>
         </li>
         <li>
@@ -217,68 +215,51 @@
         <div class="row">
           <article class="col-6 col-12-xsmall">
             <a
+              href="#"
               data-panel-open
               data-panel-title="🏴‍☠️ Nuova Fratellanza dei Pirati"
-              data-panel-src="./panels/nuova-fratellanza-dei-pirati.html"
+              data-panel-target="#section-fratellanza-dei-pirati"
               class="image fit thumb"
-              ><img src="./home/nuova-fratellanza-dei-pirati.png"
+              ><img src="./rhymil/fratellanza-dei-pirati.png"
             /></a>
           </article>
           <article class="col-6 col-12-xsmall">
             <a
-              href="./illustrations/stato-del-popolo-libero.html"
+              href="./rhymil/stato-del-popolo-libero.html"
               class="image fit thumb"
-              ><img src="./home/stato-del-popolo-libero.png"
+              ><img src="./rhymil/stato-del-popolo-libero.png"
             /></a>
           </article>
           <article class="col-6 col-12-xsmall">
-            <a
-              href="./illustrations/ordine-clericale.html"
-              class="image fit thumb"
-              ><img src="./home/ordine-clericale.png"
+            <a href="./rhymil/ordine-clericale.html" class="image fit thumb"
+              ><img src="./rhymil/ordine-clericale.png"
             /></a>
           </article>
           <article class="col-6 col-12-xsmall">
-            <a
-              href="./illustrations/ordine-dei-maghi.html"
-              class="image fit thumb"
-              ><img src="./home/ordine-dei-maghi.png"
+            <a href="./rhymil/ordine-dei-maghi.html" class="image fit thumb"
+              ><img src="./rhymil/ordine-dei-maghi.png"
             /></a>
           </article>
           <article class="col-6 col-12-xsmall">
-            <a
-              href="./illustrations/ordine-dei-paladini.html"
-              class="image fit thumb"
-              ><img src="./home/ordine-dei-paladini.png"
+            <a href="./rhymil/ordine-dei-paladini.html" class="image fit thumb"
+              ><img src="./rhymil/ordine-dei-paladini.png"
             /></a>
           </article>
           <article class="col-6 col-12-xsmall">
-            <a
-              href="./illustrations/ordine-dei-cavalieri.html"
-              class="image fit thumb"
-              ><img src="./home/ordine-dei-cavalieri.png"
+            <a href="./rhymil/ordine-dei-cavalieri.html" class="image fit thumb"
+              ><img src="./rhymil/ordine-dei-cavalieri.png"
             /></a>
           </article>
           <article class="col-6 col-12-xsmall">
-            <a
-              href="./illustrations/terre-barbariche.html"
-              class="image fit thumb"
-              ><img src="./home/terre-barbariche.png"
+            <a href="./rhymil/terre-barbariche.html" class="image fit thumb"
+              ><img src="./rhymil/terre-barbariche.png"
             /></a>
           </article>
-        </div>
-      </section>
-      <section>
-        <div>
-          <p>
-            <a href="https://rhymil.arcanadomine.it/dashboard.php"
-              >&copy; Rhymil - campagna di Arcana Domine</a
-            >
-          </p>
         </div>
       </section>
     </div>
 
+    <!-- =================== Panel unico riutilizzabile (già nel DOM) =================== -->
     <div
       id="uiPanelSheet"
       class="panel-sheet"
@@ -293,11 +274,206 @@
           ✕
         </button>
         <h3 id="uiPanelTitle" class="panel-title"></h3>
-        <p class="panel-desc"></p>
         <div class="panel-content">
-          <!-- qui verrà iniettato il contenuto -->
+          <section id="section-docs" class="panel-section">
+            <ul class="panel-list">
+              <li class="panel-item">
+                <a
+                  href="https://rhymil.arcanadomine.it/assets/pdf/TOMO-I-Regolamento-base.pdf"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  📕 <span>Tomo 1</span> - Regolamento base
+                </a>
+              </li>
+              <li class="panel-item">
+                <a
+                  href="https://rhymil.arcanadomine.it/assets/pdf/TOMO-II-Ambientazione.pdf"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  📘 <span>Tomo 2</span> - Ambientazione
+                </a>
+              </li>
+              <li class="panel-item">
+                <a
+                  href="https://rhymil.arcanadomine.it/assets/pdf/TOMO-III-Incantesimi.pdf"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  📗 <span>Tomo 3</span> - Incantesimi
+                </a>
+              </li>
+              <li class="panel-item">
+                <a
+                  href="https://rhymil.arcanadomine.it/assets/pdf/TOMO-IV-Compendio.pdf"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  📔 <span>Tomo 4</span> - Compendio
+                </a>
+              </li>
+              <li class="panel-item">
+                <a
+                  href="https://rhymil.arcanadomine.it/assets/pdf/TOMO-V-Alberi-dei-talenti.pdf"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  📙 <span>Tomo 5</span> - Talenti
+                </a>
+              </li>
+            </ul>
+          </section>
+
+          <section id="section-fratellanza-dei-pirati" class="panel-section">
+            <div class="pswp-gallery" id="gallery--fratellanza-dei-pirati">
+              <a
+                href="/rhymil/fratellanza-dei-pirati/barbabrace.jpg"
+                data-pswp-width="1200"
+                data-pswp-height="750"
+              >
+                <img
+                  src="/rhymil/fratellanza-dei-pirati/barbabrace.jpg"
+                  width="150"
+                />
+                <span class="pswp-caption-content">
+                  <span class="myimage-name">Barbabrace</span>
+                  <span class="myimage-owner">- Alberto Fardin</span>
+                  <br />
+                  <span class="myimage-desc">
+                    Un corsaro più che un pirata che ama raccogliere qualunque
+                    informazione prima di prendere una decisione ed agire. La
+                    sfortuna lo ha colpito più volte, facendolo inciampare in
+                    situazioni difficili, ma è sempre riuscito a uscirne
+                    indenne. Il soprannome 'Barbabrace' gli è stato dato dopo
+                    essere sopravvissuto a un incendio su una nave, che lui
+                    stesso aveva scatenato. Solo pochi conoscono il suo vero
+                    nome.
+                  </span>
+                </span>
+              </a>
+              <a
+                href="/rhymil/fratellanza-dei-pirati/fred.jpg"
+                data-pswp-width="1200"
+                data-pswp-height="750"
+                title="fred"
+              >
+                <img
+                  src="/rhymil/fratellanza-dei-pirati/fred.jpg"
+                  alt="fred"
+                  width="150"
+                />
+                <span class="pswp-caption-content">
+                  <span class="myimage-name">Fred Rayles</span>
+                  <span class="myimage-owner">- Daniele De Castro</span>
+                  <br />
+                  <span class="myimage-desc">
+                    Mercante che adora sperimentare nella creazione di nuove
+                    sostanze. Adora essere al centro di tutto anche se non lo da
+                    a vedere. Fa parte della fazione pirati per via delle
+                    similitudini ma non sembra per nulla un pirata. Adora
+                    contrattare e sbalordire con “io sono arrivato prima”.
+                  </span>
+                </span>
+              </a>
+            </div>
+          </section>
         </div>
       </div>
     </div>
+
+    <!-- ====================== Install guide modal (già nel DOM) ====================== -->
+    <div
+      id="installModal"
+      class="install-modal"
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+    >
+      <div class="install-backdrop" data-close="true"></div>
+      <div
+        class="install-dialog"
+        role="document"
+        aria-labelledby="installTitle"
+      >
+        <button
+          class="install-close"
+          aria-label="Chiudi guida"
+          data-close="true"
+        >
+          ✕
+        </button>
+        <h2 id="installTitle">⬇️ Installa app RhymilHub</h2>
+
+        <p class="muted">
+          Questa pagina è una WebApp. Puoi aggiungerla alla schermata Home del
+          tuo telefono come una normale app, così la apri più in fretta e la hai
+          sempre a portata di mano. Si aggiorna da sola quando pubblichiamo
+          novità. Seleziona il tuo dispositivo e segui i passaggi.
+        </p>
+
+        <div class="install-tabs" role="tablist" aria-label="Piattaforma">
+          <button
+            class="tab is-active"
+            role="tab"
+            aria-selected="true"
+            data-tab="ios"
+            type="button"
+          >
+            iPhone / iPad
+          </button>
+          <button
+            class="tab"
+            role="tab"
+            aria-selected="false"
+            data-tab="android"
+            type="button"
+          >
+            Android
+          </button>
+        </div>
+
+        <div
+          class="install-panel is-active"
+          data-panel="ios"
+          role="tabpanel"
+          id="panel-ios"
+        >
+          <ol class="steps">
+            <li>Apri Rhymil Hub in <strong>Safari</strong> su iOS.</li>
+            <li>Tocca <strong>Condividi</strong> ⎋.</li>
+            <li>Scegli <strong>Aggiungi alla schermata Home</strong>.</li>
+            <li>Conferma con <strong>Aggiungi</strong>.</li>
+          </ol>
+          <div class="shots">
+            <img src="/images/install-app-ios.png" />
+          </div>
+        </div>
+
+        <div
+          class="install-panel"
+          data-panel="android"
+          role="tabpanel"
+          id="panel-android"
+          hidden
+        >
+          <ol class="steps">
+            <li>Apri Rhymil Hub in <strong>Chrome</strong> su Android.</li>
+            <li>Tocca il menu <strong>⋮</strong> in alto a destra.</li>
+            <li>
+              Scegli <strong>Aggiungi alla schermata Home</strong> o
+              <strong>Installa app</strong>.
+            </li>
+            <li>Conferma con <strong>Aggiungi</strong>.</li>
+          </ol>
+          <div class="shots">
+            <img src="/images/install-app-android.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script -->
+    <script type="module" src="./js/app.js"></script>
   </body>
 </html>
