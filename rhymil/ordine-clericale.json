@@ -25,7 +25,7 @@
 			"text": "",
 			"owner": "",
 			"image": "hodo"
-		},
+		}
 	],
 	"masters": [
 		{
@@ -51,6 +51,6 @@
 			"text": "Capo del corpo degli inquisitori",
 			"owner": "master Tobi",
 			"image": "_primoinquisitore"
-		},
+		}
 	]
 }
