@@ -1,0 +1,89 @@
+/* ===== Bottom Sheet: Pannello flottante — Tema Bianco ===== */
+.panel-sheet {
+  position: fixed; inset: 0; z-index: 9998;
+  /* Niente display:none: usiamo visibility/opacity per permettere la transizione */
+  visibility: hidden; opacity: 0; pointer-events: none;
+  transition: opacity .22s ease;
+}
+.panel-sheet.is-open { visibility: visible; opacity: 1; pointer-events: auto; }
+
+.panel-backdrop {
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,.55);            /* sfondo scuro dietro al pannello */
+  opacity: 0; transition: opacity .22s ease;
+  backdrop-filter: blur(2px);
+}
+.panel-sheet.is-open .panel-backdrop { opacity: 1; }
+
+.panel-panel {
+  outline: none;
+  position: absolute; left: 0; right: 0; bottom: 0;
+  background: #ffffff;                     /* <-- pannello bianco */
+  color: #111827;                          /* testo scuro */
+  border-top-left-radius: 16px; border-top-right-radius: 16px;
+  border: 1px solid #e5e7eb;               /* bordo soft */
+  padding: 12px 16px calc(16px + env(safe-area-inset-bottom));
+  max-height: 80vh; overflow: auto;
+
+  /* Stato iniziale: fuori dallo schermo */
+  transform: translateY(100%);
+  /* Transizione morbida */
+  transition: transform .32s cubic-bezier(.2,.8,.2,1);
+  box-shadow: 0 -10px 30px rgba(0,0,0,.12); /* ombra leggera */
+  will-change: transform;
+}
+.panel-sheet.is-open .panel-panel { transform: translateY(0); }
+
+.panel-title { margin: 0 0 6px; font-size: 1.1rem; }
+.panel-desc  { margin: 0 0 12px; color: #6b7280; } /* testo descrittivo più attenuato */
+
+.panel-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.panel-item { padding: 0 }
+.panel-item a {
+  display: flex; align-items: center; gap: 10px;
+  padding: 12px; border-radius: 12px;
+  background: #f8fafc;                     /* bg card chiaro */
+  border: 1px solid #e5e7eb;               /* bordo soft */
+  color: #111827;                          /* testo scuro */
+  text-decoration: none; outline: none;
+}
+.panel-item a span { font-weight: 600; }
+.panel-item a:hover { background: #f1f5f9; }     /* hover leggero */
+.panel-item small { color: #6b7280; font-weight: 400; }
+
+/* niente bordo azzurro sul focus “programmatico” o da mouse */
+.panel-item a {
+  outline: none;
+  box-shadow: none;
+}
+
+
+.panel-close {
+  position: absolute; right: 10px; top: 8px;
+  border: 1px solid #e5e7eb;
+  background: rgba(17,24,39,.06);          /* bottone chiudi soft su bianco */
+  color: #111827;
+  font-size: 18px; padding: 6px 10px;
+  border-radius: 10px; cursor: pointer;
+}
+.panel-close:hover { background: rgba(17,24,39,.09); }
+
+@media (min-width: 800px) {
+  .panel-panel { left: 50%; width: 640px; transform: translateY(100%) translateX(-50%); }
+  .panel-sheet.is-open .panel-panel { transform: translateY(0) translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .panel-panel, .panel-backdrop, .panel-sheet { transition: none !important; }
+}
+
+.panel-title {
+  color: #000000;
+  font-size: 1.25em !important;
+  margin-bottom: 0.75em !important;
+}
+.panel-intro {
+  font-size: 0.8rem;
+  line-height: normal;
+  color: #787878;
+}

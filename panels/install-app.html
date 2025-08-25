@@ -1,0 +1,113 @@
+<style>
+  /* ===== Install guide (tabs + pannelli) ===== */
+  .tabs {
+    display: flex;
+    gap: 8px;
+    margin: 8px 0 12px;
+  }
+  .tabs .tab {
+    flex: 0 0 auto;
+    padding: 8px 12px;
+    border-radius: 999px;
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    color: #111827;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .tabs .tab.is-active {
+    background: #111827;
+    color: #fff;
+    border-color: #111827;
+  }
+
+  .panel {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  .panel[hidden] {
+    display: none !important;
+  }
+  .panel.is-active {
+    display: block;
+  }
+
+  .steps {
+    margin: 0 0 12px 0;
+    padding-left: 1.2em;
+  }
+  .steps li {
+    margin: 6px 0;
+  }
+
+  .shots {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 12px;
+  }
+  .shots img {
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  }
+
+  @media (min-width: 700px) {
+    .shots {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+</style>
+<div class="guide" panel-content>
+  <p class="panel-intro">
+    Questa pagina è una WebApp. Puoi aggiungerla alla schermata Home del tuo
+    telefono come una normale app, così la apri più in fretta e la hai sempre a
+    portata di mano. Si aggiorna da sola quando pubblichiamo novità. Seleziona
+    il tuo dispositivo e segui i passaggi in pochi click.
+  </p>
+  <div class="tabs" role="tablist" aria-label="Piattaforma">
+    <button
+      class="tab is-active"
+      role="tab"
+      aria-selected="true"
+      data-tab="ios"
+    >
+      iPhone / iPad
+    </button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="android">
+      Android
+    </button>
+  </div>
+  <!-- iOS -->
+  <div class="panel is-active" data-panel="ios" role="tabpanel">
+    <ol class="steps">
+      <li>Apri Rhymil Hub in <strong>Safari</strong> su iOS.</li>
+      <li>
+        Tocca il pulsante <strong>Condividi</strong>
+        <span class="ios-share" aria-hidden="true">⬆︎</span>.
+      </li>
+      <li>Scegli <strong>Aggiungi alla schermata Home</strong>.</li>
+      <li>Conferma con <strong>Aggiungi</strong>.</li>
+    </ol>
+    <div class="shots">
+      <img src="./panels/install-app-ios.png" alt="" />
+    </div>
+  </div>
+  <!-- Android -->
+  <div class="panel" data-panel="android" role="tabpanel" hidden>
+    <ol class="steps">
+      <li>Apri Rhymil Hub in <strong>Chrome</strong> su Android.</li>
+      <li>Tocca il menu <strong>⋮</strong> in alto a destra.</li>
+      <li>
+        Scegli <strong>Aggiungi alla schermata Home</strong> (oppure
+        <strong>Installa app</strong> su alcuni dispositivi).
+      </li>
+      <li>Conferma con <strong>Aggiungi</strong>.</li>
+    </ol>
+    <div class="shots">
+      <img src="./panels/install-app-android.png" alt="" />
+    </div>
+  </div>
+</div>
