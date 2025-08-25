@@ -87,11 +87,13 @@ document.addEventListener('click', (e) => {
 });
 
 // drag per chiudere
-let startY=null, currentY=null, dragging=false;
-panel.addEventListener('touchstart', e => { dragging=true; startY=e.touches[0].clientY; currentY=startY; panel.style.transition='none'; }, {passive:true});
-panel.addEventListener('touchmove', e => { if(!dragging) return; currentY=e.touches[0].clientY; const dy=Math.max(0,currentY-startY); panel.style.transform=`translateY(${dy}px)`; }, {passive:true});
-panel.addEventListener('touchend', () => { if(!dragging) return; const dy=Math.max(0,currentY-startY); panel.style.transition=''; panel.style.transform=''; dragging=false; startY=currentY=null; if (dy>100) closeSheet(); });
-
+const ENABLE_SWIPE_TO_CLOSE = false;
+if (ENABLE_SWIPE_TO_CLOSE) {
+  let startY=null, currentY=null, dragging=false;
+  panel.addEventListener('touchstart', e => { dragging=true; startY=e.touches[0].clientY; currentY=startY; panel.style.transition='none'; }, {passive:true});
+  panel.addEventListener('touchmove', e => { if(!dragging) return; currentY=e.touches[0].clientY; const dy=Math.max(0,currentY-startY); panel.style.transform=`translateY(${dy}px)`; }, {passive:true});
+  panel.addEventListener('touchend', () => { if(!dragging) return; const dy=Math.max(0,currentY-startY); panel.style.transition=''; panel.style.transform=''; dragging=false; startY=currentY=null; if (dy>100) closeSheet(); });
+}
 /* ----------------------- PhotoSwipe Lightbox ------------------------ */
 /* Rimuovi target _blank nelle gallerie per evitare nuove schede */
 document.querySelectorAll('.pswp-gallery a[target="_blank"]').forEach(a => a.removeAttribute('target'));

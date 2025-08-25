@@ -22,7 +22,7 @@
 .panel-item a:hover { background:#f1f5f9; }
 .panel-close {
   position:absolute; right:10px; top:8px; border:1px solid #e5e7eb; background:rgba(17,24,39,.06);
-  color:#111827; font-size:18px; padding:6px 10px; border-radius:10px; cursor:pointer;
+  color:#111827; font-size:18px; padding:8px 10px; border-radius:10px; cursor:pointer; line-height: 1;
 }
 
 .myimage-name {
@@ -67,3 +67,73 @@
 .shots { display:grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap:10px; margin-top:12px; }
 .shots img { width:100%; height:auto; border-radius:14px; border:1px solid rgba(255,255,255,.15); box-shadow:0 6px 18px rgba(0,0,0,.35); }
 @media (max-width: 640px) { .shots { grid-template-columns:1fr; } }
+
+
+/* ================== Custom styles ================== */
+* {
+  -webkit-user-select: none; /* Safari/Chrome iOS */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* Internet Explorer/Edge */
+  user-select: none;         /* Standard */
+}
+
+.version {
+	font-family: monospace;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	background-color: rgba(0,0,0,0.5);
+	color: #fff;
+	padding: 0px 15px;
+	margin: 0;
+	opacity: 0.5;
+	font-size: 8px;
+	border-radius: 100px;
+}
+.description {
+	margin-top: 1.4em;
+	color: #eee;
+	text-align: center;
+	font-size: 0.85em;
+	line-height: 1.5em;
+}
+
+.actions .instagram {
+	display: inline-block;
+	width: 49%;
+	 * {
+		color: #E4405F;
+	}
+	*:hover {
+		border-color: #E4405F;
+	}
+}
+.actions .facebook {
+	display: inline-block;
+	width: 49%;
+	float: right;
+	 * {
+		color: #1877F2;
+	}
+	*:hover {
+		border-color: #1877F2;
+	}
+}
+.actions .whatsapp {
+	:before {
+		color: #25D366;
+	}
+	 *:hover {
+		border-color: #25D366;
+	}
+}
+
+
+.button--primary {
+  background-color: #f54900 !important;
+  border-color: #f54900 !important;
+	* {
+		color: #fff;
+	}
+}
+

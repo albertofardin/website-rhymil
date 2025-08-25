@@ -61,6 +61,20 @@ function loadJsonLoose(p) {
   return JSON.parse(s);
 }
 
+// ---- Version bump ----------------------------------------------------------
+function bumpVersionInHtml(html) {
+  const re = /(<p\s+class=["']version["'][^>]*>[\s\S]*?\b[vV])(\d+(?:[.,]\d+)?)([\s\S]*?<\/p>)/i;
+  const m = html.match(re);
+  if (!m) { console.warn('⚠️  Nessun <p class="version">…</p> trovato. Salto incremento.'); return html; }
+  const raw = m[2].trim().replace(',', '.');
+  const curr = parseFloat(raw);
+  if (Number.isNaN(curr)) { console.warn('⚠️  Valore versione non numerico:', raw); return html; }
+  const next = Math.round((curr + 0.1) * 10) / 10;
+  const nextStr = next.toFixed(1);
+  console.log(`🔢 Versione: ${curr.toFixed(1)} → ${nextStr}`);
+  return html.replace(re, `$1${nextStr}$3`);
+}
+
 // ---- Markup builders -------------------------------------------------------
 function anchorFor(item, baseHref) {
   const imgName = (item.image || '').replace(/\.(jpg|jpeg|png|webp)$/i, '');
@@ -74,7 +88,7 @@ function anchorFor(item, baseHref) {
     <img src="${href}" width="150" alt="${name}" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">${name}</span>
-      <span class="myimage-owner">- ${owner}</span><br />
+      ${owner && `<span class="myimage-owner">- ${owner}</span><br />`}
       <span class="myimage-desc">${text}</span>
     </span>
   </a>`;
@@ -150,13 +164,6 @@ async function main() {
 
   let html = fs.readFileSync(htmlPath, 'utf8');
 
-  // Backup se si sovrascrive lo stesso file
-  if (outPath === htmlPath) {
-    const bak = `${htmlPath}.bak`;
-    fs.writeFileSync(bak, html, 'utf8');
-    console.log(`🔐 Backup creato: ${bak}`);
-  }
-
   for (const slug of TARGET) {
     const jsonPath = path.join(dir, `${slug}.json`);
     if (!fs.existsSync(jsonPath)) {
@@ -186,6 +193,7 @@ async function main() {
     console.log(`✅ Sezione aggiornata: ${sectionId}`);
   }
 
+  html = bumpVersionInHtml(html);
   fs.writeFileSync(outPath, html, 'utf8');
   console.log(`🏁 File scritto: ${outPath}`);
 }
