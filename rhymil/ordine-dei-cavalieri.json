@@ -6,25 +6,25 @@
 			"name": "Simon Ashen",
 			"text": "Cavaliere di seconda generazione, all'apparenza serioso e corrucciato, in realtà lo è davvero. Abile spadaccino a due lame, è il primo a gettarsi a capofitto nelle battaglie. In lui arde un forte senso di giustizia.",
 			"owner": "Eddy Berardi",
-			"image": "simon"
+			"image": "p_simon"
 		},
 		{
 			"name": "Sander",
 			"text": "",
 			"owner": "",
-			"image": "sander"
+			"image": "p_sander"
 		},
 		{
 			"name": "Rodrigo",
 			"text": "",
 			"owner": "",
-			"image": "rodrigo"
+			"image": "p_rodrigo"
 		},
 		{
 			"name": "Beruthiel",
 			"text": "",
 			"owner": "",
-			"image": "beruthiel"
+			"image": "p_beruthiel"
 		}
 	],
 	"masters": [
@@ -32,25 +32,25 @@
 			"name": "Eleonor De Lervis",
 			"text": "Capitana del Corpo Navale dell' Ordine dei Cavalieri",
 			"owner": "",
-			"image": "_eleonor"
+			"image": "m_eleonor"
 		},
 		{
 			"name": "Gildarts Solcoferreo",
 			"text": "Capitano",
 			"owner": "",
-			"image": "_gildarts"
+			"image": "m_gildarts"
 		},
 		{
 			"name": "Alexander Deimont",
 			"text": "Capitano",
 			"owner": "master Lorenzo",
-			"image": "_alexander"
+			"image": "m_alexander"
 		},
 		{
 			"name": "Leonard Winford",
 			"text": "Primo Capo",
 			"owner": "",
-			"image": "_leonard"
+			"image": "m_leonard"
 		}
 	]
 }

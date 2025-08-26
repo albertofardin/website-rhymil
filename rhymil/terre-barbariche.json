@@ -6,61 +6,61 @@
 			"name": "Reis",
 			"text": "",
 			"owner": "Nicole Caligari",
-			"image": "reis"
+			"image": "p_reis"
 		},
 		{
 			"name": "Yana",
 			"text": "",
 			"owner": "Valentina Colella",
-			"image": "yana"
+			"image": "p_yana"
 		},
 		{
 			"name": "Atbae Al'Namir",
 			"text": "",
 			"owner": "Nicole Caligari",
-			"image": "atbae"
+			"image": "p_atbae"
 		},
 		{
 			"name": "Volkmar Starkad",
 			"text": "Giovane Sciamano del Orca Marina, timido e inesperto, sogna di diventare un grande sciamano per tornare alla vita tranquilla da pescatore nel suo piccolo villaggio nelle Terre Fredde.",
 			"owner": "Matteo Polzella",
-			"image": "volkmar"
+			"image": "p_volkmar"
 		},
 		{
 			"name": "Quinu",
 			"text": "",
 			"owner": "Linda Tagliaferro",
-			"image": "quinu"
+			"image": "p_quinu"
 		},
 		{
 			"name": "Kunshae Sagfuok",
 			"text": "Fedele al patto del suo clan con il popolo delle terre fredde, millanta esperienza e sapienza sulla natura e sulle meccaniche di proliferazione della propria razza.",
 			"owner": "Matteo Bertacche",
-			"image": "kunshae"
+			"image": "p_kunshae"
 		},
 		{
 			"name": "Milten",
 			"text": "",
 			"owner": "",
-			"image": "milten"
+			"image": "p_milten"
 		},
 		{
 			"name": "Astrid",
 			"text": "",
 			"owner": "",
-			"image": "astrid"
+			"image": "p_astrid"
 		},
 		{
 			"name": "Uruk",
 			"text": "",
 			"owner": "",
-			"image": "uruk"
+			"image": "p_uruk"
 		},
 		{
 			"name": "Aelin",
 			"text": "",
 			"owner": "",
-			"image": "aelin"
+			"image": "p_aelin"
 		}
 	],
 	"masters": [
@@ -68,37 +68,37 @@
 			"name": "Hathor",
 			"text": "Sommo Sciamano Terre Sabbiose",
 			"owner": "master Tobi",
-			"image": "_hathor"
+			"image": "m_hathor"
 		},
 		{
 			"name": "Selikand",
 			"text": "Campione delle Terre Sabbiose",
 			"owner": "",
-			"image": "_selikand"
+			"image": "m_selikand"
 		},
 		{
 			"name": "Yamanos",
 			"text": "Gran Sciamano delle Terre Fredde",
 			"owner": "",
-			"image": "_yamanos"
+			"image": "m_yamanos"
 		},
 		{
 			"name": "Eiyda",
 			"text": "Somma Sciamana Terre Fredde",
 			"owner": "",
-			"image": "_eiyda"
+			"image": "m_eiyda"
 		},
 		{
 			"name": "Selhea",
 			"text": "Campionessa delle Terre Fredde",
 			"owner": "",
-			"image": "_selhea"
+			"image": "m_selhea"
 		},
 		{
 			"name": "Zareb",
 			"text": "Sommo Sciamano delle Terre Calde",
 			"owner": "",
-			"image": "_zareb"
+			"image": "m_zareb"
 		}
 	]
 }

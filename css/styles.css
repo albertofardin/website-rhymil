@@ -15,7 +15,8 @@
 .panel-content { display:block; }
 .panel-section { display:none; }
 .panel-section.is-active { display:block; }
-.panel-list { list-style:none; padding:0; margin:0; display:grid; gap:8px; }
+.panel-list { list-style:none; padding:0; margin:0; display:grid; gap:8px; margin-top: 20px; }
+.panel-list li { margin:0; padding: 0; }
 .panel-item a {
   display:flex; align-items:center; gap:10px; padding:12px; border-radius:12px; background:#f8fafc; border:1px solid #e5e7eb; color:#111827; text-decoration:none;
 }
@@ -24,6 +25,8 @@
   position:absolute; right:10px; top:8px; border:1px solid #e5e7eb; background:rgba(17,24,39,.06);
   color:#111827; font-size:18px; padding:8px 10px; border-radius:10px; cursor:pointer; line-height: 1;
 }
+.panel-section .pswp-gallery img { border-radius: 5px; }
+.panel-section header { font-size: 12px; line-height: 16px; margin-top: 15px;}
 
 .myimage-name {
   color: #ffffff;
@@ -67,6 +70,7 @@
 .shots { display:grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap:10px; margin-top:12px; }
 .shots img { width:100%; height:auto; border-radius:14px; border:1px solid rgba(255,255,255,.15); box-shadow:0 6px 18px rgba(0,0,0,.35); }
 @media (max-width: 640px) { .shots { grid-template-columns:1fr; } }
+
 
 
 /* ================== Custom styles ================== */
@@ -136,4 +140,3 @@
 		color: #fff;
 	}
 }
-

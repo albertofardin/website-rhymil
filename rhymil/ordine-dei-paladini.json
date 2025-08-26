@@ -6,31 +6,31 @@
 			"name": "Hermes Calighe",
 			"text": "Mezz'elfo dall'orecchio sempre pronto a captare ogni nuova notizia e pettegolezzo, Hermes è un giovane paladino che non ha paura di mettersi in gioco per perseguire uno scopo più grande. Molto saldo nei suoi principi morali, dovrebbe capire che le sue convinzioni e le sue idee forse non sono sempre oggettivamente le migliori.",
 			"owner": "Mattia De Zorzi",
-			"image": "hermes"
+			"image": "p_hermes"
 		},
 		{
 			"name": "Ansem Towermoon",
 			"text": "Paladino da scrivania che si è ritrovato dentro qualcosa più grande lui. Ha un cuore grande e giusto, per questo l'immobilismo spesso imposto dalla legge lo rende irascibile e scostante. Tuttavia la sua fede non ha mai vacillato.",
 			"owner": "Thomas Tomè",
-			"image": "ansen"
+			"image": "p_ansen"
 		},
 		{
 			"name": "Boreas Bonaventura",
 			"text": "Una Paladina alle prima armi, fresca fresca di accademia, fa del suo meglio per risolvere le situazioni in modo pacifico. Nonostante abbia ancora moltissimo da imparare, il suo sogno è quello di diventare un medico da campo e di salvare vite in battaglia.",
 			"owner": "Cora Oian",
-			"image": "boreas"
+			"image": "p_boreas"
 		},
 		{
 			"name": "Walfinas",
 			"text": "",
 			"owner": "",
-			"image": "walfinas"
+			"image": "p_walfinas"
 		},
 		{
 			"name": "Aramantha",
 			"text": "",
 			"owner": "",
-			"image": "aramantha"
+			"image": "p_aramantha"
 		}
 	],
 	"masters": [
@@ -38,25 +38,31 @@
 			"name": "Teodor Kilkan",
 			"text": "Primo Paladino",
 			"owner": "master Lorenzo",
-			"image": "_teodor"
+			"image": "m_teodor"
 		},
 		{
 			"name": "Gilidian Ayrtor",
 			"text": "Comandante delle Armate",
 			"owner": "master Alessandro",
-			"image": "_gilidian"
+			"image": "m_gilidian"
 		},
 		{
 			"name": "Gerard Holdren",
 			"text": "Tenente. Holdren è sempre stato uno stacanovista, ha sempre messo la sua vocazione prima di ogni cosa, anche della vita privata. Tanto quanto ligio e zelante è anche alla mano con una battuta pronta per sdrammatizzare, è sempre gentile e disponibile e difficilmente perde le staffe, pure nel cuore della battaglia! La sua fredda calma è sempre stato un motivo di disagio tra i suoi colleghi. ",
 			"owner": "master Alberto",
-			"image": "_gerard"
+			"image": "m_gerard"
 		},
 		{
 			"name": "Damian Kolser",
 			"text": "Sacrestano",
 			"owner": "",
-			"image": "_damian"
+			"image": "m_damian"
+		},
+		{
+			"name": "Alider Westrol",
+			"text": "Sacrestano",
+			"owner": "",
+			"image": "m_alider"
 		}
 	]
 }

@@ -6,25 +6,25 @@
 			"name": "Delphine Belinfer",
 			"text": "Pacata, decisa e talvolta chiassosa, ma solo quando non riesce a farsi sentire, o perde il controllo delle proprie emozioni, e l'unico modo che conosce è urlare, merito di essere cresciuta con tre fratelli. Ciò nonostante riesce anche a mostrare qualche lato dolce e sensibile. Cerca sempre di non essere invasiva e trovare le parole giuste per non ferire, ma la sua mente molto semplice spesso le fa dire in modo ingenuo e spontaneo il suo pensiero. Per fortuna i suoi fratelli dell'Ordine Clericale la capiscono. E' una delle figure che si può incontrare più spesso sui campi di battaglia per medicare e curare le ferite, tramite i favori divini della grande madre Ewylion e qualche insegnamento dell'Ordine degli Eruditi.",
 			"owner": "Adriana Pierro",
-			"image": "delphine"
+			"image": "p_delphine"
 		},
 		{
 			"name": "Linhardt Aegis",
 			"text": "Linhardt è un uomo che ha passato decisamente la 30ina di anni. Ha sempre una buona parola per tutti, e non si tira mai indietro se c'è da prestare aiuto. È letteralmente la bontà fatta uomo. Fervente credente della Dea Madre Ewylion, si colloca fra le sorelle e i fratelli della via della Salute. Non contento, si sta applicando come Erudita diviso quindi fra l'arte medica e quella alchemica. Lo sentirete parlare spesso della sua Navimbur, o di quanto sia affezionato a Savannah Mohr.",
 			"owner": "Andrea Di Vico",
-			"image": "linhardt"
+			"image": "p_linhardt"
 		},
 		{
 			"name": "Ahryn",
 			"text": "",
 			"owner": "",
-			"image": "ahryn"
+			"image": "p_ahryn"
 		},
 		{
 			"name": "Hodo",
 			"text": "",
 			"owner": "",
-			"image": "hodo"
+			"image": "p_hodo"
 		}
 	],
 	"masters": [
@@ -32,25 +32,25 @@
 			"name": "Padre Ezekiel",
 			"text": "Voce degli Eletti delle Vie. Chierico della Via dell’Armonia e della Salute.",
 			"owner": "master Tobi",
-			"image": "_ezekiel"
+			"image": "m_ezekiel"
 		},
 		{
 			"name": "Padre Raphael",
 			"text": "Chierico della Via dell’Ordine e Giustizia.",
 			"owner": "master Jonny",
-			"image": "_raphael"
+			"image": "m_raphael"
 		},
 		{
 			"name": "Me’Ber Roccialuce",
 			"text": "Chierica viaggiatrice. Il suo motto è `Tutti possono redimersi, a volte serve solo il giusto incoraggiamento`",
 			"owner": "master Jonny",
-			"image": "_meber"
+			"image": "m_meber"
 		},
 		{
 			"name": "Primo Inquisitore",
 			"text": "Capo del corpo degli inquisitori",
 			"owner": "master Tobi",
-			"image": "_primoinquisitore"
+			"image": "m_primoinquisitore"
 		}
 	]
 }
