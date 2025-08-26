@@ -25,6 +25,7 @@
   position:absolute; right:10px; top:8px; border:1px solid #e5e7eb; background:rgba(17,24,39,.06);
   color:#111827; font-size:18px; padding:8px 10px; border-radius:10px; cursor:pointer; line-height: 1;
 }
+.panel-section .pswp-gallery { text-align: center; }
 .panel-section .pswp-gallery img { border-radius: 5px; }
 .panel-section header { font-size: 12px; line-height: 16px; margin-top: 15px;}
 

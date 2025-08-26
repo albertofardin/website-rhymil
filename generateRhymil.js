@@ -78,14 +78,15 @@ function bumpVersionInHtml(html) {
 // ---- Markup builders -------------------------------------------------------
 function anchorFor(item, baseHref) {
   const imgName = (item.image || '').replace(/\.(jpg|jpeg|png|webp)$/i, '');
-  const href = path.posix.join(baseHref, `${imgName}.png`);
+  const hrefLarge = path.posix.join(baseHref, `${imgName}.png`);
+  const hrefThumb = path.posix.join(baseHref, `thumb/${imgName}.png`);
   const name = escapeHtml(item.name || '');
   const owner = escapeHtml(item.owner || '');
   const text = escapeHtml(item.text || '');
 
   return `
-  <a href="${href}" data-pswp-width="1080" data-pswp-height="1350" title="${name}">
-    <img src="${href}" width="110" alt="${name}" loading="lazy" />
+  <a href="${hrefLarge}" data-pswp-width="1080" data-pswp-height="1350" title="${name}">
+    <img src="${hrefThumb}" width="110" alt="${name}" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">${name}</span>
       ${owner && `<span class="myimage-owner">- ${owner}</span><br />`}
