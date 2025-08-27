@@ -10,20 +10,20 @@
   max-height:80vh; overflow:auto; transform: translateY(100%); transition: transform .32s cubic-bezier(.2,.8,.2,1); box-shadow: 0 -10px 30px rgba(0,0,0,.12);
 }
 .panel-sheet.is-open .panel-panel { transform: translateY(0); }
-.panel-title { margin: 0 0 6px; font-size: 1.1rem; }
+.panel-title { margin: 0 50px 15px 5px; font-size: 1.1rem; }
 .panel-desc { margin: 0 0 12px; color:#6b7280; }
 .panel-content { display:block; }
 .panel-section { display:none; }
 .panel-section.is-active { display:block; }
-.panel-list { list-style:none; padding:0; margin:0; display:grid; gap:8px; margin-top: 20px; }
+.panel-list { list-style:none; padding:0; margin:0; display:grid; gap:8px; margin-top: 20px; padding-bottom: 25px; }
 .panel-list li { margin:0; padding: 0; }
 .panel-item a {
-  display:flex; align-items:center; gap:10px; padding:12px; border-radius:12px; background:#f8fafc; border:1px solid #e5e7eb; color:#111827; text-decoration:none;
+  display:flex; align-items:center; gap:10px; padding:12px; border-radius:0.35em; background:#f8fafc; border:1px solid #e5e7eb; color:#111827; text-decoration:none;
 }
 .panel-item a:hover { background:#f1f5f9; }
 .panel-close {
-  position:absolute; right:10px; top:8px; border:1px solid #e5e7eb; background:rgba(17,24,39,.06);
-  color:#111827; font-size:18px; padding:8px 10px; border-radius:10px; cursor:pointer; line-height: 1;
+  position:absolute; right:16px; top:8px; border:1px solid #e5e7eb; background:#f8fafc;
+  color:#111827; font-size:18px; padding:8px 10px; border-radius:0.35em; cursor:pointer; line-height: 1;
 }
 .panel-section .pswp-gallery { text-align: center; }
 .panel-section .pswp-gallery img { border-radius: 5px; }
@@ -103,41 +103,17 @@
 	line-height: 1.5em;
 }
 
-.actions .instagram {
-	display: inline-block;
-	width: 49%;
-	 * {
-		color: #E4405F;
-	}
-	*:hover {
-		border-color: #E4405F;
-	}
+hr {
+	border: none;
+    height: 1px;
+    background-color: #e5e7eb;
+    margin: 1rem 0;
 }
-.actions .facebook {
-	display: inline-block;
-	width: 49%;
-	float: right;
-	 * {
-		color: #1877F2;
-	}
-	*:hover {
-		border-color: #1877F2;
-	}
-}
-.actions .whatsapp {
-	:before {
-		color: #25D366;
-	}
-	 *:hover {
-		border-color: #25D366;
-	}
-}
-
 
 .button--primary {
   background-color: #f54900 !important;
   border-color: #f54900 !important;
-	* {
-		color: #fff;
+	*:before, * {
+		color: #fff !important;
 	}
 }
