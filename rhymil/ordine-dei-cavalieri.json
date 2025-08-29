@@ -1,5 +1,6 @@
 {
-	"name": "⚔️ Ordine dei Cavalieri",
+	"icon": "⚔️",
+	"name": "Ordine dei Cavalieri",
 	"text": "Non sono semplici soldati. Sono strateghi, duellanti e comandanti temprati dal dovere. Essere cavaliere è tracciare la linea tra il caos e l’ordine, tra la parola data e il tradimento. Alcuni combattono in sella, altri a piedi, altri ancora vincono guerre con i loro piani prima che la battaglia inizi. Dietro ogni volto c’è un giuramento: difendere, proteggere, mantenere la legge. Le loro spade e i loro scudi non inseguono gloria, ma la pace che solo la giustizia può donare.",
 	"players": [
 		{

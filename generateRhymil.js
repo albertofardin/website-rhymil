@@ -96,16 +96,18 @@ function anchorFor(item, baseHref) {
 }
 
 function buildSection(data, opts) {
-  const { slug, baseHref, width, height, thumbWidth } = opts;
+  const { slug, baseHref} = opts;
   const sectionId = `section-${slug}`;
   const galleryId = `gallery--${slug}`;
-  const lead = data.text ? `<p>${escapeHtml(data.text)}</p>` : '';
   const players = (data.players || []).map(p =>anchorFor(p, baseHref)).join('\n');
   const masters = (data.masters || []).map(m =>anchorFor(m, baseHref)).join('\n');
   return `
   <section id="${sectionId}" class="panel-section">
-    <header class="major">
-      ${lead}
+    <h3 class="panel-title">
+      ${escapeHtml(data.icon) + " " +escapeHtml(data.name)}
+    </h3>
+    <header>
+      <p>${escapeHtml(data.text)}</p>
     </header>
     <div class="pswp-gallery" id="${galleryId}">
       ${players}

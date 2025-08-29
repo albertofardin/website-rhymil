@@ -59,7 +59,6 @@ if (installBtn && installModal) {
 /* ------------------------ Panel riutilizzabile ---------------------- */
 const sheet = document.getElementById('uiPanelSheet');
 const panel = sheet.querySelector('.panel-panel');
-const pTitle = sheet.querySelector('.panel-title');
 const pContent = sheet.querySelector('.panel-content');
 
 function openSheet(){ sheet.classList.add('is-open'); sheet.setAttribute('aria-hidden','false'); document.documentElement.style.overflow='hidden'; setTimeout(()=>panel.focus({preventScroll:true}),0); }
@@ -72,9 +71,7 @@ document.addEventListener('click', (e) => {
   const t = e.target.closest('[data-panel-open]');
   if (!t) return;
   e.preventDefault();
-  const title = t.getAttribute('data-panel-title') || '';
   const targetSel = t.getAttribute('data-panel-target');
-  pTitle.textContent = title;
 
   // mostra la sezione richiesta (il contenuto è già nel DOM)
   const all = pContent.querySelectorAll('.panel-section');
