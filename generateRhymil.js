@@ -14,12 +14,12 @@ const path = require('path');
 // ---- Config/Target ---------------------------------------------------------
 const TARGET = [
   'fratellanza-dei-pirati',
-  'ordine-dei-cavalieri',
-  'ordine-dei-paladini',
-  'ordine-dei-maghi',
+  'stato-del-popolo-libero',
   'ordine-clericale',
-  'terre-barbariche',
-  'stato-del-popolo-libero'
+  'ordine-dei-maghi',
+  'ordine-dei-paladini',
+  'ordine-dei-cavalieri',
+  'terre-barbariche'
 ];
 
 // ---- Utils -----------------------------------------------------------------
@@ -95,16 +95,15 @@ function anchorFor(item, baseHref) {
   </a>`;
 }
 
-function buildSection(data, opts) {
-  const { slug, baseHref} = opts;
+function buildSection(data, slug, baseHref) {
   const sectionId = `section-${slug}`;
   const galleryId = `gallery--${slug}`;
-  const players = (data.players || []).map(p =>anchorFor(p, baseHref)).join('\n');
-  const masters = (data.masters || []).map(m =>anchorFor(m, baseHref)).join('\n');
+  const players = (data.players || []).map(p => anchorFor(p, baseHref)).join('\n');
+  const masters = (data.masters || []).map(m => anchorFor(m, baseHref)).join('\n');
   return `
   <section id="${sectionId}" class="panel-section">
     <h3 class="panel-title">
-      ${escapeHtml(data.icon) + " " +escapeHtml(data.name)}
+      ${escapeHtml(data.icon) + " " + escapeHtml(data.name)}
     </h3>
     <header>
       <p>${escapeHtml(data.text)}</p>
@@ -116,9 +115,92 @@ function buildSection(data, opts) {
   </section>`;
 }
 
+// ===== Builders & upsert per <article> in .factions ====================
+function buildArticle(data, slug) {
+  // Rispetta la struttura richiesta
+  return `
+        <article>
+          <a
+            href="#"
+            data-panel-open
+            data-panel-target="#section-${slug}"
+          >
+            <img src="./rhymil/${slug}.png" />
+          </a>
+        </article>`;
+}
+
+function upsertArticle(html, slug, articleHtml) {
+  // 1) trova l'apertura esatta di <div class="factions">
+  const openRe = /<div\s+class=["']factions["'][^>]*>/i;
+  const openMatch = openRe.exec(html);
+
+  // Se non esiste, crea il blocco prima di </body>
+  if (!openMatch) {
+    const newBlock = `\n<div class="factions">\n${articleHtml.trim()}\n</div>\n`;
+    if (/<\/body>/i.test(html)) {
+      return html.replace(/<\/body>/i, `${newBlock}</body>`);
+    }
+    return html + newBlock; // fallback estremo
+  }
+
+  const openIdx = openMatch.index;
+  const afterOpenIdx = openIdx + openMatch[0].length;
+
+  // 2) trova la </div> che chiude proprio questa .factions usando un contatore
+  const tagRe = /<\/?div\b[^>]*>/gi;
+  tagRe.lastIndex = afterOpenIdx;
+  let depth = 1;
+  let closeStart = -1;
+  let closeEnd = -1;
+
+  for (let m; (m = tagRe.exec(html)); ) {
+    if (m[0][1] === '/') depth--; else depth++;
+    if (depth === 0) { // chiusura della .factions
+      closeStart = m.index;
+      closeEnd = m.index + m[0].length;
+      break;
+    }
+  }
+
+  if (closeStart === -1) {
+    console.warn('⚠️ Chiusura </div> di .factions non trovata, nessuna modifica.');
+    return html;
+  }
+
+  // 3) contenuto interno corrente
+  let inner = html.slice(afterOpenIdx, closeStart).replace(/\r\n/g, '\n');
+
+  // 4) elimina TUTTI gli <article> già presenti per lo slug, per evitare duplicati
+  const itemRe = new RegExp(
+    `<article[\\s\\S]*?data-panel-target="#section-${slug}"[\\s\\S]*?<\\/article>`,
+    'ig'
+  );
+  inner = inner.replace(itemRe, '').trimEnd();
+
+  // 5) calcola l'indentazione da usare per il nuovo article
+  const indentMatch = /\n([ \t]*)<article\b/.exec(inner);
+  const indent = indentMatch ? indentMatch[1] : '        '; // 8 spazi default
+
+  // 6) normalizza e indenta l'article da inserire
+  const articleIndented =
+    articleHtml
+      .trim()
+      .split('\n')
+      .map(line => indent + line)
+      .join('\n') + '\n';
+
+  if (!inner.endsWith('\n')) inner += '\n';
+  inner += articleIndented;
+
+  // 7) ricompone l'HTML senza toccare nulla fuori da .factions
+  return html.slice(0, afterOpenIdx) + inner + html.slice(closeStart);
+}
+
+
 // Inserisce o sostituisce una section con id specifico
-function upsertSection(html, sectionId, newSection) {
-  const sectionRegex = new RegExp(`<section\\s+id="${sectionId}"[\\s\\S]*?<\\/section>`, 'i');
+function upsertSection(html, slug, newSection) {
+  const sectionRegex = new RegExp(`<section\\s+id="section-${slug}"[\\s\\S]*?<\\/section>`, 'i');
 
   if (sectionRegex.test(html)) {
     return html.replace(sectionRegex, newSection);
@@ -183,17 +265,13 @@ async function main() {
     }
 
     const baseHref = `/${baseRoot}/${slug}`.replace(/\/{2,}/g, '/');
-    const sectionHtml = buildSection(data, {
-      slug,
-      baseHref,
-      width: imgWidth,
-      height: imgHeight,
-      thumbWidth: thumbW,
-    });
+    const sectionHtml = buildSection(data, slug, baseHref);
+    const articleHtml = buildArticle(data, slug);
 
-    const sectionId = `section-${slug}`;
-    html = upsertSection(html, sectionId, sectionHtml);
-    console.log(`✅ Sezione aggiornata: ${sectionId}`);
+    html = upsertSection(html, slug, sectionHtml);
+    html = upsertArticle(html, slug, articleHtml);
+
+    console.log(`✅ Update: ${slug}`);
   }
 
   html = bumpVersionInHtml(html);
