@@ -86,7 +86,7 @@ function anchorFor(item, baseHref) {
 
   return `
   <a href="${hrefLarge}" data-pswp-width="1080" data-pswp-height="1350" title="${name}">
-    <img src="${hrefThumb}" width="110" alt="${name}" loading="lazy" />
+    <img src="${hrefThumb}" width="110" alt="${name}"  />
     <span class="pswp-caption-content">
       <span class="myimage-name">${name}</span>
       ${owner && `<span class="myimage-owner">- ${owner}</span><br />`}
