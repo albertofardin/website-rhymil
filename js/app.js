@@ -5,7 +5,7 @@ import PhotoSwipeDynamicCaption from '/photoswipe/photoswipe-caption-plugin.esm.
 
 /* -------------------- Service Worker (opzionale) -------------------- */
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js').catch(console.error);
+  navigator.serviceWorker.register('js/sw.js').catch(console.error);
 }
 
 /* ----------------------- PWA install: bottone ----------------------- */

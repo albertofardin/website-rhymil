@@ -13,12 +13,12 @@ const path = require('path');
 
 // ---- Config/Target ---------------------------------------------------------
 const TARGET = [
-  'fratellanza-dei-pirati',
-  'stato-del-popolo-libero',
-  'ordine-clericale',
-  'ordine-dei-maghi',
   'ordine-dei-paladini',
   'ordine-dei-cavalieri',
+  'ordine-clericale',
+  'ordine-dei-maghi',
+  'fratellanza-dei-pirati',
+  'stato-del-popolo-libero',
   'terre-barbariche'
 ];
 
@@ -76,7 +76,7 @@ function bumpVersionInHtml(html) {
 }
 
 // ---- Markup builders -------------------------------------------------------
-function anchorFor(item, baseHref) {
+function anchorFor(item, index, baseHref) {
   const imgName = (item.image || '').replace(/\.(jpg|jpeg|png|webp)$/i, '');
   const hrefLarge = path.posix.join(baseHref, `${imgName}.png`);
   const hrefThumb = path.posix.join(baseHref, `thumb/${imgName}.png`);
@@ -86,31 +86,26 @@ function anchorFor(item, baseHref) {
 
   return `
   <a href="${hrefLarge}" data-pswp-width="1080" data-pswp-height="1350" title="${name}">
-    <img src="${hrefThumb}" width="110" alt="${name}"  />
+    <img src="${hrefThumb}" width="110" alt="${name}" ${index < 8 ? "": 'loading="lazy"'} />
     <span class="pswp-caption-content">
       <span class="myimage-name">${name}</span>
-      ${owner && `<span class="myimage-owner">- ${owner}</span><br />`}
+      ${!owner ? "": `<span class="myimage-owner">- ${owner}</span><br />`}
       <span class="myimage-desc">${text}</span>
     </span>
   </a>`;
 }
 
 function buildSection(data, slug, baseHref) {
-  const sectionId = `section-${slug}`;
-  const galleryId = `gallery--${slug}`;
-  const players = (data.players || []).map(p => anchorFor(p, baseHref)).join('\n');
-  const masters = (data.masters || []).map(m => anchorFor(m, baseHref)).join('\n');
   return `
-  <section id="${sectionId}" class="panel-section">
+  <section id="section-${slug}" class="panel-section">
     <h3 class="panel-title">
       ${escapeHtml(data.icon) + " " + escapeHtml(data.name)}
     </h3>
     <header>
       <p>${escapeHtml(data.text)}</p>
     </header>
-    <div class="pswp-gallery" id="${galleryId}">
-      ${players}
-      ${masters}
+    <div class="pswp-gallery" id="gallery--${slug}">
+      ${[].concat(data.players || [], data.masters || []).map((p, i) => anchorFor(p, i, baseHref)).join('\n')}
     </div>
   </section>`;
 }
