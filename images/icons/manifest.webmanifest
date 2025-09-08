@@ -1,7 +1,7 @@
 {
-  "name": "RhymilHub",
-  "short_name": "RhymilHub",
-  "description":"centralizzatore dei link ed illustrazioni della campagna Rhymil",
+  "name": "Rhymil",
+  "short_name": "Rhymil",
+  "description":"Centralizzatore dei documenti, link ed illustrazioni della campagna di gioco di ruolo dal vivo Rhymil",
   "start_url": "/index.html",
   "scope": "/",
   "display": "standalone",

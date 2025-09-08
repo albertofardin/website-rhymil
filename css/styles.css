@@ -98,6 +98,7 @@ h6 { font-size: 0.7em; line-height: 1.5em; }
   border-radius: 0.35em;
   display: block;
   width: 100%;
+  border: 1px solid #e5e7eb;
 }
 
 @media screen and (max-width: 980px) {
@@ -456,7 +457,7 @@ ul.actions li *:hover { border-color: rgb(120, 120, 120); }
 .install-panel.is-active { display:block; }
 
 .steps { margin:0 0 12px 0; padding-left: 1.2em; }
-.steps li { margin:6px 0; }
+.steps li { margin:6px 0;     list-style: decimal; }
 
 .shots {
   display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:10px; margin-top:12px;
