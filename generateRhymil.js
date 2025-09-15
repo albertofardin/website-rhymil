@@ -8,18 +8,18 @@
  *   node generateRhymil.js --dir ./rhymil --html ./index.html --out ./index.html --baseRoot rhymil --width 1200 --height 750 --thumb 150
  */
 
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
 // ---- Config/Target ---------------------------------------------------------
 const TARGET = [
-  'ordine-dei-paladini',
-  'ordine-dei-cavalieri',
-  'ordine-clericale',
-  'ordine-dei-maghi',
-  'fratellanza-dei-pirati',
-  'stato-del-popolo-libero',
-  'terre-barbariche'
+  "ordine-dei-paladini",
+  "ordine-dei-cavalieri",
+  "ordine-clericale",
+  "ordine-dei-maghi",
+  "fratellanza-dei-pirati",
+  "stato-del-popolo-libero",
+  "terre-barbariche",
 ];
 
 // ---- Utils -----------------------------------------------------------------
@@ -27,48 +27,56 @@ function parseArgs(argv) {
   const args = {};
   for (let i = 2; i < argv.length; i++) {
     const a = argv[i];
-    if (a.startsWith('--')) {
+    if (a.startsWith("--")) {
       const key = a.slice(2);
-      const val = argv[i + 1] && !argv[i + 1].startsWith('--') ? argv[++i] : true;
+      const val =
+        argv[i + 1] && !argv[i + 1].startsWith("--") ? argv[++i] : true;
       args[key] = val;
     }
   }
   return args;
 }
 
-function escapeHtml(s = '') {
+function escapeHtml(s = "") {
   return String(s)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#39;');
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
 }
 
 function titleFromSlug(slug) {
-  return slug
-    .replace(/-/g, ' ')
-    .replace(/\b\w/g, m => m.toUpperCase());
+  return slug.replace(/-/g, " ").replace(/\b\w/g, (m) => m.toUpperCase());
 }
 
 // Permette JSON un po' "lasco": commenti/trailing commas/BOM
 function loadJsonLoose(p) {
-  let s = fs.readFileSync(p, 'utf8');
-  s = s.replace(/^\uFEFF/, '');                // BOM
-  s = s.replace(/\/\/.*$/mg, '');              // // comments
-  s = s.replace(/\/\*[\s\S]*?\*\//g, '');      // /* */ comments
-  s = s.replace(/,(\s*[}\]])/g, '$1');         // trailing comma
+  let s = fs.readFileSync(p, "utf8");
+  s = s.replace(/^\uFEFF/, ""); // BOM
+  s = s.replace(/\/\/.*$/gm, ""); // // comments
+  s = s.replace(/\/\*[\s\S]*?\*\//g, ""); // /* */ comments
+  s = s.replace(/,(\s*[}\]])/g, "$1"); // trailing comma
   return JSON.parse(s);
 }
 
 // ---- Version bump ----------------------------------------------------------
 function bumpVersionInHtml(html) {
-  const re = /(<p\s+class=["']version["'][^>]*>[\s\S]*?\b[vV])(\d+(?:[.,]\d+)?)([\s\S]*?<\/p>)/i;
+  const re =
+    /(<p\s+class=["']version["'][^>]*>[\s\S]*?\b[vV])(\d+(?:[.,]\d+)?)([\s\S]*?<\/p>)/i;
   const m = html.match(re);
-  if (!m) { console.warn('⚠️  Nessun <p class="version">…</p> trovato. Salto incremento.'); return html; }
-  const raw = m[2].trim().replace(',', '.');
+  if (!m) {
+    console.warn(
+      '⚠️  Nessun <p class="version">…</p> trovato. Salto incremento.'
+    );
+    return html;
+  }
+  const raw = m[2].trim().replace(",", ".");
   const curr = parseFloat(raw);
-  if (Number.isNaN(curr)) { console.warn('⚠️  Valore versione non numerico:', raw); return html; }
+  if (Number.isNaN(curr)) {
+    console.warn("⚠️  Valore versione non numerico:", raw);
+    return html;
+  }
   const next = Math.round((curr + 0.1) * 10) / 10;
   const nextStr = next.toFixed(1);
   console.log(`🔢 Versione: ${curr.toFixed(1)} → ${nextStr}`);
@@ -76,20 +84,20 @@ function bumpVersionInHtml(html) {
 }
 
 // ---- Markup builders -------------------------------------------------------
-function anchorFor(item, index, baseHref) {
-  const imgName = (item.image || '').replace(/\.(jpg|jpeg|png|webp)$/i, '');
+function anchorFor(item, baseHref) {
+  const imgName = (item.image || "").replace(/\.(jpg|jpeg|png|webp)$/i, "");
   const hrefLarge = path.posix.join(baseHref, `${imgName}.png`);
   const hrefThumb = path.posix.join(baseHref, `thumb/${imgName}.png`);
-  const name = escapeHtml(item.name || '');
-  const owner = escapeHtml(item.owner || '');
-  const text = escapeHtml(item.text || '');
+  const name = escapeHtml(item.name || "");
+  const owner = escapeHtml(item.owner || "");
+  const text = escapeHtml(item.text || "");
 
   return `
   <a href="${hrefLarge}" data-pswp-width="1080" data-pswp-height="1350" title="${name}">
-    <img src="${hrefThumb}" width="110" alt="${name}" ${index < 8 ? "": 'loading="lazy"'} />
+    <img src="${hrefThumb}" width="110" alt="${name}" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">${name}</span>
-      ${!owner ? "": `<span class="myimage-owner">- ${owner}</span><br />`}
+      ${!owner ? "" : `<span class="myimage-owner">- ${owner}</span><br />`}
       <span class="myimage-desc">${text}</span>
     </span>
   </a>`;
@@ -105,7 +113,10 @@ function buildSection(data, slug, baseHref) {
       <p>${escapeHtml(data.text)}</p>
     </header>
     <div class="pswp-gallery" id="gallery--${slug}">
-      ${[].concat(data.players || [], data.masters || []).map((p, i) => anchorFor(p, i, baseHref)).join('\n')}
+      ${[]
+        .concat(data.players || [], data.masters || [])
+        .map((p) => anchorFor(p, baseHref))
+        .join("\n")}
     </div>
   </section>`;
 }
@@ -150,8 +161,10 @@ function upsertArticle(html, slug, articleHtml) {
   let closeEnd = -1;
 
   for (let m; (m = tagRe.exec(html)); ) {
-    if (m[0][1] === '/') depth--; else depth++;
-    if (depth === 0) { // chiusura della .factions
+    if (m[0][1] === "/") depth--;
+    else depth++;
+    if (depth === 0) {
+      // chiusura della .factions
       closeStart = m.index;
       closeEnd = m.index + m[0].length;
       break;
@@ -159,43 +172,47 @@ function upsertArticle(html, slug, articleHtml) {
   }
 
   if (closeStart === -1) {
-    console.warn('⚠️ Chiusura </div> di .factions non trovata, nessuna modifica.');
+    console.warn(
+      "⚠️ Chiusura </div> di .factions non trovata, nessuna modifica."
+    );
     return html;
   }
 
   // 3) contenuto interno corrente
-  let inner = html.slice(afterOpenIdx, closeStart).replace(/\r\n/g, '\n');
+  let inner = html.slice(afterOpenIdx, closeStart).replace(/\r\n/g, "\n");
 
   // 4) elimina TUTTI gli <article> già presenti per lo slug, per evitare duplicati
   const itemRe = new RegExp(
     `<article[\\s\\S]*?data-panel-target="#section-${slug}"[\\s\\S]*?<\\/article>`,
-    'ig'
+    "ig"
   );
-  inner = inner.replace(itemRe, '').trimEnd();
+  inner = inner.replace(itemRe, "").trimEnd();
 
   // 5) calcola l'indentazione da usare per il nuovo article
   const indentMatch = /\n([ \t]*)<article\b/.exec(inner);
-  const indent = indentMatch ? indentMatch[1] : '        '; // 8 spazi default
+  const indent = indentMatch ? indentMatch[1] : "        "; // 8 spazi default
 
   // 6) normalizza e indenta l'article da inserire
   const articleIndented =
     articleHtml
       .trim()
-      .split('\n')
-      .map(line => indent + line)
-      .join('\n') + '\n';
+      .split("\n")
+      .map((line) => indent + line)
+      .join("\n") + "\n";
 
-  if (!inner.endsWith('\n')) inner += '\n';
+  if (!inner.endsWith("\n")) inner += "\n";
   inner += articleIndented;
 
   // 7) ricompone l'HTML senza toccare nulla fuori da .factions
   return html.slice(0, afterOpenIdx) + inner + html.slice(closeStart);
 }
 
-
 // Inserisce o sostituisce una section con id specifico
 function upsertSection(html, slug, newSection) {
-  const sectionRegex = new RegExp(`<section\\s+id="section-${slug}"[\\s\\S]*?<\\/section>`, 'i');
+  const sectionRegex = new RegExp(
+    `<section\\s+id="section-${slug}"[\\s\\S]*?<\\/section>`,
+    "i"
+  );
 
   if (sectionRegex.test(html)) {
     return html.replace(sectionRegex, newSection);
@@ -227,22 +244,25 @@ function upsertSection(html, slug, newSection) {
 async function main() {
   const args = parseArgs(process.argv);
 
-  const dir       = args.dir || './rhymil';
-  const htmlPath  = args.html || './index.html';
-  const outPath   = args.out  || htmlPath;
+  const dir = args.dir || "./rhymil";
+  const htmlPath = args.html || "./index.html";
+  const outPath = args.out || htmlPath;
 
   // Opzioni immagini/base
-  const baseRoot  = (args.baseRoot ? String(args.baseRoot) : 'rhymil').replace(/^\/+|\/+$/g, '');
-  const imgWidth  = Number(args.width  || 1200);
+  const baseRoot = (args.baseRoot ? String(args.baseRoot) : "rhymil").replace(
+    /^\/+|\/+$/g,
+    ""
+  );
+  const imgWidth = Number(args.width || 1200);
   const imgHeight = Number(args.height || 750);
-  const thumbW    = Number(args.thumb  || 150);
+  const thumbW = Number(args.thumb || 150);
 
   if (!fs.existsSync(htmlPath)) {
     console.error(`❌ HTML non trovato: ${htmlPath}`);
     process.exit(1);
   }
 
-  let html = fs.readFileSync(htmlPath, 'utf8');
+  let html = fs.readFileSync(htmlPath, "utf8");
 
   for (const slug of TARGET) {
     const jsonPath = path.join(dir, `${slug}.json`);
@@ -259,7 +279,7 @@ async function main() {
       continue;
     }
 
-    const baseHref = `/${baseRoot}/${slug}`.replace(/\/{2,}/g, '/');
+    const baseHref = `/${baseRoot}/${slug}`.replace(/\/{2,}/g, "/");
     const sectionHtml = buildSection(data, slug, baseHref);
     const articleHtml = buildArticle(data, slug);
 
@@ -270,11 +290,11 @@ async function main() {
   }
 
   html = bumpVersionInHtml(html);
-  fs.writeFileSync(outPath, html, 'utf8');
+  fs.writeFileSync(outPath, html, "utf8");
   console.log(`🏁 File scritto: ${outPath}`);
 }
 
-main().catch(err => {
-  console.error('❌ Errore:', err);
+main().catch((err) => {
+  console.error("❌ Errore:", err);
   process.exit(1);
 });

@@ -94,7 +94,7 @@
 
     <!-- Base -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://rhymil.netlify.app/" />
+    <meta property="og:url" content="https://rhymil.it/" />
     <meta property="og:title" content="RHYMIL" />
     <meta
       property="og:description"
@@ -102,7 +102,7 @@
     />
     <meta
       property="og:image"
-      content="https://rhymil.netlify.app/images/icons/og-image.jpg"
+      content="https://rhymil.it/images/icons/og-image.jpg"
     />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -115,13 +115,13 @@
     />
     <meta
       name="twitter:image"
-      content="https://rhymil.netlify.app/images/icons/og-image.jpg"
+      content="https://rhymil.it/images/icons/og-image.jpg"
     />
   </head>
   <body>
     <header id="header">
       <div class="inner">
-        <p class="version">v1.0</p>
+        <p class="version">v1.1</p>
         <a href="#" class="image logo"><img src="./images/avatar.png" /></a>
         <p class="description">
           Benvenuto su Rhymil, il sito web centralizzatore di link ed
@@ -277,15 +277,22 @@
           </a>
         </article>
       </div>
-      <hr />
       <ul class="actions">
         <li class="panel-item">
-          <a href="https://wa.me/3488638006" target="_blank">
-            <span class="icon solid fa-cog"></span>
-            <span>Suggerisci modifiche al sito</span></a
+          <a
+            class="button"
+            data-panel-open
+            data-panel-target="#section-webmaster"
+            href="#"
           >
+            <span class="icon solid fa-pen"></span>
+            <span>Richiedi una modifica</span>
+          </a>
         </li>
       </ul>
+      <div class="footer">
+        <small>© <span id="year"></span> Rhymil</small>
+      </div>
     </div>
 
     <!-- =================== Panel unico riutilizzabile (già nel DOM) =================== -->
@@ -303,6 +310,40 @@
           ✕
         </button>
         <div class="panel-content">
+          <section id="section-webmaster" class="panel-section">
+            <h3 class="panel-title">📩 Richiedi una modifica</h3>
+            <header class="major">
+              <p>
+                Se desideri aggiungere, modificare o rimuovere qualcosa sei nel
+                posto giusto! Il sito e le sue illustrazioni sono curate da
+                Alberto Fardin, che puoi contattare direttamente per:<br />
+                - richiedere l’aggiunta del tuo personaggio (inviando foto,
+                nome, realtà politica e breve descrizione)<br />
+                - proporre miglioramenti o correzioni<br />
+                - condividere idee e suggerimenti per rendere il sito sempre più
+                completo 🌟
+              </p>
+            </header>
+            <ul class="panel-list">
+              <li class="panel-item">
+                <a href="https://wa.me/3488638006" target="_blank">
+                  <span
+                    class="icon brands fa-whatsapp"
+                    style="color: #25d366"
+                  ></span>
+                  <span>Contatta Alberto</span></a
+                >
+              </li>
+            </ul>
+            <img
+              class="webmaster"
+              src="/images/webmaster.png"
+              width="110"
+              loading="lazy"
+              style="position: absolute; right: 60px; bottom: 0px"
+            />
+          </section>
+
           <section id="section-docs" class="panel-section">
             <h3 class="panel-title">📚 Tomi Ufficiali</h3>
             <ul class="panel-list">
@@ -420,6 +461,7 @@
                   src="/rhymil/stato-del-popolo-libero/thumb/p_savannah.png"
                   width="110"
                   alt="Savannah Morr"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Savannah Morr</span>
@@ -442,6 +484,7 @@
                   src="/rhymil/stato-del-popolo-libero/thumb/p_gilbur.png"
                   width="110"
                   alt="Gilbur Battifoglia"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Gilbur Battifoglia</span>
@@ -469,6 +512,7 @@
                   src="/rhymil/stato-del-popolo-libero/thumb/p_nefah.png"
                   width="110"
                   alt="Nefah Nersora"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Nefah Nersora</span>
@@ -487,6 +531,7 @@
                   src="/rhymil/stato-del-popolo-libero/thumb/p_lucien.png"
                   width="110"
                   alt="Lucien"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Lucien</span>
@@ -505,6 +550,7 @@
                   src="/rhymil/stato-del-popolo-libero/thumb/p_floren.png"
                   width="110"
                   alt="Floren"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Floren</span>
@@ -524,6 +570,7 @@
                   src="/rhymil/stato-del-popolo-libero/thumb/p_eilwood.png"
                   width="110"
                   alt="Eilwood"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Eilwood</span>
@@ -542,6 +589,7 @@
                   src="/rhymil/stato-del-popolo-libero/thumb/m_edgard.png"
                   width="110"
                   alt="Edgard Holsch"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Edgard Holsch</span>
@@ -560,6 +608,7 @@
                   src="/rhymil/stato-del-popolo-libero/thumb/m_sasha.png"
                   width="110"
                   alt="Sasha Waivyr"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Sasha Waivyr</span>
@@ -642,6 +691,7 @@
                   src="/rhymil/terre-barbariche/thumb/p_reis.png"
                   width="110"
                   alt="Reis"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Reis</span>
@@ -660,6 +710,7 @@
                   src="/rhymil/terre-barbariche/thumb/p_yana.png"
                   width="110"
                   alt="Yana"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Yana</span>
@@ -678,6 +729,7 @@
                   src="/rhymil/terre-barbariche/thumb/p_atbae.png"
                   width="110"
                   alt="Atbae Al&#39;Namir"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Atbae Al&#39;Namir</span>
@@ -696,6 +748,7 @@
                   src="/rhymil/terre-barbariche/thumb/p_volkmar.png"
                   width="110"
                   alt="Volkmar Starkad"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Volkmar Starkad</span>
@@ -719,6 +772,7 @@
                   src="/rhymil/terre-barbariche/thumb/p_quinu.png"
                   width="110"
                   alt="Quinu"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Quinu</span>
@@ -737,6 +791,7 @@
                   src="/rhymil/terre-barbariche/thumb/p_kunshae.png"
                   width="110"
                   alt="Kunshae Sagfuok"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Kunshae Sagfuok</span>
@@ -759,6 +814,7 @@
                   src="/rhymil/terre-barbariche/thumb/p_milten.png"
                   width="110"
                   alt="Milten"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Milten</span>
@@ -777,6 +833,7 @@
                   src="/rhymil/terre-barbariche/thumb/p_astrid.png"
                   width="110"
                   alt="Astrid"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Astrid</span>
@@ -974,6 +1031,7 @@
                   src="/rhymil/ordine-clericale/thumb/p_delphine.png"
                   width="110"
                   alt="Delphine Belinfer"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Delphine Belinfer</span>
@@ -1006,6 +1064,7 @@
                   src="/rhymil/ordine-clericale/thumb/p_linhardt.png"
                   width="110"
                   alt="Linhardt Aegis"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Linhardt Aegis</span>
@@ -1034,6 +1093,7 @@
                   src="/rhymil/ordine-clericale/thumb/p_ahryn.png"
                   width="110"
                   alt="Ahryn"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Ahryn</span>
@@ -1052,6 +1112,7 @@
                   src="/rhymil/ordine-clericale/thumb/p_hodo.png"
                   width="110"
                   alt="Hodo"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Hodo</span>
@@ -1070,6 +1131,7 @@
                   src="/rhymil/ordine-clericale/thumb/m_ezekiel.png"
                   width="110"
                   alt="Padre Ezekiel"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Padre Ezekiel</span>
@@ -1091,6 +1153,7 @@
                   src="/rhymil/ordine-clericale/thumb/m_raphael.png"
                   width="110"
                   alt="Padre Raphael"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Padre Raphael</span>
@@ -1111,6 +1174,7 @@
                   src="/rhymil/ordine-clericale/thumb/m_meber.png"
                   width="110"
                   alt="Me’Ber Roccialuce"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Me’Ber Roccialuce</span>
@@ -1133,6 +1197,7 @@
                   src="/rhymil/ordine-clericale/thumb/m_primoinquisitore.png"
                   width="110"
                   alt="Primo Inquisitore"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Primo Inquisitore</span>
@@ -1171,6 +1236,7 @@
                   src="/rhymil/ordine-dei-maghi/thumb/p_julius.png"
                   width="110"
                   alt="Julius"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Julius</span>
@@ -1189,6 +1255,7 @@
                   src="/rhymil/ordine-dei-maghi/thumb/p_gwin.png"
                   width="110"
                   alt="Gwin"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Gwin</span>
@@ -1207,6 +1274,7 @@
                   src="/rhymil/ordine-dei-maghi/thumb/p_cordelia.png"
                   width="110"
                   alt="Cordelia"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Cordelia</span>
@@ -1225,6 +1293,7 @@
                   src="/rhymil/ordine-dei-maghi/thumb/p_cedric.png"
                   width="110"
                   alt="Cedric Throne"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Cedric Throne</span>
@@ -1243,6 +1312,7 @@
                   src="/rhymil/ordine-dei-maghi/thumb/p_iseth.png"
                   width="110"
                   alt="Iseth Somberlain"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Iseth Somberlain</span>
@@ -1261,6 +1331,7 @@
                   src="/rhymil/ordine-dei-maghi/thumb/m_geor.png"
                   width="110"
                   alt="Geor Dun"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Geor Dun</span>
@@ -1279,6 +1350,7 @@
                   src="/rhymil/ordine-dei-maghi/thumb/m_agnes.png"
                   width="110"
                   alt="Agnes Roboris"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Agnes Roboris</span>
@@ -1297,6 +1369,7 @@
                   src="/rhymil/ordine-dei-maghi/thumb/m_felitya.png"
                   width="110"
                   alt="Felitya"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Felitya</span>
@@ -1334,6 +1407,7 @@
                   src="/rhymil/ordine-dei-paladini/thumb/p_hermes.png"
                   width="110"
                   alt="Hermes Calighe"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Hermes Calighe</span>
@@ -1360,6 +1434,7 @@
                   src="/rhymil/ordine-dei-paladini/thumb/p_ansem.png"
                   width="110"
                   alt="Ansem Towermoon"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Ansem Towermoon</span>
@@ -1384,6 +1459,7 @@
                   src="/rhymil/ordine-dei-paladini/thumb/p_boreas.png"
                   width="110"
                   alt="Boreas Bonaventura"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Boreas Bonaventura</span>
@@ -1408,6 +1484,7 @@
                   src="/rhymil/ordine-dei-paladini/thumb/p_walfinas.png"
                   width="110"
                   alt="Walfinas"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Walfinas</span>
@@ -1426,6 +1503,7 @@
                   src="/rhymil/ordine-dei-paladini/thumb/p_aramantha.png"
                   width="110"
                   alt="Aramantha"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Aramantha</span>
@@ -1444,6 +1522,7 @@
                   src="/rhymil/ordine-dei-paladini/thumb/m_teodor.png"
                   width="110"
                   alt="Teodor Kilkan"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Teodor Kilkan</span>
@@ -1462,6 +1541,7 @@
                   src="/rhymil/ordine-dei-paladini/thumb/m_gilidian.png"
                   width="110"
                   alt="Gilidian Ayrtor"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Gilidian Ayrtor</span>
@@ -1480,6 +1560,7 @@
                   src="/rhymil/ordine-dei-paladini/thumb/m_gerard.png"
                   width="110"
                   alt="Gerard Holdren"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Gerard Holdren</span>
@@ -1561,6 +1642,7 @@
                   src="/rhymil/ordine-dei-cavalieri/thumb/p_simon.png"
                   width="110"
                   alt="Simon Ashen"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Simon Ashen</span>
@@ -1584,6 +1666,7 @@
                   src="/rhymil/ordine-dei-cavalieri/thumb/p_sander.png"
                   width="110"
                   alt="Sander"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Sander</span>
@@ -1602,6 +1685,7 @@
                   src="/rhymil/ordine-dei-cavalieri/thumb/p_rodrigo.png"
                   width="110"
                   alt="Rodrigo"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Rodrigo</span>
@@ -1620,6 +1704,7 @@
                   src="/rhymil/ordine-dei-cavalieri/thumb/p_beruthiel.png"
                   width="110"
                   alt="Beruthiel"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Beruthiel</span>
@@ -1638,6 +1723,7 @@
                   src="/rhymil/ordine-dei-cavalieri/thumb/m_eleonor.png"
                   width="110"
                   alt="Eleonor De Lervis"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Eleonor De Lervis</span>
@@ -1659,6 +1745,7 @@
                   src="/rhymil/ordine-dei-cavalieri/thumb/m_gildarts.png"
                   width="110"
                   alt="Gildarts Solcoferreo"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Gildarts Solcoferreo</span>
@@ -1677,6 +1764,7 @@
                   src="/rhymil/ordine-dei-cavalieri/thumb/m_alexander.png"
                   width="110"
                   alt="Alexander Deimont"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Alexander Deimont</span>
@@ -1695,6 +1783,7 @@
                   src="/rhymil/ordine-dei-cavalieri/thumb/m_leonard.png"
                   width="110"
                   alt="Leonard Winford"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Leonard Winford</span>
@@ -1729,6 +1818,7 @@
                   src="/rhymil/fratellanza-dei-pirati/thumb/p_barbabrace.png"
                   width="110"
                   alt="Barbabrace"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Barbabrace</span>
@@ -1756,6 +1846,7 @@
                   src="/rhymil/fratellanza-dei-pirati/thumb/p_fred.png"
                   width="110"
                   alt="Fred Rayles"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Fred Rayles</span>
@@ -1780,6 +1871,7 @@
                   src="/rhymil/fratellanza-dei-pirati/thumb/p_roy.png"
                   width="110"
                   alt="Roy Backler"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Roy Backler</span>
@@ -1802,6 +1894,7 @@
                   src="/rhymil/fratellanza-dei-pirati/thumb/p_elira.png"
                   width="110"
                   alt="Elira Varnem"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Elira Varnem</span>
@@ -1826,6 +1919,7 @@
                   src="/rhymil/fratellanza-dei-pirati/thumb/p_virma.png"
                   width="110"
                   alt="Virma"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Virma</span>
@@ -1850,6 +1944,7 @@
                   src="/rhymil/fratellanza-dei-pirati/thumb/p_thomas.png"
                   width="110"
                   alt="Thomas Avery"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Thomas Avery</span>
@@ -1876,6 +1971,7 @@
                   src="/rhymil/fratellanza-dei-pirati/thumb/p_lucky.png"
                   width="110"
                   alt="Lucky il `Senza Paura"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Lucky il `Senza Paura</span>
@@ -1901,6 +1997,7 @@
                   src="/rhymil/fratellanza-dei-pirati/thumb/p_rakael.png"
                   width="110"
                   alt="Rakael `Sega-Ossa`"
+                  loading="lazy"
                 />
                 <span class="pswp-caption-content">
                   <span class="myimage-name">Rakael `Sega-Ossa`</span>
@@ -2217,5 +2314,11 @@
 
     <!-- Script -->
     <script type="module" src="./js/app.js"></script>
+    <script defer>
+      document.addEventListener("DOMContentLoaded", () => {
+        const y = document.getElementById("year");
+        if (y) y.textContent = new Date().getFullYear();
+      });
+    </script>
   </body>
 </html>
