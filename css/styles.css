@@ -774,7 +774,7 @@ ul.actions li *:hover {
   flex: 0 0 auto;
   padding: 8px 12px;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid #f00;
   background: transparent;
   color: #fff;
   cursor: pointer;
@@ -815,7 +815,7 @@ ul.actions li *:hover {
   width: 100%;
   height: auto;
   border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 3px solid #f00;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
 }
 

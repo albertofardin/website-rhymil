@@ -1,69 +1,87 @@
 {
-	"icon": "✊",
-	"name": "Stato del Popolo Libero",
-	"text": "Non sono semplici ribelli. Sono madri, figli, artigiani e soldati che hanno detto “basta”. Hanno visto crollare torri, bruciare promesse e spezzare catene, eppure si sono rialzati. Lo Stato del Popolo Libero non ha una corona né un dogma, ma ha memoria, orgoglio e fame di giustizia. C’è chi guida con la parola, chi difende con la lama, chi trama nell’ombra per il bene comune. Con mani callose, cuori testardi e sogni che non vogliono più nascondere, hanno trasformato la rinuncia in coraggio.",
-	"players": [
-		{
-			"name": "Savannah Morr",
-			"text": "Sfarfalla ovunque per nascondere il fatto che non sa fare niente. Le piace: i pettegolezzi, correre dietro ai paladini. Non le piace: i rituali, i carciofi.",
-			"owner": "Micol Stivanello",
-			"image": "p_savannah"
-		},
-		{
-			"name": "Gilbur Battifoglia",
-			"text": "Nano di Pianura giunto a Navimbur per migliorare la sua bravura nell'arte orafa. Amichevole e diretto. Farebbe qualsiasi cosa per un buon pezzo di formaggio ed è sempre disposto ad aiutare chi ha bisogno. È un tipo curioso e attento ai dettagli, qualcuno direbbe che è più interessato alle pietre e agli ingranaggi che alle persone. Crede nella giustizia più che nelle leggi e, per fortuna, non è testardo come i suoi cugini di Rerforth.",
-			"owner": "Gilberto Presello",
-			"image": "p_gilbur"
-		},
-		{
-			"name": "Nefah Nersora",
-			"text": "",
-			"owner": "Martina Bortolat",
-			"image": "p_nefah"
-		},
-		{
-			"name": "Lucien",
-			"text": "",
-			"owner": "Alessandro Beolchi",
-			"image": "p_lucien"
-		},
-		{
-			"name": "Floren",
-			"text": "",
-			"owner": "Francesco Paltrinieri",
-			"image": "p_floren"
-		},
-		{
-			"name": "Eilwood",
-			"text": "",
-			"owner": "Alessandro Beolchi",
-			"image": "p_eilwood"
-		}
-	],
-	"masters": [
-		{
-			"name": "Edgard Holsch",
-			"text": "",
-			"owner": "master Tobi",
-			"image": "m_edgard"
-		},
-		{
-			"name": "Sasha Waivyr",
-			"text": "Rappresentante dello Stato del Popolo Libero insieme ad Edgar Hosch. Poco diplomatica e molto schietta. Le piace sapere tutto sia del luogo in cui si trova, che delle persone che ha attorno. Difficile che le sfugga qualcosa e se si ha bisogno di una informazione lei è la persona giusta a cui chiedere, ovviamente nei modi e termini che a lei aggradano. Aiuta le persone in difficoltà, soprattutto i bambini dell'orfanotrofio a cui è molto legata.",
-			"owner": "master Silvia",
-			"image": "m_sasha"
-		},
-		{
-			"name": "Gheed",
-			"text": "",
-			"owner": "",
-			"image": "m_gheed"
-		},
-		{
-			"name": "Katerina Bellarom",
-			"text": "",
-			"owner": "",
-			"image": "m_katerina"
-		}
-	]
+  "icon": "✊",
+  "name": "Stato del Popolo Libero",
+  "text": "Non sono semplici ribelli. Sono madri, figli, artigiani e soldati che hanno detto “basta”. Hanno visto crollare torri, bruciare promesse e spezzare catene, eppure si sono rialzati. Lo Stato del Popolo Libero non ha una corona né un dogma, ma ha memoria, orgoglio e fame di giustizia. C’è chi guida con la parola, chi difende con la lama, chi trama nell’ombra per il bene comune. Con mani callose, cuori testardi e sogni che non vogliono più nascondere, hanno trasformato la rinuncia in coraggio.",
+  "players": [
+    {
+      "name": "Savannah Morr",
+      "text": "Sfarfalla ovunque per nascondere il fatto che non sa fare niente. Le piace: i pettegolezzi, correre dietro ai paladini. Non le piace: i rituali, i carciofi.",
+      "owner": "Micol Stivanello",
+      "image": "p_savannah"
+    },
+    {
+      "name": "Gilbur Battifoglia",
+      "text": "Nano di Pianura giunto a Navimbur per migliorare la sua bravura nell'arte orafa. Amichevole e diretto. Farebbe qualsiasi cosa per un buon pezzo di formaggio ed è sempre disposto ad aiutare chi ha bisogno. È un tipo curioso e attento ai dettagli, qualcuno direbbe che è più interessato alle pietre e agli ingranaggi che alle persone. Crede nella giustizia più che nelle leggi e, per fortuna, non è testardo come i suoi cugini di Rerforth.",
+      "owner": "Gilberto Presello",
+      "image": "p_gilbur"
+    },
+    {
+      "name": "Nefah Nersora",
+      "text": "",
+      "owner": "Martina Bortolat",
+      "image": "p_nefah"
+    },
+    {
+      "name": "Lucien",
+      "text": "",
+      "owner": "Alessandro Beolchi",
+      "image": "p_lucien"
+    },
+    {
+      "name": "Floren",
+      "text": "",
+      "owner": "Francesco Paltrinieri",
+      "image": "p_floren"
+    },
+    {
+      "name": "Linhardt Aegis",
+      "text": "Ex sacerdote dell’Ordine Clericale, divenuto Alchimista Bianco e cerusico del Popolo Libero. Ha lasciato i dogmi della fede per inseguire la conoscenza, studiando tra gli eruditi e i maestri dell’alchimia. Custodisce un sapere pratico e chirurgico che unisce fede, scienza e bisturi, e brandisce la sua mazza ferrata tanto in battaglia quanto come simbolo della determinazione a difendere la vita.",
+      "owner": "Andrea Di Vico",
+      "image": "p_linhardt"
+    },
+    {
+      "name": "Alkib 'Topo' Moss",
+      "text": "Soprannominato 'Topo', inizia a lavorare come cuoco nel porto di Navimbur. In seguito a debiti di gioco si vede costretto ad arruolarsi in una compagnia di riscossione debiti poco lecita dove impara a combattere. Dopo un paio d'anni decide di unirsi alla Spedizione guidato da curiosità e voglia di scoperta.",
+      "owner": "Tommaso Parolo",
+      "image": "p_alkib"
+    },
+    {
+      "name": "Mallacht Barbabianca",
+      "text": "Figlio di un grande nano artigiano, Mallacht è cresciuto a Navimbur e ha viaggiato per tutta Rhymil con suo padre per guadagnare grazie alla loro bottega su ruote. Dopo la morte del padre Mallacht viaggia ancora per Rhymil cercando di aiutare e trovare qualcuno o qualcosa che gli dia un nuovo scopo nella vita.",
+      "owner": "Pietro Burato",
+      "image": "p_mallacht"
+    },
+    {
+      "name": "Eilwood",
+      "text": "",
+      "owner": "Alessandro Beolchi",
+      "image": "p_eilwood"
+    }
+  ],
+  "masters": [
+    {
+      "name": "Edgard Holsch",
+      "text": "",
+      "owner": "master Tobi",
+      "image": "m_edgard"
+    },
+    {
+      "name": "Sasha Waivyr",
+      "text": "Rappresentante dello Stato del Popolo Libero insieme ad Edgar Hosch. Poco diplomatica e molto schietta. Le piace sapere tutto sia del luogo in cui si trova, che delle persone che ha attorno. Difficile che le sfugga qualcosa e se si ha bisogno di una informazione lei è la persona giusta a cui chiedere, ovviamente nei modi e termini che a lei aggradano. Aiuta le persone in difficoltà, soprattutto i bambini dell'orfanotrofio a cui è molto legata.",
+      "owner": "master Silvia",
+      "image": "m_sasha"
+    },
+    {
+      "name": "Gheed",
+      "text": "",
+      "owner": "",
+      "image": "m_gheed"
+    },
+    {
+      "name": "Katerina Bellarom",
+      "text": "",
+      "owner": "",
+      "image": "m_katerina"
+    }
+  ]
 }
