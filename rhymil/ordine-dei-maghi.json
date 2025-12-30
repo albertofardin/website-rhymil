@@ -1,57 +1,65 @@
 {
-	"icon": "🔮",
-	"name": "Ordine dei Maghi",
-	"text": "Non sono semplici studiosi. Sono custodi di segreti, interpreti di simboli e ricercatori di verità. L’Ordine non vive solo nei tomi polverosi: nasce tra le stelle scrutate, tra formule che piegano la realtà e tra parole che possono cambiare il mondo. Essere mago significa tessere il filo invisibile che unisce il visibile all’invisibile. Hanno lasciato la sicurezza delle biblioteche per sfidare l’ignoto. Alcuni cercano potere, altri risposte, altri ancora solo la verità. Ma tutti portano la conoscenza della Trama dove il mondo ne ha bisogno.",
-	"players": [
-		{
-			"name": "Julius",
-			"text": "",
-			"owner": "Samuele Lamon",
-			"image": "p_julius"
-		},
-		{
-			"name": "Gwin",
-			"text": "",
-			"owner": "",
-			"image": "p_gwin"
-		},
-		{
-			"name": "Cordelia",
-			"text": "",
-			"owner": "Nicole Caligari",
-			"image": "p_cordelia"
-		},
-		{
-			"name": "Cedric Throne",
-			"text": "",
-			"owner": "Gianmarco Crozzolin",
-			"image": "p_cedric"
-		},
-		{
-			"name": "Iseth Somberlain",
-			"text": "",
-			"owner": "Marco Foffano",
-			"image": "p_iseth"
-		}
-	],
-	"masters": [
-		{
-			"name": "Geor Dun",
-			"text": "Meastro della Via del Tempo",
-			"owner": "master Alessio",
-			"image": "m_geor"
-		},
-		{
-			"name": "Agnes Roboris",
-			"text": "Meastro della Via della Vita",
-			"owner": "",
-			"image": "m_agnes"
-		},
-		{
-			"name": "Felitya",
-			"text": "Meastro della Via della Conoscenza",
-			"owner": "",
-			"image": "m_felitya"
-		}
-	]
+  "icon": "🔮",
+  "name": "Ordine dei Maghi",
+  "text": "Non sono semplici studiosi. Sono custodi di segreti, interpreti di simboli e ricercatori di verità. L’Ordine non vive solo nei tomi polverosi: nasce tra le stelle scrutate, tra formule che piegano la realtà e tra parole che possono cambiare il mondo. Essere mago significa tessere il filo invisibile che unisce il visibile all’invisibile. Hanno lasciato la sicurezza delle biblioteche per sfidare l’ignoto. Alcuni cercano potere, altri risposte, altri ancora solo la verità. Ma tutti portano la conoscenza della Trama dove il mondo ne ha bisogno.",
+  "players": [
+    {
+      "name": "Julius",
+      "text": "",
+      "owner": "Samuele Lamon",
+      "image": "p_julius",
+      "version": 1
+    },
+    {
+      "name": "Gwin",
+      "text": "",
+      "owner": "",
+      "image": "p_gwin",
+      "version": 1
+    },
+    {
+      "name": "Cordelia",
+      "text": "",
+      "owner": "Nicole Caligari",
+      "image": "p_cordelia",
+      "version": 1
+    },
+    {
+      "name": "Cedric Throne",
+      "text": "",
+      "owner": "Gianmarco Crozzolin",
+      "image": "p_cedric",
+      "version": 1
+    },
+    {
+      "name": "Iseth Somberlain",
+      "text": "",
+      "owner": "Marco Foffano",
+      "image": "p_iseth",
+      "version": 1
+    }
+  ],
+  "masters": [
+    {
+      "name": "Geor Dun",
+      "text": "Meastro della Via del Tempo",
+      "owner": "master Alessio",
+      "image": "m_geor",
+      "version": 1
+    },
+    {
+      "name": "Agnes Roboris",
+      "text": "Meastro della Via della Vita",
+      "owner": "",
+      "image": "m_agnes",
+      "version": 1
+    },
+    {
+      "name": "Felitya",
+      "text": "Meastro della Via della Conoscenza",
+      "owner": "",
+      "image": "m_felitya",
+      "version": 1
+    }
+  ]
 }

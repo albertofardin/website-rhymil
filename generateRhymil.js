@@ -86,8 +86,15 @@ function bumpVersionInHtml(html) {
 // ---- Markup builders -------------------------------------------------------
 function anchorFor(item, baseHref) {
   const imgName = (item.image || "").replace(/\.(jpg|jpeg|png|webp)$/i, "");
-  const hrefLarge = path.posix.join(baseHref, `${imgName}.png`);
-  const hrefThumb = path.posix.join(baseHref, `thumb/${imgName}.png`);
+  const version = escapeHtml(item.version || "");
+  const hrefLarge = path.posix.join(
+    baseHref,
+    `${imgName}.png?version=${version}`
+  );
+  const hrefThumb = path.posix.join(
+    baseHref,
+    `thumb/${imgName}.png?version=${version}`
+  );
   const name = escapeHtml(item.name || "");
   const owner = escapeHtml(item.owner || "");
   const text = escapeHtml(item.text || "");

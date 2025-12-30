@@ -1,105 +1,121 @@
 {
-	"icon": "🏺",
-	"name": "Terre Barbariche",
-	"text": "Non sono semplici guerrieri. Sono capi clan, sciamani e campioni temprati da sabbia, gelo e sole implacabile. Un tempo divise, le Terre Sabbiose, le Terre Calde e le Terre Fredde si sono temporaneamente unite in una sola forza. Essere della tribù non è solo sopravvivere, ma guidare e proteggere un popolo tra lande ostili. Alcuni parlano con gli spiriti, altri brandiscono la lama. Ogni volto porta con sé una promessa: resistere e mantenere viva la propria gente.",
-	"players": [
-		{
-			"name": "Reis",
-			"text": "",
-			"owner": "Nicole Caligari",
-			"image": "p_reis"
-		},
-		{
-			"name": "Yana",
-			"text": "",
-			"owner": "Valentina Colella",
-			"image": "p_yana"
-		},
-		{
-			"name": "Atbae Al'Namir",
-			"text": "",
-			"owner": "Nicole Caligari",
-			"image": "p_atbae"
-		},
-		{
-			"name": "Volkmar Starkad",
-			"text": "Giovane Sciamano del Orca Marina, timido e inesperto, sogna di diventare un grande sciamano per tornare alla vita tranquilla da pescatore nel suo piccolo villaggio nelle Terre Fredde.",
-			"owner": "Matteo Polzella",
-			"image": "p_volkmar"
-		},
-		{
-			"name": "Quinu",
-			"text": "",
-			"owner": "Linda Tagliaferro",
-			"image": "p_quinu"
-		},
-		{
-			"name": "Kunshae Sagfuok",
-			"text": "Fedele al patto del suo clan con il popolo delle terre fredde, millanta esperienza e sapienza sulla natura e sulle meccaniche di proliferazione della propria razza.",
-			"owner": "Matteo Bertacche",
-			"image": "p_kunshae"
-		},
-		{
-			"name": "Milten",
-			"text": "",
-			"owner": "",
-			"image": "p_milten"
-		},
-		{
-			"name": "Astrid",
-			"text": "",
-			"owner": "",
-			"image": "p_astrid"
-		},
-		{
-			"name": "Uruk",
-			"text": "",
-			"owner": "",
-			"image": "p_uruk"
-		},
-		{
-			"name": "Aelin",
-			"text": "",
-			"owner": "",
-			"image": "p_aelin"
-		}
-	],
-	"masters": [
-		{
-			"name": "Hathor",
-			"text": "Sommo Sciamano Terre Sabbiose",
-			"owner": "master Tobi",
-			"image": "m_hathor"
-		},
-		{
-			"name": "Selikand",
-			"text": "Campione delle Terre Sabbiose",
-			"owner": "",
-			"image": "m_selikand"
-		},
-		{
-			"name": "Yamanos",
-			"text": "Gran Sciamano delle Terre Fredde",
-			"owner": "",
-			"image": "m_yamanos"
-		},
-		{
-			"name": "Eiyda",
-			"text": "Somma Sciamana Terre Fredde",
-			"owner": "",
-			"image": "m_eiyda"
-		},
-		{
-			"name": "Selhea",
-			"text": "Campionessa delle Terre Fredde",
-			"owner": "",
-			"image": "m_selhea"
-		},
-		{
-			"name": "Zareb",
-			"text": "Sommo Sciamano delle Terre Calde",
-			"owner": "",
-			"image": "m_zareb"
-		}
-	]
+  "icon": "🏺",
+  "name": "Terre Barbariche",
+  "text": "Non sono semplici guerrieri. Sono capi clan, sciamani e campioni temprati da sabbia, gelo e sole implacabile. Un tempo divise, le Terre Sabbiose, le Terre Calde e le Terre Fredde si sono temporaneamente unite in una sola forza. Essere della tribù non è solo sopravvivere, ma guidare e proteggere un popolo tra lande ostili. Alcuni parlano con gli spiriti, altri brandiscono la lama. Ogni volto porta con sé una promessa: resistere e mantenere viva la propria gente.",
+  "players": [
+    {
+      "name": "Reis",
+      "text": "",
+      "owner": "Nicole Caligari",
+      "image": "p_reis",
+      "version": 1
+    },
+    {
+      "name": "Yana",
+      "text": "",
+      "owner": "Valentina Colella",
+      "image": "p_yana",
+      "version": 1
+    },
+    {
+      "name": "Atbae Al'Namir",
+      "text": "",
+      "owner": "Nicole Caligari",
+      "image": "p_atbae",
+      "version": 1
+    },
+    {
+      "name": "Volkmar Starkad",
+      "text": "Giovane Sciamano del Orca Marina, timido e inesperto, sogna di diventare un grande sciamano per tornare alla vita tranquilla da pescatore nel suo piccolo villaggio nelle Terre Fredde.",
+      "owner": "Matteo Polzella",
+      "image": "p_volkmar",
+      "version": 1
+    },
+    {
+      "name": "Quinu",
+      "text": "",
+      "owner": "Linda Tagliaferro",
+      "image": "p_quinu",
+      "version": 1
+    },
+    {
+      "name": "Kunshae Sagfuok",
+      "text": "Fedele al patto del suo clan con il popolo delle terre fredde, millanta esperienza e sapienza sulla natura e sulle meccaniche di proliferazione della propria razza.",
+      "owner": "Matteo Bertacche",
+      "image": "p_kunshae",
+      "version": 1
+    },
+    {
+      "name": "Milten",
+      "text": "",
+      "owner": "",
+      "image": "p_milten",
+      "version": 1
+    },
+    {
+      "name": "Astrid",
+      "text": "",
+      "owner": "",
+      "image": "p_astrid",
+      "version": 1
+    },
+    {
+      "name": "Uruk",
+      "text": "",
+      "owner": "",
+      "image": "p_uruk",
+      "version": 1
+    },
+    {
+      "name": "Aelin",
+      "text": "",
+      "owner": "",
+      "image": "p_aelin",
+      "version": 1
+    }
+  ],
+  "masters": [
+    {
+      "name": "Hathor",
+      "text": "Sommo Sciamano Terre Sabbiose",
+      "owner": "master Tobi",
+      "image": "m_hathor",
+      "version": 1
+    },
+    {
+      "name": "Selikand",
+      "text": "Campione delle Terre Sabbiose",
+      "owner": "",
+      "image": "m_selikand",
+      "version": 1
+    },
+    {
+      "name": "Yamanos",
+      "text": "Gran Sciamano delle Terre Fredde",
+      "owner": "",
+      "image": "m_yamanos",
+      "version": 1
+    },
+    {
+      "name": "Eiyda",
+      "text": "Somma Sciamana Terre Fredde",
+      "owner": "",
+      "image": "m_eiyda",
+      "version": 1
+    },
+    {
+      "name": "Selhea",
+      "text": "Campionessa delle Terre Fredde",
+      "owner": "",
+      "image": "m_selhea",
+      "version": 1
+    },
+    {
+      "name": "Zareb",
+      "text": "Sommo Sciamano delle Terre Calde",
+      "owner": "",
+      "image": "m_zareb",
+      "version": 1
+    }
+  ]
 }

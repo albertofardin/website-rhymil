@@ -7,19 +7,22 @@
       "name": "Delphine Belinfer",
       "text": "Pacata, decisa e talvolta chiassosa, ma solo quando non riesce a farsi sentire, o perde il controllo delle proprie emozioni, e l'unico modo che conosce è urlare, merito di essere cresciuta con tre fratelli. Ciò nonostante riesce anche a mostrare qualche lato dolce e sensibile. Cerca sempre di non essere invasiva e trovare le parole giuste per non ferire, ma la sua mente molto semplice spesso le fa dire in modo ingenuo e spontaneo il suo pensiero. Per fortuna i suoi fratelli dell'Ordine Clericale la capiscono. E' una delle figure che si può incontrare più spesso sui campi di battaglia per medicare e curare le ferite, tramite i favori divini della grande madre Ewylion e qualche insegnamento dell'Ordine degli Eruditi.",
       "owner": "Adriana Pierro",
-      "image": "p_delphine"
+      "image": "p_delphine",
+      "version": 2
     },
     {
       "name": "Ahryn",
       "text": "",
       "owner": "",
-      "image": "p_ahryn"
+      "image": "p_ahryn",
+      "version": 1
     },
     {
       "name": "Hodo",
       "text": "",
       "owner": "",
-      "image": "p_hodo"
+      "image": "p_hodo",
+      "version": 1
     }
   ],
   "masters": [
@@ -27,25 +30,29 @@
       "name": "Padre Ezekiel",
       "text": "Voce degli Eletti delle Vie. Chierico della Via dell’Armonia e della Salute.",
       "owner": "master Tobi",
-      "image": "m_ezekiel"
+      "image": "m_ezekiel",
+      "version": 1
     },
     {
       "name": "Padre Raphael",
       "text": "Chierico della Via dell’Ordine e Giustizia.",
       "owner": "master Jonny",
-      "image": "m_raphael"
+      "image": "m_raphael",
+      "version": 1
     },
     {
       "name": "Me’Ber Roccialuce",
       "text": "Chierica viaggiatrice. Il suo motto è `Tutti possono redimersi, a volte serve solo il giusto incoraggiamento`",
       "owner": "master Jonny",
-      "image": "m_meber"
+      "image": "m_meber",
+      "version": 1
     },
     {
       "name": "Primo Inquisitore",
       "text": "Capo del corpo degli inquisitori",
       "owner": "master Tobi",
-      "image": "m_primoinquisitore"
+      "image": "m_primoinquisitore",
+      "version": 1
     }
   ]
 }
