@@ -50,13 +50,27 @@
       "text": "Figlio di un grande nano artigiano, Mallacht è cresciuto a Navimbur e ha viaggiato per tutta Rhymil con suo padre per guadagnare grazie alla loro bottega su ruote. Dopo la morte del padre Mallacht viaggia ancora per Rhymil cercando di aiutare e trovare qualcuno o qualcosa che gli dia un nuovo scopo nella vita.",
       "owner": "Pietro Burato",
       "image": "p_mallacht",
-      "version": 1
+      "version": 2
     },
     {
       "name": "Eryn",
       "text": "Eryn è una Kiuth, è sempre stata vista come 'diversa', alcuni abbassano lo sguardo o cambiano strada a causa del suo aspetto. Lei non capisce questa cosa perché è sempre stata buona con tutti e ha sempre tentato di aiutare e proteggere. Vissuta in una famiglia di pescatori umili che hanno sempre avuto dei valori forti, ora è partita per dare un contributo anche lei e aiutare a mandare avanti l'attività di famiglia.",
       "owner": "Elena Milanese",
       "image": "p_eryn",
+      "version": 1
+    },
+    {
+      "name": "Morwen",
+      "text": "",
+      "owner": "Jessica Ballotta",
+      "image": "p_morwen",
+      "version": 1
+    },
+    {
+      "name": "Duncan",
+      "text": "",
+      "owner": "Cristiano Padovani",
+      "image": "p_duncan",
       "version": 1
     },
     {

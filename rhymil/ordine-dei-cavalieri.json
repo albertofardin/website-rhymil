@@ -4,20 +4,6 @@
   "text": "Non sono semplici soldati. Sono strateghi, duellanti e comandanti temprati dal dovere. Essere cavaliere è tracciare la linea tra il caos e l’ordine, tra la parola data e il tradimento. Alcuni combattono in sella, altri a piedi, altri ancora vincono guerre con i loro piani prima che la battaglia inizi. Dietro ogni volto c’è un giuramento: difendere, proteggere, mantenere la legge. Le loro spade e i loro scudi non inseguono gloria, ma la pace che solo la giustizia può donare.",
   "players": [
     {
-      "name": "Simon Ashen",
-      "text": "Cavaliere di seconda generazione, all'apparenza serioso e corrucciato, in realtà lo è davvero. Abile spadaccino a due lame, è il primo a gettarsi a capofitto nelle battaglie. In lui arde un forte senso di giustizia.",
-      "owner": "Eddy Berardi",
-      "image": "p_simon",
-      "version": 1
-    },
-    {
-      "name": "Sander",
-      "text": "",
-      "owner": "",
-      "image": "p_sander",
-      "version": 1
-    },
-    {
       "name": "Rodrigo",
       "text": "",
       "owner": "",
@@ -29,6 +15,20 @@
       "text": "",
       "owner": "",
       "image": "p_beruthiel",
+      "version": 1
+    },
+    {
+      "name": "Eryndal Thalen",
+      "text": "Lui era un cavaliere senza coraggio, ma con più fede di qualunque paladino. Nella paura, era guidato dalla speranza: la speranza di farcela, di resistere, di ritrovare ciò che aveva perduto lungo il cammino. Non combatteva per gloria né per onore, ma per ciò che restava in piedi quando tutto il resto crollava. Ogni sua freccia valeva più di ogni dubbio che lo attraversava, ogni respiro era una scelta, ogni passo una sfida silenziosa. E non mancava mai il bersaglio, anche se esitava a scoccare per primo, se non quando farlo significava salvare gli altri. Non era l’assenza di paura a renderlo forte, ma il fatto che, nonostante essa, continuasse ad avanzare. E forse era proprio questo che lo rendeva degno del nome di cavaliere.",
+      "owner": "Offi Christopher",
+      "image": "p_eryndal",
+      "version": 1
+    },
+    {
+      "name": "Sander",
+      "text": "",
+      "owner": "",
+      "image": "p_sander",
       "version": 1
     }
   ],

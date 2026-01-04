@@ -11,17 +11,24 @@
       "version": 2
     },
     {
+      "name": "Simon Ashen",
+      "text": "Ex Cavaliere che lotta incessantemente col Demone che alberga dentro di sé. La sua missione è riuscire a domare il potere demoniaco e metterlo al servizio di Rhymil. Attualmente sotto la custodia del Primo Inquisitore. Svolge ad ora il compito di guardiano e protettore dei membri dell'Ordine Clericale  della Spedizione.",
+      "owner": "Eddy Berardi",
+      "image": "p_simon",
+      "version": 2
+    },
+    {
+      "name": "Odo",
+      "text": "",
+      "owner": "Alex Granzotto",
+      "image": "p_odo",
+      "version": 2
+    },
+    {
       "name": "Ahryn",
       "text": "",
       "owner": "",
       "image": "p_ahryn",
-      "version": 1
-    },
-    {
-      "name": "Hodo",
-      "text": "",
-      "owner": "",
-      "image": "p_hodo",
       "version": 1
     }
   ],
