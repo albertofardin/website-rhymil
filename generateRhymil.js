@@ -63,7 +63,8 @@ function loadJsonLoose(p) {
 // ---- Version bump ----------------------------------------------------------
 function bumpVersionInHtml(html) {
   const re =
-    /(<p\s+class=["']version["'][^>]*>[\s\S]*?\b[vV])(\d+(?:[.,]\d+)?)([\s\S]*?<\/p>)/i;
+    /(<p\s+class=["']version["'][^>]*>[\s\S]*?\b[vV])(\d+)(?:[.,](\d+))?([\s\S]*?<\/p>)/i;
+
   const m = html.match(re);
   if (!m) {
     console.warn(
@@ -71,16 +72,20 @@ function bumpVersionInHtml(html) {
     );
     return html;
   }
-  const raw = m[2].trim().replace(",", ".");
-  const curr = parseFloat(raw);
-  if (Number.isNaN(curr)) {
-    console.warn("⚠️  Valore versione non numerico:", raw);
+
+  const major = parseInt(m[2], 10);
+  const minor = m[3] ? parseInt(m[3], 10) : 0;
+
+  if (Number.isNaN(major) || Number.isNaN(minor)) {
+    console.warn("⚠️  Valore versione non numerico:", m[2], m[3]);
     return html;
   }
-  const next = Math.round((curr + 0.1) * 10) / 10;
-  const nextStr = next.toFixed(1);
-  console.log(`🔢 Versione: ${curr.toFixed(1)} → ${nextStr}`);
-  return html.replace(re, `$1${nextStr}$3`);
+
+  const nextMinor = minor + 1;
+  const nextStr = `${major}.${nextMinor}`;
+
+  console.log(`🔢 Versione: ${major}.${minor} → ${nextStr}`);
+  return html.replace(re, `$1${nextStr}$4`);
 }
 
 // ---- Markup builders -------------------------------------------------------

@@ -43,7 +43,7 @@
       "text": "Soprannominato 'Topo', inizia a lavorare come cuoco nel porto di Navimbur. In seguito a debiti di gioco si vede costretto ad arruolarsi in una compagnia di riscossione debiti poco lecita dove impara a combattere. Dopo un paio d'anni decide di unirsi alla Spedizione guidato da curiosità e voglia di scoperta.",
       "owner": "Tommaso Parolo",
       "image": "p_alkib",
-      "version": 1
+      "version": 2
     },
     {
       "name": "Mallacht Barbabianca",
@@ -57,7 +57,14 @@
       "text": "Eryn è una Kiuth, è sempre stata vista come 'diversa', alcuni abbassano lo sguardo o cambiano strada a causa del suo aspetto. Lei non capisce questa cosa perché è sempre stata buona con tutti e ha sempre tentato di aiutare e proteggere. Vissuta in una famiglia di pescatori umili che hanno sempre avuto dei valori forti, ora è partita per dare un contributo anche lei e aiutare a mandare avanti l'attività di famiglia.",
       "owner": "Elena Milanese",
       "image": "p_eryn",
-      "version": 1
+      "version": 2
+    },
+    {
+      "name": "Lecandel Purrfect",
+      "text": "È un felinide, perciò viene da un altro mondo. È stato accudito dagli gnomi a Dalarta dove ha imparato a fare piccole riparazioni ed è andato alla Città Centrale per iniziare i suoi studi di medicina.",
+      "owner": "Luca Milanese",
+      "image": "p_lecandel",
+      "version": 2
     },
     {
       "name": "Morwen",
@@ -71,13 +78,6 @@
       "text": "",
       "owner": "Cristiano Padovani",
       "image": "p_duncan",
-      "version": 1
-    },
-    {
-      "name": "Eilwood",
-      "text": "",
-      "owner": "Alessandro Beolchi",
-      "image": "p_eilwood",
       "version": 1
     }
   ],
