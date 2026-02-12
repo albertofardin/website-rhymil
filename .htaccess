@@ -1,0 +1,25 @@
+# 1) HTML: ricontrolla sempre (evita pagina vecchia)
+
+<FilesMatch "\.(html)$">
+<IfModule mod_headers.c>
+Header set Cache-Control "no-cache, no-store, must-revalidate"
+Header set Pragma "no-cache"
+Header set Expires "0"
+</IfModule>
+</FilesMatch>
+
+# 2) CSS/JS: se NON li versioni, metti cache bassa (es. 1 ora)
+
+<FilesMatch "\.(css|js)$">
+<IfModule mod_headers.c>
+Header set Cache-Control "public, max-age=3600"
+</IfModule>
+</FilesMatch>
+
+# 3) Immagini/font: cache più lunga (ok)
+
+<FilesMatch "\.(png|jpg|jpeg|gif|svg|webp|woff|woff2)$">
+<IfModule mod_headers.c>
+Header set Cache-Control "public, max-age=604800"
+</IfModule>
+</FilesMatch>

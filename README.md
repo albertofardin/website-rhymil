@@ -1,6 +1,8 @@
 ## rhymil-photoalbum
 
-Questo sito raccoglie le illustrazioni dei personaggi della campagna LARP **Rhymil**, per avere sempre a portata di mano volti e nomi tra un evento e l’altro. Non è il sito ufficiale della campagna (che fornisce ambientazione e regolamento), ma serve da supporto visivo per i partecipanti.:contentReference[oaicite:0]{index=0}
+- **Live Demo:** [https://www.rhymil.it/](https://www.rhymil.it/)
+
+Questo sito raccoglie le illustrazioni dei personaggi della campagna LARP **Rhymil**, per avere sempre a portata di mano volti e nomi tra un evento e l’altro. Non è il sito ufficiale della campagna (che fornisce ambientazione e regolamento), ma serve da supporto visivo per i partecipanti.
 
 ---
 
