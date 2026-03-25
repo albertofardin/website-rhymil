@@ -60,45 +60,16 @@ function loadJsonLoose(p) {
   return JSON.parse(s);
 }
 
-// ---- Version bump ----------------------------------------------------------
-function bumpVersionInHtml(html) {
-  const re =
-    /(<p\s+class=["']version["'][^>]*>[\s\S]*?\b[vV])(\d+)(?:[.,](\d+))?([\s\S]*?<\/p>)/i;
-
-  const m = html.match(re);
-  if (!m) {
-    console.warn(
-      '⚠️  Nessun <p class="version">…</p> trovato. Salto incremento.'
-    );
-    return html;
-  }
-
-  const major = parseInt(m[2], 10);
-  const minor = m[3] ? parseInt(m[3], 10) : 0;
-
-  if (Number.isNaN(major) || Number.isNaN(minor)) {
-    console.warn("⚠️  Valore versione non numerico:", m[2], m[3]);
-    return html;
-  }
-
-  const nextMinor = minor + 1;
-  const nextStr = `${major}.${nextMinor}`;
-
-  console.log(`🔢 Versione: ${major}.${minor} → ${nextStr}`);
-  return html.replace(re, `$1${nextStr}$4`);
-}
-
 // ---- Markup builders -------------------------------------------------------
-function anchorFor(item, baseHref) {
+function anchorFor(version, item, baseHref) {
   const imgName = (item.image || "").replace(/\.(jpg|jpeg|png|webp)$/i, "");
-  const version = escapeHtml(item.version || "");
   const hrefLarge = path.posix.join(
     baseHref,
-    `${imgName}.png?version=${version}`
+    `${imgName}.png?version=${version}`,
   );
   const hrefThumb = path.posix.join(
     baseHref,
-    `thumb/${imgName}.png?version=${version}`
+    `thumb/${imgName}.png?version=${version}`,
   );
   const name = escapeHtml(item.name || "");
   const owner = escapeHtml(item.owner || "");
@@ -115,7 +86,7 @@ function anchorFor(item, baseHref) {
   </a>`;
 }
 
-function buildSection(data, slug, baseHref) {
+function buildSection(slug, version, data, baseHref) {
   return `
   <section id="section-${slug}" class="panel-section">
     <h3 class="panel-title">
@@ -126,15 +97,20 @@ function buildSection(data, slug, baseHref) {
     </header>
     <div class="pswp-gallery" id="gallery--${slug}">
       ${[]
-        .concat(data.players || [], data.masters || [])
-        .map((p) => anchorFor(p, baseHref))
+        .concat(data.players || [])
+        .map((p) => anchorFor(version, p, baseHref))
         .join("\n")}
+        <hr/>
+        ${[]
+          .concat(data.masters || [])
+          .map((p) => anchorFor(version, p, baseHref))
+          .join("\n")}
     </div>
   </section>`;
 }
 
 // ===== Builders & upsert per <article> in .factions ====================
-function buildArticle(data, slug) {
+function buildArticle(slug) {
   // Rispetta la struttura richiesta
   return `
         <article>
@@ -185,7 +161,7 @@ function upsertArticle(html, slug, articleHtml) {
 
   if (closeStart === -1) {
     console.warn(
-      "⚠️ Chiusura </div> di .factions non trovata, nessuna modifica."
+      "⚠️ Chiusura </div> di .factions non trovata, nessuna modifica.",
     );
     return html;
   }
@@ -196,7 +172,7 @@ function upsertArticle(html, slug, articleHtml) {
   // 4) elimina TUTTI gli <article> già presenti per lo slug, per evitare duplicati
   const itemRe = new RegExp(
     `<article[\\s\\S]*?data-panel-target="#section-${slug}"[\\s\\S]*?<\\/article>`,
-    "ig"
+    "ig",
   );
   inner = inner.replace(itemRe, "").trimEnd();
 
@@ -223,7 +199,7 @@ function upsertArticle(html, slug, articleHtml) {
 function upsertSection(html, slug, newSection) {
   const sectionRegex = new RegExp(
     `<section\\s+id="section-${slug}"[\\s\\S]*?<\\/section>`,
-    "i"
+    "i",
   );
 
   if (sectionRegex.test(html)) {
@@ -263,11 +239,8 @@ async function main() {
   // Opzioni immagini/base
   const baseRoot = (args.baseRoot ? String(args.baseRoot) : "rhymil").replace(
     /^\/+|\/+$/g,
-    ""
+    "",
   );
-  const imgWidth = Number(args.width || 1200);
-  const imgHeight = Number(args.height || 750);
-  const thumbW = Number(args.thumb || 150);
 
   if (!fs.existsSync(htmlPath)) {
     console.error(`❌ HTML non trovato: ${htmlPath}`);
@@ -275,6 +248,19 @@ async function main() {
   }
 
   let html = fs.readFileSync(htmlPath, "utf8");
+
+  const refVersion =
+    /(<p\s+class=["']version["'][^>]*>[\s\S]*?\b[vV])(\d+)(?:[.,](\d+))?([\s\S]*?<\/p>)/i;
+  const matchVersion = html.match(refVersion);
+  if (!matchVersion) {
+    console.warn("⚠️  no version found");
+    return html;
+  }
+
+  const major = parseInt(matchVersion[2], 10);
+  const minor = matchVersion[3] ? parseInt(matchVersion[3], 10) : 0;
+  const currVersion = `${major}.${minor}`;
+  const nextVersion = `${major}.${minor + 1}`;
 
   for (const slug of TARGET) {
     const jsonPath = path.join(dir, `${slug}.json`);
@@ -292,8 +278,8 @@ async function main() {
     }
 
     const baseHref = `/${baseRoot}/${slug}`.replace(/\/{2,}/g, "/");
-    const sectionHtml = buildSection(data, slug, baseHref);
-    const articleHtml = buildArticle(data, slug);
+    const sectionHtml = buildSection(slug, nextVersion, data, baseHref);
+    const articleHtml = buildArticle(slug);
 
     html = upsertSection(html, slug, sectionHtml);
     html = upsertArticle(html, slug, articleHtml);
@@ -301,7 +287,9 @@ async function main() {
     console.log(`✅ Update: ${slug}`);
   }
 
-  html = bumpVersionInHtml(html);
+  console.log(`🔢 Versione: ${currVersion} → ${nextVersion}`);
+  html = html.replace(refVersion, `$1${nextVersion}$4`);
+
   fs.writeFileSync(outPath, html, "utf8");
   console.log(`🏁 File scritto: ${outPath}`);
 }

@@ -7,43 +7,19 @@
       "name": "Julius Reynhold",
       "text": "",
       "owner": "Samuele Lamon",
-      "image": "p_julius",
-      "version": 2
+      "image": "p_julius"
     },
     {
       "name": "Gwin Lionlike",
       "text": "",
       "owner": "Dario Piana",
-      "image": "p_gwin",
-      "version": 2
+      "image": "p_gwin"
     },
     {
       "name": "Keldan",
       "text": "",
       "owner": "Alessandro",
-      "image": "p_keldan",
-      "version": 1
-    },
-    {
-      "name": "Cordelia",
-      "text": "",
-      "owner": "Nicole Caligari",
-      "image": "p_cordelia",
-      "version": 1
-    },
-    {
-      "name": "Cedric Throne",
-      "text": "",
-      "owner": "Gianmarco Crozzolin",
-      "image": "p_cedric",
-      "version": 1
-    },
-    {
-      "name": "Iseth Somberlain",
-      "text": "",
-      "owner": "Marco Foffano",
-      "image": "p_iseth",
-      "version": 1
+      "image": "p_keldan"
     }
   ],
   "masters": [
@@ -51,22 +27,19 @@
       "name": "Geor Dun",
       "text": "Meastro della Via del Tempo",
       "owner": "master Alessio",
-      "image": "m_geor",
-      "version": 1
+      "image": "m_geor"
     },
     {
       "name": "Agnes Roboris",
       "text": "Meastro della Via della Vita",
       "owner": "",
-      "image": "m_agnes",
-      "version": 1
+      "image": "m_agnes"
     },
     {
       "name": "Felitya",
       "text": "Meastro della Via della Conoscenza",
       "owner": "",
-      "image": "m_felitya",
-      "version": 1
+      "image": "m_felitya"
     }
   ]
 }
