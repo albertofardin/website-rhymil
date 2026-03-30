@@ -7,25 +7,31 @@
       "name": "Barbabrace",
       "text": "Arrivato da un passato oscuro che solo lui conosce, Barbabrace porta un nome nato dalla sfortuna che sembra non abbandonarlo mai. Poeta nell’animo e libertino nello spirito, tra un boccale e l’altro recita versi troppo aulici per una taverna, affidando pensieri e paure alla fede in Hara. Dietro la barba segnata e lo sguardo stanco si cela però un uomo risoluto, capace di tenere unito il gruppo e dare ordine quando regna il caos. Non cerca il comando, ma spesso è lui a prendersene il peso, per il bene della Spedizione e di chi cammina al suo fianco.",
       "owner": "Alberto Fardin",
-      "image": "p_barbabrace"
+      "image": "pirati_barbabrace"
     },
     {
       "name": "Fred Rayles",
       "text": "Mercante che adora sperimentare nella creazione di nuove sostanze. Adora essere al centro di tutto anche se non lo da a vedere. Fa parte della fazione pirati per via delle similitudini ma non sembra per nulla un pirata. Adora contrattare e sbalordire con “io sono arrivato prima”.",
       "owner": "Daniele De Castro",
-      "image": "p_fred"
+      "image": "pirati_fred"
     },
     {
       "name": "Roy Backler",
       "text": "Mercante prima che pirata, adora i soldi e farebbe qualsiasi cosa per ottenerli. Il suo motto, non che linea guida, è “Tutto e tutti hanno un prezzo”. ",
       "owner": "Davide Zanon",
-      "image": "p_roy"
+      "image": "pirati_roy"
     },
     {
       "name": "Elijah",
       "text": "Felinide ruffiano, pirata in erba, adulatore dei belli, cucitore di cuori infranti, ma soprattutto... una gran puttana!",
       "owner": "Simone Ripaccioli",
-      "image": "p_elijah"
+      "image": "pirati_elijah"
+    },
+    {
+      "name": "Liv",
+      "text": "Buttato nella Spedizione dal suo ex-capitano più per liberarsi di lui che per reale fiducia. Impiccione, chiacchierone, sempre con quel mezzo sorriso che sa più di guaio che di amicizia, si infila dove non dovrebbe e scopre quello che altri preferirebbero tenere nascosto. Non è chiaro se sia un peso morto da scaricare alla prima occasione o una lama pronta a colpire nel momento giusto. Ma una cosa è certa, se è ancora vivo, un motivo c’è.",
+      "owner": "Nicolò Arena",
+      "image": "pirati_liv"
     }
   ],
   "masters": [
@@ -33,43 +39,43 @@
       "name": "Taritas",
       "text": "l'unico Re",
       "owner": "master Lorenzo",
-      "image": "m_taritas"
+      "image": "pirati_taritas"
     },
     {
       "name": "Kess",
-      "text": "la Regina",
-      "owner": "master Jennifer",
-      "image": "m_kess"
+      "text": "\"Fatti i cazzi tuoi!\", è l’unico consiglio che Kess concede prima di decidere cosa fare di te. Non chiede permesso, entra e si prende ciò che vuole, vive tra sospetto e ambizione, sempre un passo avanti e sempre con un coltello pronto dietro il sorriso. Superstiziosa quanto basta per non sfidare il destino a viso aperto.",
+      "owner": "master Jenny",
+      "image": "pirati_kess"
     },
     {
       "name": "Isabela",
       "text": "Capitano Maggiore, detta la Sirena. Impulsiva,ironica  testarda e manipoltrice. Ama il Rhum e i soldi più di qualsiasi altra cosa. Ha avuto diversi amanti, sia uomini che donne, ma gira voce che solo uno sia riuscito a rapire il suo cuore e non è il defunto marito. La sua nave è un Galeone totalmente fatto di legno scurissimo e vele nere chiamato 'Lo Smeraldo nero' la sua polena una sirena con un arpione in mano. Attualmente portatrice e custode di un artefatto di manifattura elfica.",
       "owner": "master Silvia",
-      "image": "m_isabela"
+      "image": "pirati_isabela"
     },
     {
       "name": "Vane",
       "text": "Capitano Maggiore, detto la Murena.",
       "owner": "",
-      "image": "m_vane"
+      "image": "pirati_vane"
     },
     {
       "name": "Akkor",
       "text": "Capitano Maggiore, detto lo Squalo Bianco.",
       "owner": "master Tobi",
-      "image": "m_akkor"
+      "image": "pirati_akkor"
     },
     {
       "name": "Sarmana",
       "text": "Capitano Maggiore, detta l'Orca.",
-      "owner": "master Jennifer",
-      "image": "m_sarmana"
+      "owner": "master Jenny",
+      "image": "pirati_sarmana"
     },
     {
       "name": "Rey",
       "text": "È una giovane mezzelfa oscura, lo si può notare dalla sua pelle dal grigio chiaro con qualche punto tendente al rosa rispetto ad un Kiuth puro. Non si sa molto su di lei tranne che è una donna fidata di Re Taritas.",
       "owner": "master Silvia",
-      "image": "m_rey"
+      "image": "pirati_rey"
     }
   ]
 }

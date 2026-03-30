@@ -2,10 +2,6 @@
 /**
  * Genera/aggiorna più <section id="section-..."> in index.html
  * leggendo i vari JSON dentro la cartella specificata (default: ./rhymil).
- *
- * USO:
- *   node generateRhymil.js
- *   node generateRhymil.js --dir ./rhymil --html ./index.html --out ./index.html --baseRoot rhymil --width 1200 --height 750 --thumb 150
  */
 
 const fs = require("fs");
@@ -61,22 +57,16 @@ function loadJsonLoose(p) {
 }
 
 // ---- Markup builders -------------------------------------------------------
-function anchorFor(version, item, baseHref) {
+function anchorFor(version, item) {
   const imgName = (item.image || "").replace(/\.(jpg|jpeg|png|webp)$/i, "");
-  const hrefLarge = path.posix.join(
-    baseHref,
-    `${imgName}.png?version=${version}`,
-  );
-  const hrefThumb = path.posix.join(
-    baseHref,
-    `thumb/${imgName}.png?version=${version}`,
-  );
+  const hrefImage = `/rhymil_images/${imgName}.png?version=${version}`;
+  const hrefThumb = `/rhymil_thumbs/${imgName}.png?version=${version}`;
   const name = escapeHtml(item.name || "");
   const owner = escapeHtml(item.owner || "");
   const text = escapeHtml(item.text || "");
 
   return `
-  <a href="${hrefLarge}" data-pswp-width="1080" data-pswp-height="1350" title="${name}">
+  <a href="${hrefImage}" data-pswp-width="1080" data-pswp-height="1350" title="${name}">
     <img src="${hrefThumb}" width="110" alt="${name}" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">${name}</span>
@@ -86,7 +76,7 @@ function anchorFor(version, item, baseHref) {
   </a>`;
 }
 
-function buildSection(slug, version, data, baseHref) {
+function buildSection(slug, version, data) {
   return `
   <section id="section-${slug}" class="panel-section">
     <h3 class="panel-title">
@@ -98,12 +88,12 @@ function buildSection(slug, version, data, baseHref) {
     <div class="pswp-gallery" id="gallery--${slug}">
       ${[]
         .concat(data.players || [])
-        .map((p) => anchorFor(version, p, baseHref))
+        .map((p) => anchorFor(version, p))
         .join("\n")}
         <hr/>
         ${[]
           .concat(data.masters || [])
-          .map((p) => anchorFor(version, p, baseHref))
+          .map((p) => anchorFor(version, p))
           .join("\n")}
     </div>
   </section>`;
@@ -236,12 +226,6 @@ async function main() {
   const htmlPath = args.html || "./index.html";
   const outPath = args.out || htmlPath;
 
-  // Opzioni immagini/base
-  const baseRoot = (args.baseRoot ? String(args.baseRoot) : "rhymil").replace(
-    /^\/+|\/+$/g,
-    "",
-  );
-
   if (!fs.existsSync(htmlPath)) {
     console.error(`❌ HTML non trovato: ${htmlPath}`);
     process.exit(1);
@@ -277,8 +261,7 @@ async function main() {
       continue;
     }
 
-    const baseHref = `/${baseRoot}/${slug}`.replace(/\/{2,}/g, "/");
-    const sectionHtml = buildSection(slug, nextVersion, data, baseHref);
+    const sectionHtml = buildSection(slug, nextVersion, data);
     const articleHtml = buildArticle(slug);
 
     html = upsertSection(html, slug, sectionHtml);

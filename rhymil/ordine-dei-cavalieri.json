@@ -7,19 +7,19 @@
       "name": "Rodrigo",
       "text": "",
       "owner": "Adriano Herrera",
-      "image": "p_rodrigo"
+      "image": "cavalieri_rodrigo"
     },
     {
       "name": "Beruthiel",
       "text": "",
       "owner": "Angelica Cavalli",
-      "image": "p_beruthiel"
+      "image": "cavalieri_beruthiel"
     },
     {
       "name": "Eryndal Thalen",
       "text": "Lui era un cavaliere senza coraggio, ma con più fede di qualunque paladino. Nella paura, era guidato dalla speranza: la speranza di farcela, di resistere, di ritrovare ciò che aveva perduto lungo il cammino. Non combatteva per gloria né per onore, ma per ciò che restava in piedi quando tutto il resto crollava. Ogni sua freccia valeva più di ogni dubbio che lo attraversava, ogni respiro era una scelta, ogni passo una sfida silenziosa. E non mancava mai il bersaglio, anche se esitava a scoccare per primo, se non quando farlo significava salvare gli altri. Non era l’assenza di paura a renderlo forte, ma il fatto che, nonostante essa, continuasse ad avanzare. E forse era proprio questo che lo rendeva degno del nome di cavaliere.",
       "owner": "Offi Christopher",
-      "image": "p_eryndal"
+      "image": "cavalieri_eryndal"
     }
   ],
   "masters": [
@@ -27,14 +27,14 @@
       "name": "Eleonor De Lervis",
       "text": "Capitana del Corpo Navale dell' Ordine dei Cavalieri",
       "owner": "",
-      "image": "m_eleonor",
+      "image": "cavalieri_eleonor",
       "version": 1
     },
     {
       "name": "Gildarts Solcoferreo",
       "text": "Capitano",
       "owner": "",
-      "image": "m_gildarts",
+      "image": "cavalieri_gildarts",
       "version": 1
     }
   ]

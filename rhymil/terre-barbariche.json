@@ -7,19 +7,19 @@
       "name": "Milten",
       "text": "Sciamano del clan del lupo bianco e aspirante ritualista. Da sempre ho dimostrato affinità con gli spiriti poiché il loro mondo mi affascina molto. Mi sono unito alla spedizione per fare esperienza e carriera nel mio settore in cerca di risposte ben precise, ma soprattutto in cerca dell'ombra poiché mi ha portato via qualcuno di caro.",
       "owner": "Tiziano Termini",
-      "image": "p_milten"
+      "image": "tribu_milten"
     },
     {
       "name": "Quinu",
       "text": "",
       "owner": "Linda Tagliaferro",
-      "image": "p_quinu"
+      "image": "tribu_quinu"
     },
     {
       "name": "Artenos",
       "text": "Guerriero brutale, gelido come il ghiaccio, la sua ascia danese è sempre assetata di sangue",
       "owner": "Dario Vitale",
-      "image": "p_artenos"
+      "image": "tribu_artenos"
     }
   ],
   "masters": [
@@ -27,37 +27,37 @@
       "name": "Hathor",
       "text": "Sommo Sciamano Terre Sabbiose",
       "owner": "master Tobi",
-      "image": "m_hathor"
+      "image": "tribu_hathor"
     },
     {
       "name": "Selikand",
       "text": "Campione delle Terre Sabbiose",
       "owner": "",
-      "image": "m_selikand"
+      "image": "tribu_selikand"
     },
     {
       "name": "Yamanos",
       "text": "Gran Sciamano delle Terre Fredde",
       "owner": "",
-      "image": "m_yamanos"
+      "image": "tribu_yamanos"
     },
     {
       "name": "Eiyda",
       "text": "Somma Sciamana Terre Fredde",
       "owner": "",
-      "image": "m_eiyda"
+      "image": "tribu_eiyda"
     },
     {
       "name": "Selhea",
       "text": "Campionessa delle Terre Fredde",
       "owner": "",
-      "image": "m_selhea"
+      "image": "tribu_selhea"
     },
     {
       "name": "Zareb",
       "text": "Sommo Sciamano delle Terre Calde",
       "owner": "",
-      "image": "m_zareb"
+      "image": "tribu_zareb"
     }
   ]
 }
