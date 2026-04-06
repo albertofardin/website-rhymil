@@ -1,4 +1,4 @@
-## rhymil-photoalbum
+## website-rhymil
 
 - **Live Demo:** [https://www.rhymil.it/](https://www.rhymil.it/)
 
