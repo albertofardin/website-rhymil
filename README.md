@@ -1,6 +1,10 @@
+<p align="center">
+<img width="200" src="./images/avatar.png">
+</p>
+
 ## website-rhymil
 
-- **Live Demo:** [https://www.rhymil.it/](https://www.rhymil.it/)
+https://albertofardin.github.io/website-rhymil/
 
 Questo sito raccoglie le illustrazioni dei personaggi della campagna LARP **Rhymil**, per avere sempre a portata di mano volti e nomi tra un evento e l’altro. Non è il sito ufficiale della campagna (che fornisce ambientazione e regolamento), ma serve da supporto visivo per i partecipanti.
 
