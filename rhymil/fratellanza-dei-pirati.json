@@ -55,12 +55,6 @@
       "image": "pirati_kess"
     },
     {
-      "name": "Isabela",
-      "text": "Capitano Maggiore, detta la Sirena. Impulsiva,ironica  testarda e manipoltrice. Ama il Rhum e i soldi più di qualsiasi altra cosa. Ha avuto diversi amanti, sia uomini che donne, ma gira voce che solo uno sia riuscito a rapire il suo cuore e non è il defunto marito. La sua nave è un Galeone totalmente fatto di legno scurissimo e vele nere chiamato 'Lo Smeraldo nero' la sua polena una sirena con un arpione in mano. Attualmente portatrice e custode di un artefatto di manifattura elfica.",
-      "owner": "master Silvia",
-      "image": "pirati_isabela"
-    },
-    {
       "name": "Vane",
       "text": "Capitano Maggiore, detto la Murena.",
       "owner": "",
@@ -84,6 +78,14 @@
       "owner": "master Silvia",
       "quote": "Il silenzio è la mia arma migliore",
       "image": "pirati_rey"
+    }
+  ],
+  "dead": [
+    {
+      "name": "Isabela",
+      "text": "Capitano Maggiore, detta la Sirena. Impulsiva,ironica  testarda e manipoltrice. Ama il Rhum e i soldi più di qualsiasi altra cosa. Ha avuto diversi amanti, sia uomini che donne, ma gira voce che solo uno sia riuscito a rapire il suo cuore e non è il defunto marito. La sua nave è un Galeone totalmente fatto di legno scurissimo e vele nere chiamato 'Lo Smeraldo nero' la sua polena una sirena con un arpione in mano. Attualmente portatrice e custode di un artefatto di manifattura elfica.",
+      "owner": "master Silvia",
+      "image": "pirati_isabela"
     }
   ]
 }

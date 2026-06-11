@@ -78,7 +78,8 @@ function fileHash(relPath) {
 
 // ---- Markup builders -------------------------------------------------------
 // `shortName`: nei thumb dei giocatori mostra solo la prima parola del nome
-function anchorFor(item, shortName = false) {
+// `extraClass`: classi aggiuntive sull'anchor (es. "is-dead" per i caduti)
+function anchorFor(item, shortName = false, extraClass = "") {
   const imgName = (item.image || "").replace(/\.(jpg|jpeg|png|webp)$/i, "");
   const largePath = `./rhymil_images/_large/${imgName}.webp`;
   const thumbPath = `./rhymil_images/_thumb/${imgName}.webp`;
@@ -90,6 +91,7 @@ function anchorFor(item, shortName = false) {
   const quote = escapeHtml(item.quote || "");
 
   const attrs = [
+    extraClass ? `class="${extraClass}"` : "",
     `href="${hrefImage}"`,
     `title="${name}"`,
     `data-name="${name}"`,
@@ -114,6 +116,7 @@ function anchorFor(item, shortName = false) {
 function buildSection(slug, data) {
   const players = [].concat(data.players || []);
   const masters = [].concat(data.masters || []);
+  const dead = [].concat(data.dead || []);
   return `
   <section id="section-${slug}" class="panel-section">
     <h3 class="panel-title">
@@ -131,6 +134,8 @@ function buildSection(slug, data) {
   </a>
       ${masters.length === 0 ? "" : `<h4 class="gallery-title">Master</h4>`}
       ${masters.map((p) => anchorFor(p)).join("\n")}
+      ${dead.length === 0 ? "" : `<h4 class="gallery-title">☠️ Caduti</h4>`}
+      ${dead.map((p) => anchorFor(p, false, "is-dead")).join("\n")}
     </div>
   </section>`;
 }
@@ -320,7 +325,11 @@ async function main() {
       continue;
     }
 
-    for (const item of [].concat(data.players || [], data.masters || [])) {
+    for (const item of [].concat(
+      data.players || [],
+      data.masters || [],
+      data.dead || [],
+    )) {
       const imgName = (item.image || "").replace(/\.(jpg|jpeg|png|webp)$/i, "");
       if (imgName) usedImages.add(imgName);
     }

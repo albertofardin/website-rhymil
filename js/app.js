@@ -207,6 +207,7 @@ function fillChar(a) {
   const d = a.dataset;
 
   charImg.classList.add("is-loading");
+  charImg.classList.toggle("is-dead", a.classList.contains("is-dead"));
   charImg.src = a.href;
   charImg.alt = d.name || "";
 

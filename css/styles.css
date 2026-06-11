@@ -677,6 +677,11 @@ ul.actions li .icon:before {
     transform 0.3s var(--ease-spring),
     box-shadow 0.3s ease;
 }
+/* caduti in battaglia: illustrazione in scala di grigi */
+.char-gallery a.is-dead img,
+.char-media img.is-dead {
+  filter: grayscale(1);
+}
 /* nome del personaggio flottante in basso sull'immagine */
 .thumb-name {
   position: absolute;

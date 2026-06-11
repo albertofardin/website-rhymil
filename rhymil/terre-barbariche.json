@@ -68,5 +68,13 @@
       "quote": "Bevi la luce, e l'oscurità avrà paura di te.",
       "image": "tribu_zareb"
     }
+  ],
+  "dead": [
+    {
+      "name": "Yana",
+      "text": "",
+      "owner": "",
+      "image": "tribu_yana"
+    }
   ]
 }

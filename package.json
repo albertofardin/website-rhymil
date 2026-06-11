@@ -2,6 +2,7 @@
   "name": "website-rhymil",
   "private": true,
   "scripts": {
+    "dev": "serve -l 8080",
     "images": "node generateImages.js",
     "html": "node generateRhymil.js"
   },

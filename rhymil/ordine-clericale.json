@@ -47,5 +47,19 @@
       "quote": "L'eresia si maschera da dubbio.",
       "image": "chierici_primoinquisitore"
     }
+  ],
+  "dead": [
+    {
+      "name": "Simon Ashen",
+      "text": "Ex Cavaliere che lotta incessantemente col Demone che alberga dentro di sé. La sua missione è riuscire a domare il potere demoniaco e metterlo al servizio di Rhymil. Attualmente sotto la custodia del Primo Inquisitore. Svolge ad ora il compito di guardiano e protettore dei membri dell'Ordine Clericale  della Spedizione.",
+      "owner": "Eddy Berardi",
+      "image": "chierici_simon"
+    },
+    {
+      "name": "Ahryn",
+      "text": "",
+      "owner": "Dario Pavan",
+      "image": "chierici_ahryn"
+    }
   ]
 }

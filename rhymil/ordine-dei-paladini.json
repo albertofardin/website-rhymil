@@ -65,5 +65,13 @@
       "owner": "master Alberto",
       "image": "paladini_raldoron"
     }
+  ],
+  "dead": [
+    {
+      "name": "Beltranius Ioleii Gautstafr",
+      "text": "",
+      "owner": "Cristian Castellet",
+      "image": "paladini_beltranius"
+    }
   ]
 }
