@@ -47,5 +47,14 @@
       "quote": "Il potere è vuoto senza disciplina.",
       "image": "maghi_felitya"
     }
+  ],
+  "dead": [
+    {
+      "name": "Cordelia",
+      "text": "",
+      "owner": "",
+      "quote": "",
+      "image": "maghi_cordelia"
+    }
   ]
 }

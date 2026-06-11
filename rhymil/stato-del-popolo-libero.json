@@ -108,5 +108,14 @@
       "owner": "",
       "image": "plibero_katerina"
     }
+  ],
+  "dead": [
+    {
+      "name": "Eilwood",
+      "text": "",
+      "owner": "Alessandro Beolchi",
+      "quote": "",
+      "image": "plibero_eilwood"
+    }
   ]
 }

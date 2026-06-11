@@ -31,16 +31,30 @@
       "text": "Capitana del Corpo Navale dell' Ordine dei Cavalieri",
       "owner": "",
       "image": "cavalieri_eleonor",
-      "quote": "Sotto la mia guida, nessuno piega la spada.",
-      "version": 1
+      "quote": "Sotto la mia guida, nessuno piega la spada."
     },
     {
       "name": "Gildarts Solcoferreo",
       "text": "Capitano",
       "owner": "",
       "image": "cavalieri_gildarts",
-      "quote": "L'onore si forgia nel coraggio.",
-      "version": 1
+      "quote": "L'onore si forgia nel coraggio."
+    }
+  ],
+  "dead": [
+    {
+      "name": "Thalion Dirk",
+      "text": "Cavaliere dal cuore irrequieto, cresciuto nel fango ma rivolto verso la luce. Affrontò il mondo con una lama affilata, un sorriso beffardo e l’onore che imparò a conquistarsi da solo",
+      "owner": "Offi Christopher",
+      "quote": "Nato tra i vicoli, morto da cavaliere. L’onore fu la sua ultima conquista.",
+      "image": "cavalieri_thalion"
+    },
+    {
+      "name": "Alexander",
+      "text": "Capitano",
+      "owner": "Master Lorenzo",
+      "quote": "",
+      "image": "cavalieri_alexander"
     }
   ]
 }
