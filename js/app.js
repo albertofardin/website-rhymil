@@ -25,6 +25,28 @@ if (installBtn) {
   });
 }
 
+/* --------- Tasto "back" mobile: chiude i pannelli, non l'app -------- */
+// pila dei pannelli aperti: il back di sistema chiude l'ultimo aperto
+const panelStack = [];
+
+function pushPanel(name, closeNow) {
+  panelStack.push({ name, closeNow });
+  history.pushState({ panel: name }, "");
+}
+
+// chiusura via UI: consuma l'entry di history, il popstate esegue la chiusura
+function popPanel(name) {
+  const i = panelStack.findIndex((p) => p.name === name);
+  if (i === -1) return;
+  if (i === panelStack.length - 1) history.back();
+  else panelStack.splice(i, 1)[0].closeNow();
+}
+
+window.addEventListener("popstate", () => {
+  const top = panelStack.pop();
+  if (top) top.closeNow();
+});
+
 /* ---------------------- Install modal handlers ---------------------- */
 const installModal = document.getElementById("installModal");
 if (installBtn && installModal) {
@@ -34,12 +56,17 @@ if (installBtn && installModal) {
   const panels = Array.from(installModal.querySelectorAll(".install-panel"));
 
   function openInstall() {
+    if (installModal.classList.contains("is-open")) return;
     installModal.classList.add("is-open");
     document.documentElement.style.overflow = "hidden";
+    pushPanel("install", closeInstallNow);
   }
-  function closeInstall() {
+  function closeInstallNow() {
     installModal.classList.remove("is-open");
     document.documentElement.style.overflow = "";
+  }
+  function closeInstall() {
+    popPanel("install");
   }
   installBtn.addEventListener("click", (e) => {
     e.preventDefault();
@@ -76,17 +103,22 @@ const panel = sheet.querySelector(".panel-panel");
 const pContent = sheet.querySelector(".panel-content");
 
 function openSheet() {
+  if (sheet.classList.contains("is-open")) return;
   sheet.classList.add("is-open");
   sheet.setAttribute("aria-hidden", "false");
   document.documentElement.style.overflow = "hidden";
   panel.scrollTop = 0;
   setTimeout(() => panel.focus({ preventScroll: true }), 0);
+  pushPanel("sheet", closeSheetNow);
 }
-function closeSheet() {
+function closeSheetNow() {
   sheet.classList.remove("is-open");
   sheet.setAttribute("aria-hidden", "true");
   document.documentElement.style.overflow = "";
   panel.style.transform = "";
+}
+function closeSheet() {
+  popPanel("sheet");
 }
 sheet.addEventListener("click", (e) => {
   if (e.target.closest("[data-panel-close]")) closeSheet();
@@ -251,13 +283,20 @@ function openChar(a) {
   charList = Array.from(gallery.querySelectorAll("a:not(.thumb-add)"));
   charIndex = charList.indexOf(a);
   fillChar(a);
-  charCard.classList.add("is-open");
-  charCard.setAttribute("aria-hidden", "false");
+  if (!charCard.classList.contains("is-open")) {
+    charCard.classList.add("is-open");
+    charCard.setAttribute("aria-hidden", "false");
+    pushPanel("char", closeCharNow);
+  }
+}
+
+function closeCharNow() {
+  charCard.classList.remove("is-open");
+  charCard.setAttribute("aria-hidden", "true");
 }
 
 function closeChar() {
-  charCard.classList.remove("is-open");
-  charCard.setAttribute("aria-hidden", "true");
+  popPanel("char");
 }
 
 function navChar(step) {
