@@ -257,6 +257,36 @@ function upsertSection(html, slug, newSection) {
   return `${html}\n${newSection}\n`;
 }
 
+// ---- Cleanup immagini orfane ------------------------------------------------
+// Elimina da rhymil_images (originali, _large, _thumb) i file non associati
+// a nessun personaggio dei JSON.
+function cleanupOrphanImages(imagesDir, usedNames) {
+  if (!fs.existsSync(imagesDir)) {
+    console.warn(`⚠️  Cartella immagini non trovata: ${imagesDir} (salto pulizia)`);
+    return;
+  }
+
+  const dirs = [imagesDir, path.join(imagesDir, "_large"), path.join(imagesDir, "_thumb")];
+  let removed = 0;
+
+  for (const d of dirs) {
+    if (!fs.existsSync(d)) continue;
+    for (const entry of fs.readdirSync(d, { withFileTypes: true })) {
+      if (!entry.isFile()) continue;
+      const base = entry.name.replace(/\.(jpg|jpeg|png|webp)$/i, "");
+      if (base === entry.name) continue; // non è un'immagine
+      if (usedNames.has(base)) continue;
+      const filePath = path.join(d, entry.name);
+      fs.unlinkSync(filePath);
+      removed++;
+      console.log(`🗑️  Rimossa immagine orfana: ${filePath}`);
+    }
+  }
+
+  if (removed === 0) console.log("✨ Nessuna immagine orfana da rimuovere.");
+  else console.log(`🧹 Pulizia completata: ${removed} file rimossi.`);
+}
+
 // ---- Main ------------------------------------------------------------------
 async function main() {
   const args = parseArgs(process.argv);
@@ -271,6 +301,8 @@ async function main() {
   }
 
   let html = fs.readFileSync(htmlPath, "utf8");
+  const usedImages = new Set();
+  let parseErrors = 0;
 
   for (const slug of TARGET) {
     const jsonPath = path.join(dir, `${slug}.json`);
@@ -284,7 +316,13 @@ async function main() {
       data = loadJsonLoose(jsonPath);
     } catch (err) {
       console.error(`❌ Errore parsing JSON "${slug}": ${err.message}`);
+      parseErrors++;
       continue;
+    }
+
+    for (const item of [].concat(data.players || [], data.masters || [])) {
+      const imgName = (item.image || "").replace(/\.(jpg|jpeg|png|webp)$/i, "");
+      if (imgName) usedImages.add(imgName);
     }
 
     const sectionHtml = buildSection(slug, data);
@@ -298,6 +336,15 @@ async function main() {
 
   fs.writeFileSync(outPath, html, "utf8");
   console.log(`🏁 File scritto: ${outPath}`);
+
+  // Ultima fase: rimuove le immagini non associate a nessun personaggio.
+  // Se un JSON non è stato parsato, salta la pulizia per non cancellare
+  // immagini di personaggi che esistono ma non sono stati letti.
+  if (parseErrors > 0) {
+    console.warn("⚠️  Pulizia immagini saltata: errori di parsing nei JSON.");
+  } else {
+    cleanupOrphanImages("./rhymil_images", usedImages);
+  }
 }
 
 main().catch((err) => {
