@@ -77,24 +77,37 @@ function fileHash(relPath) {
 }
 
 // ---- Markup builders -------------------------------------------------------
-function anchorFor(item) {
+// `shortName`: nei thumb dei giocatori mostra solo la prima parola del nome
+function anchorFor(item, shortName = false) {
   const imgName = (item.image || "").replace(/\.(jpg|jpeg|png|webp)$/i, "");
-  const largePath = `./rhymil_images/large/${imgName}.webp`;
-  const thumbPath = `./rhymil_images/thumb/${imgName}.webp`;
-  const hrefImage = `/rhymil_images/large/${imgName}.webp?v=${fileHash(largePath)}`;
-  const hrefThumb = `/rhymil_images/thumb/${imgName}.webp?v=${fileHash(thumbPath)}`;
+  const largePath = `./rhymil_images/_large/${imgName}.webp`;
+  const thumbPath = `./rhymil_images/_thumb/${imgName}.webp`;
+  const hrefImage = `/rhymil_images/_large/${imgName}.webp?v=${fileHash(largePath)}`;
+  const hrefThumb = `/rhymil_images/_thumb/${imgName}.webp?v=${fileHash(thumbPath)}`;
   const name = escapeHtml(item.name || "");
   const owner = escapeHtml(item.owner || "");
   const text = escapeHtml(item.text || "");
+  const quote = escapeHtml(item.quote || "");
+
+  const attrs = [
+    `href="${hrefImage}"`,
+    `title="${name}"`,
+    `data-name="${name}"`,
+    owner ? `data-owner="${owner}"` : "",
+    quote ? `data-quote="${quote}"` : "",
+    text ? `data-desc="${text}"` : "",
+  ]
+    .filter(Boolean)
+    .join(" ");
+
+  const thumbName = shortName
+    ? escapeHtml((item.name || "").trim().split(/\s+/)[0] || "")
+    : name;
 
   return `
-  <a href="${hrefImage}" data-pswp-width="1080" data-pswp-height="1350" title="${name}">
+  <a ${attrs}>
+    <span class="thumb-name">${thumbName}</span>
     <img src="${hrefThumb}" width="110" alt="${name}" loading="lazy" />
-    <span class="pswp-caption-content">
-      <span class="myimage-name">${name}</span>
-      ${!owner ? "" : `<span class="myimage-owner">- ${owner}</span><br />`}
-      <span class="myimage-desc">${text}</span>
-    </span>
   </a>`;
 }
 
@@ -109,12 +122,12 @@ function buildSection(slug, data) {
     <header>
       <p>${escapeHtml(data.text)}</p>
     </header>
-    <div class="pswp-gallery" id="gallery--${slug}">
+    <div class="char-gallery" id="gallery--${slug}" data-faction-icon="${escapeHtml(data.icon)}" data-faction-name="${escapeHtml(data.name)}">
       <h4 class="gallery-title">Giocatori</h4>
-      ${players.map((p) => anchorFor(p)).join("\n")}
+      ${players.map((p) => anchorFor(p, true)).join("\n")}
   <a class="thumb-add" href="https://forms.gle/bpCPzV4x4QBi88eN8" target="_blank" rel="noopener" aria-label="Aggiungi il tuo PG">
     <span class="icon solid fa-user-plus"></span>
-    <span>Aggiungi<br />il tuo PG</span>
+    <span>Modifica<br/>personaggi</span>
   </a>
       ${masters.length === 0 ? "" : `<h4 class="gallery-title">Master</h4>`}
       ${masters.map((p) => anchorFor(p)).join("\n")}

@@ -7,44 +7,51 @@
       "name": "Barbabrace",
       "text": "Arrivato da un passato oscuro che solo lui conosce, Barbabrace porta un nome nato dalla sfortuna che sembra non abbandonarlo mai. Poeta nell’animo e libertino nello spirito, tra un boccale e l’altro recita versi troppo aulici per una taverna, affidando pensieri e paure alla fede in Hara. Dietro la barba segnata e lo sguardo stanco si cela però un uomo risoluto, capace di tenere unito il gruppo e dare ordine quando regna il caos. Non cerca il comando, ma spesso è lui a prendersene il peso, per il bene della Spedizione e di chi cammina al suo fianco.",
       "owner": "Alberto Fardin",
+      "quote": "Non tutte le rotte si seguono con la bussola.",
       "image": "pirati_barbabrace"
     },
     {
       "name": "Fred Rayles",
       "text": "Mercante che adora sperimentare nella creazione di nuove sostanze. Adora essere al centro di tutto anche se non lo da a vedere. Fa parte della fazione pirati per via delle similitudini ma non sembra per nulla un pirata. Adora contrattare e sbalordire con “io sono arrivato prima”.",
       "owner": "Daniele De Castro",
+      "quote": "La differenza tra veleno e cura? Solo la dose.",
       "image": "pirati_fred"
     },
     {
       "name": "Roy Backler",
       "text": "Mercante prima che pirata, adora i soldi e farebbe qualsiasi cosa per ottenerli. Il suo motto, non che linea guida, è “Tutto e tutti hanno un prezzo”. ",
       "owner": "Davide Zanon",
+      "quote": "Quanto costa? Fammi un'offerta!",
       "image": "pirati_roy"
     },
     {
       "name": "Elijah",
       "text": "Felinide ruffiano, pirata in erba, adulatore dei belli, cucitore di cuori infranti, ma soprattutto... una gran puttana!",
       "owner": "Simone Ripaccioli",
+      "quote": "Tesoooooooro... Lo vuoi un massaggino?",
       "image": "pirati_elijah"
     },
     {
       "name": "Liv",
       "text": "Buttato nella Spedizione dal suo ex-capitano più per liberarsi di lui che per reale fiducia. Impiccione, chiacchierone, sempre con quel mezzo sorriso che sa più di guaio che di amicizia, si infila dove non dovrebbe e scopre quello che altri preferirebbero tenere nascosto. Non è chiaro se sia un peso morto da scaricare alla prima occasione o una lama pronta a colpire nel momento giusto. Ma una cosa è certa, se è ancora vivo, un motivo c’è.",
       "owner": "Nicolò Arena",
+      "quote": "Una spada fa rumore, un pugnale fa la storia.",
       "image": "pirati_liv"
     }
   ],
   "masters": [
     {
       "name": "Taritas",
-      "text": "l'unico Re",
+      "text": "Il Re dei pirati",
       "owner": "master Lorenzo",
+      "quote": "Uniti nella Fratellanza siamo una realtà!",
       "image": "pirati_taritas"
     },
     {
       "name": "Kess",
-      "text": "\"Fatti i cazzi tuoi!\", è l’unico consiglio che Kess concede prima di decidere cosa fare di te. Non chiede permesso, entra e si prende ciò che vuole, vive tra sospetto e ambizione, sempre un passo avanti e sempre con un coltello pronto dietro il sorriso. Superstiziosa quanto basta per non sfidare il destino a viso aperto.",
+      "text": "La Regina dei pirati.\n\"Fatti i cazzi tuoi!\", è l’unico consiglio che Kess concede prima di decidere cosa fare di te. Non chiede permesso, entra e si prende ciò che vuole, vive tra sospetto e ambizione, sempre un passo avanti e sempre con un coltello pronto dietro il sorriso. Superstiziosa quanto basta per non sfidare il destino a viso aperto.",
       "owner": "master Jenny",
+      "quote": "Non chiedo fedeltà. La pretendo.",
       "image": "pirati_kess"
     },
     {
@@ -75,6 +82,7 @@
       "name": "Rey",
       "text": "È una giovane mezzelfa oscura, lo si può notare dalla sua pelle dal grigio chiaro con qualche punto tendente al rosa rispetto ad un Kiuth puro. Non si sa molto su di lei tranne che è una donna fidata di Re Taritas.",
       "owner": "master Silvia",
+      "quote": "Il silenzio è la mia arma migliore",
       "image": "pirati_rey"
     }
   ]

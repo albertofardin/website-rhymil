@@ -7,18 +7,21 @@
       "name": "Rodrigo Herrera",
       "text": "",
       "owner": "Adriano Vitale",
+      "quote": "Servire senza chiedere, proteggere senza temere.",
       "image": "cavalieri_rodrigo"
     },
     {
       "name": "Beruthiel",
       "text": "",
       "owner": "Angelica Cavalli",
+      "quote": "Più forte della spada è la promessa.",
       "image": "cavalieri_beruthiel"
     },
     {
       "name": "Eryndal Thalen",
       "text": "Lui era un cavaliere senza coraggio, ma con più fede di qualunque paladino. Nella paura, era guidato dalla speranza: la speranza di farcela, di resistere, di ritrovare ciò che aveva perduto lungo il cammino. Non combatteva per gloria né per onore, ma per ciò che restava in piedi quando tutto il resto crollava. Ogni sua freccia valeva più di ogni dubbio che lo attraversava, ogni respiro era una scelta, ogni passo una sfida silenziosa. E non mancava mai il bersaglio, anche se esitava a scoccare per primo, se non quando farlo significava salvare gli altri. Non era l’assenza di paura a renderlo forte, ma il fatto che, nonostante essa, continuasse ad avanzare. E forse era proprio questo che lo rendeva degno del nome di cavaliere.",
       "owner": "Offi Christopher",
+      "quote": "La Luce mi guidi, se le mie mani tramano.",
       "image": "cavalieri_eryndal"
     }
   ],
@@ -28,6 +31,7 @@
       "text": "Capitana del Corpo Navale dell' Ordine dei Cavalieri",
       "owner": "",
       "image": "cavalieri_eleonor",
+      "quote": "Sotto la mia guida, nessuno piega la spada.",
       "version": 1
     },
     {
@@ -35,6 +39,7 @@
       "text": "Capitano",
       "owner": "",
       "image": "cavalieri_gildarts",
+      "quote": "L'onore si forgia nel coraggio.",
       "version": 1
     }
   ]

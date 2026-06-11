@@ -3,8 +3,8 @@
  * Genera le versioni web delle illustrazioni partendo dagli originali
  * in ./rhymil_images:
  *
- *   rhymil_images/<nome>.png  →  rhymil_images/large/<nome>.webp  (max 1080px)
- *                             →  rhymil_images/thumb/<nome>.webp  (360px, per la griglia)
+ *   rhymil_images/<nome>.png  →  rhymil_images/_large/<nome>.webp  (max 1080px)
+ *                             →  rhymil_images/_thumb/<nome>.webp  (360px, per la griglia)
  *
  * È incrementale: rigenera solo i file mancanti o più vecchi dell'originale.
  * Uso: node generateImages.js [--dir ./rhymil_images] [--force]
@@ -42,8 +42,8 @@ async function main() {
   const dir = args.dir || "./rhymil_images";
   const force = Boolean(args.force);
 
-  const largeDir = path.join(dir, "large");
-  const thumbDir = path.join(dir, "thumb");
+  const largeDir = path.join(dir, "_large");
+  const thumbDir = path.join(dir, "_thumb");
   fs.mkdirSync(largeDir, { recursive: true });
   fs.mkdirSync(thumbDir, { recursive: true });
 

@@ -7,18 +7,21 @@
       "name": "Julius Reynhold",
       "text": "",
       "owner": "Samuele Lamon",
+      "quote": "Il potere senza disciplina è solo caos.",
       "image": "maghi_julius"
     },
     {
       "name": "Gwin Lionlike",
       "text": "",
       "owner": "Dario Piana",
+      "quote": "Dove gli altri vedono magia, io vedo metodo.",
       "image": "maghi_gwin"
     },
     {
       "name": "Keldan",
       "text": "",
       "owner": "Alessandro",
+      "quote": "È tempo di applicare la teoria.",
       "image": "maghi_keldan"
     }
   ],
@@ -27,18 +30,21 @@
       "name": "Geor Dun",
       "text": "Meastro della Via del Tempo",
       "owner": "master Alessio",
+      "quote": "Non aspetto il tempo. Il tempo aspetta me.",
       "image": "maghi_geor"
     },
     {
       "name": "Agnes Roboris",
       "text": "Meastro della Via della Vita",
       "owner": "",
+      "quote": "Anche la pietra può ricordare come fiorire.",
       "image": "maghi_agnes"
     },
     {
       "name": "Felitya",
       "text": "Meastro della Via della Conoscenza",
       "owner": "",
+      "quote": "Il potere è vuoto senza disciplina.",
       "image": "maghi_felitya"
     }
   ]

@@ -52,3 +52,5 @@ Questo sito raccoglie le illustrazioni dei personaggi della campagna LARP **Rhym
    node generateImages.js
    ```
 4. Aggiungi il personaggio al JSON della sua fazione in `rhymil/` e rigenera l’index con `node generateRhymil.js`.
+
+Campi del personaggio nel JSON: `name` e `image` (obbligatori), `owner`, `text` (descrizione) e `quote` (citazione mostrata in corsivo nella scheda) — tutti opzionali.

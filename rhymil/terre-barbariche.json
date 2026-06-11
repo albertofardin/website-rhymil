@@ -7,18 +7,21 @@
       "name": "Milten",
       "text": "Sciamano del clan del lupo bianco e aspirante ritualista. Da sempre ho dimostrato affinità con gli spiriti poiché il loro mondo mi affascina molto. Mi sono unito alla spedizione per fare esperienza e carriera nel mio settore in cerca di risposte ben precise, ma soprattutto in cerca dell'ombra poiché mi ha portato via qualcuno di caro.",
       "owner": "Tiziano Termini",
+      "quote": "Il mio grido echeggia oltre le tormente.",
       "image": "tribu_milten"
     },
     {
       "name": "Quinu",
       "text": "",
       "owner": "Linda Tagliaferro",
+      "quote": "Il ghiaccio conserva la memoria degli antenati.",
       "image": "tribu_quinu"
     },
     {
       "name": "Artenos",
       "text": "Guerriero brutale, gelido come il ghiaccio, la sua ascia danese è sempre assetata di sangue",
       "owner": "Dario Vitale",
+      "quote": "Guarda il sole, le ombre lasciatele alle spalle.",
       "image": "tribu_artenos"
     }
   ],
@@ -27,36 +30,42 @@
       "name": "Hathor",
       "text": "Sommo Sciamano Terre Sabbiose",
       "owner": "master Tobi",
+      "quote": "Nel miraggio c'è la verità che l'occhio teme.",
       "image": "tribu_hathor"
     },
     {
       "name": "Selikand",
       "text": "Campione delle Terre Sabbiose",
       "owner": "",
+      "quote": "Le dune cambiano, ma il guerriero resta.",
       "image": "tribu_selikand"
     },
     {
       "name": "Yamanos",
       "text": "Gran Sciamano delle Terre Fredde",
       "owner": "",
+      "quote": "Nel silenzio, gli spiriti gridano più forte.",
       "image": "tribu_yamanos"
     },
     {
       "name": "Eiyda",
       "text": "Somma Sciamana Terre Fredde",
       "owner": "",
+      "quote": "Il respiro che congela è una preghiera al cielo.",
       "image": "tribu_eiyda"
     },
     {
       "name": "Selhea",
       "text": "Campionessa delle Terre Fredde",
       "owner": "",
+      "quote": "Il freddo non accoglie, mette alla prova.",
       "image": "tribu_selhea"
     },
     {
       "name": "Zareb",
       "text": "Sommo Sciamano delle Terre Calde",
       "owner": "",
+      "quote": "Bevi la luce, e l'oscurità avrà paura di te.",
       "image": "tribu_zareb"
     }
   ]

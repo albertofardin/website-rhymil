@@ -7,31 +7,36 @@
       "name": "Hermes Calighe",
       "text": "Mezz'elfo dall'orecchio sempre pronto a captare ogni nuova notizia e pettegolezzo, Hermes è un giovane paladino che non ha paura di mettersi in gioco per perseguire uno scopo più grande. Molto saldo nei suoi principi morali, dovrebbe capire che le sue convinzioni e le sue idee forse non sono sempre oggettivamente le migliori.",
       "owner": "Mattia De Zorzi",
+      "quote": "Finché respiro, nessuno cadrà.",
       "image": "paladini_hermes"
     },
     {
       "name": "Ansem Towermoon",
       "text": "Paladino da scrivania che si è ritrovato dentro qualcosa più grande lui. Ha un cuore grande e giusto, per questo l'immobilismo spesso imposto dalla legge lo rende irascibile e scostante. Tuttavia la sua fede non ha mai vacillato.",
       "owner": "Thomas Tomè",
+      "quote": "Parlo solo quando la lama tace.",
       "image": "paladini_ansem"
     },
     {
       "name": "Boreas Bonaventura",
       "text": "Una Paladina alle prima armi, fresca fresca di accademia, fa del suo meglio per risolvere le situazioni in modo pacifico. Nonostante abbia ancora moltissimo da imparare, il suo sogno è quello di diventare un medico da campo e di salvare vite in battaglia.",
       "owner": "Cora Oian",
+      "quote": "Una buona strategia vale cento uomini.",
       "image": "paladini_boreas"
     },
     {
       "name": "Walfinas",
       "text": "",
       "owner": "",
+      "quote": "La mia fede si affila ogni notte.",
       "image": "paladini_walfinas"
     },
     {
-      "name": "Beltranius Ioleii Gautstafr",
-      "text": "",
-      "owner": "Cristian Castellet",
-      "image": "paladini_beltranius"
+      "name": "Delphine Belinfer",
+      "text": "Pacata, decisa e talvolta chiassosa, ma solo quando non riesce a farsi sentire, o perde il controllo delle proprie emozioni, e l'unico modo che conosce è urlare, merito di essere cresciuta con tre fratelli. Ciò nonostante riesce anche a mostrare qualche lato dolce e sensibile. Cerca sempre di non essere invasiva e trovare le parole giuste per non ferire, ma la sua mente molto semplice spesso le fa dire in modo ingenuo e spontaneo il suo pensiero. Per fortuna i suoi fratelli dell'Ordine Clericale la capiscono. E' una delle figure che si può incontrare più spesso sui campi di battaglia per medicare e curare le ferite, tramite i favori divini della grande madre Ewylion e qualche insegnamento dell'Ordine degli Eruditi.",
+      "owner": "Adriana Pierro",
+      "quote": "Ogni sorriso è una piccola benedizione.",
+      "image": "paladini_delphine"
     }
   ],
   "masters": [
@@ -39,6 +44,7 @@
       "name": "Teodor Kilkan",
       "text": "Primo Paladino",
       "owner": "master Lorenzo",
+      "quote": "Difendere i più deboli a costo della vita.",
       "image": "paladini_teodor"
     },
     {

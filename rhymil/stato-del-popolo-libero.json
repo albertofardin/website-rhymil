@@ -7,66 +7,77 @@
       "name": "Savannah Morr",
       "text": "Sfarfalla ovunque per nascondere il fatto che non sa fare niente. Le piace: i pettegolezzi, correre dietro ai paladini. Non le piace: i rituali, i carciofi.",
       "owner": "Micol Stivanello",
+      "quote": "Un sorriso ben scelto vale più di mille pugnali.",
       "image": "plibero_savannah"
     },
     {
       "name": "Linhardt Aegis",
       "text": "Ex sacerdote dell’Ordine Clericale, divenuto Alchimista Bianco e cerusico del Popolo Libero. Ha lasciato i dogmi della fede per inseguire la conoscenza, studiando tra gli eruditi e i maestri dell’alchimia. Custodisce un sapere pratico e chirurgico che unisce fede, scienza e bisturi, e brandisce la sua mazza ferrata tanto in battaglia quanto come simbolo della determinazione a difendere la vita.",
       "owner": "Andrea Di Vico",
+      "quote": "Ogni cura inizia dalla conoscenza dell'anima.",
       "image": "plibero_linhardt"
     },
     {
       "name": "Nefah Nersora",
       "text": "",
       "owner": "Martina Bortolat",
+      "quote": "Il pericolo non fa rumore. Neanche io.",
       "image": "plibero_nefah"
     },
     {
       "name": "Lucien",
       "text": "",
       "owner": "Alessandro Beolchi",
+      "quote": "Non parlo. Pronuncio sentenze.",
       "image": "plibero_lucien"
     },
     {
       "name": "Floren",
       "text": "",
       "owner": "Francesco Paltrinieri",
+      "quote": "Il valore si misura dal coraggio di dire no.",
       "image": "plibero_floren"
     },
     {
       "name": "Alkib 'Topo' Moss",
       "text": "Soprannominato 'Topo', inizia a lavorare come cuoco nel porto di Navimbur. In seguito a debiti di gioco si vede costretto ad arruolarsi in una compagnia di riscossione debiti poco lecita dove impara a combattere. Dopo un paio d'anni decide di unirsi alla Spedizione guidato da curiosità e voglia di scoperta.",
       "owner": "Tommaso Parolo",
+      "quote": "Dove l'occhio vede, la freccia arriva.",
       "image": "plibero_alkib"
     },
     {
       "name": "Mallacht Barbabianca",
       "text": "Figlio di un grande nano artigiano, Mallacht è cresciuto a Navimbur e ha viaggiato per tutta Rhymil con suo padre per guadagnare grazie alla loro bottega su ruote. Dopo la morte del padre Mallacht viaggia ancora per Rhymil cercando di aiutare e trovare qualcuno o qualcosa che gli dia un nuovo scopo nella vita.",
       "owner": "Pietro Burato",
+      "quote": "Mai vidi simile meraviglia.",
       "image": "plibero_mallacht"
     },
     {
       "name": "Eryn",
       "text": "Eryn è una Kiuth, è sempre stata vista come 'diversa', alcuni abbassano lo sguardo o cambiano strada a causa del suo aspetto. Lei non capisce questa cosa perché è sempre stata buona con tutti e ha sempre tentato di aiutare e proteggere. Vissuta in una famiglia di pescatori umili che hanno sempre avuto dei valori forti, ora è partita per dare un contributo anche lei e aiutare a mandare avanti l'attività di famiglia.",
       "owner": "Elena Milanese",
+      "quote": "Perché? Tu non lo vedi?",
       "image": "plibero_eryn"
     },
     {
       "name": "Lecandel Purrfect",
       "text": "È un felinide, perciò viene da un altro mondo. È stato accudito dagli gnomi a Dalarta dove ha imparato a fare piccole riparazioni ed è andato alla Città Centrale per iniziare i suoi studi di medicina.",
       "owner": "Luca Milanese",
+      "quote": "Per tutto c'è una cura, basta trovarla.",
       "image": "plibero_lecandel"
     },
     {
       "name": "Morwen",
       "text": "Figlia di un'elfa delle foreste e di un umano, nata e cresciuta a Navimbur, ha fin da bimba mostrato interesse per le arti curative della madre e le arti artigiane del padre, oltre che le arti del combattimento. Estremamente curiosa di tutto ciò che può imparare, si è sposata col fabbro Duncan con cui condivide la stessa passione per l'artigianato. Predilige però l'utilizzo del bisturi e delle arti mediche con cui intende salvare più vite possibili com'è accaduto durante la Peste a Navimbur. Si è unita alla spedizione nella speranza di scoprire qualcosa di più su se stessa e le sue capacità.",
       "owner": "Jessica Ballotta",
+      "quote": "Apprendere è un dono. Insegnare è un'arte.",
       "image": "plibero_morwen"
     },
     {
       "name": "Duncan",
       "text": "",
       "owner": "Cristiano Padovani",
+      "quote": "Datemi un'incudine e raddrizzerò il mondo.",
       "image": "plibero_duncan"
     }
   ],
@@ -75,12 +86,14 @@
       "name": "Edgard Hosch",
       "text": "",
       "owner": "master Tobi",
+      "quote": "Non ho scelto di guidare, ho scelto di resistere.",
       "image": "plibero_edgard"
     },
     {
       "name": "Sasha Waivyr",
       "text": "Rappresentante dello Stato del Popolo Libero insieme ad Edgar Hosch. Poco diplomatica e molto schietta. Le piace sapere tutto sia del luogo in cui si trova, che delle persone che ha attorno. Difficile che le sfugga qualcosa e se si ha bisogno di una informazione lei è la persona giusta a cui chiedere, ovviamente nei modi e termini che a lei aggradano. Aiuta le persone in difficoltà, soprattutto i bambini dell'orfanotrofio a cui è molto legata.",
       "owner": "master Silvia",
+      "quote": "Chi tenta di fregarmi, paga due volte.",
       "image": "plibero_sasha"
     },
     {
