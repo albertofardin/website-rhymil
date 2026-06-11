@@ -1183,29 +1183,147 @@ hr {
 
 /* CTA Arcana Domine: si distingue dagli altri bottoni */
 .panel-item a.button--arcana {
-  justify-content: center;
+  position: relative;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 18px;
   background: linear-gradient(135deg, var(--accent), var(--accent-deep));
   border-color: var(--accent-deep);
   color: #fff;
-  letter-spacing: 0.01em;
+  overflow: hidden;
   box-shadow: 0 6px 18px rgba(245, 73, 0, 0.28);
 }
-/* la label lunga va a capo invece di uscire dallo schermo */
-.panel-item a.button--arcana span {
+.button--arcana .fa-dice-d20 {
+  text-align: center;
+  width: 30px;
+}
+/* riflesso che attraversa il bottone al passaggio del mouse */
+.panel-item a.button--arcana::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -60%;
+  width: 40%;
+  background: linear-gradient(
+    100deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+  transform: skewX(-18deg);
+  pointer-events: none;
+}
+.panel-item a.button--arcana:hover::after,
+.panel-item a.button--arcana:focus-visible::after {
+  transition: left 0.6s ease;
+  left: 120%;
+}
+.arcana-cta-text {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  text-align: center;
   white-space: normal;
   overflow: visible;
-  text-align: center;
-  line-height: 1.35;
+}
+.arcana-cta-text strong {
+  font-family: Cinzel, serif;
+  font-weight: 700;
+  font-size: 0.95em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+.arcana-cta-text strong::before,
+.arcana-cta-text strong::after {
+  content: "✦";
+  font-size: 0.7em;
+  opacity: 0.8;
+  vertical-align: 0.15em;
+}
+.arcana-cta-text strong::before {
+  margin-right: 0.6em;
+}
+.arcana-cta-text strong::after {
+  margin-left: 0.6em;
+}
+.arcana-cta-text small {
+  font-size: 11px;
+  line-height: 1.3;
+  opacity: 0.9;
 }
 .panel-item a.button--arcana .icon:before {
   width: auto;
-  margin-right: 6px;
+  font-size: 1.1em;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+/* i due d20 ruotano in direzioni opposte al passaggio */
+.panel-item a.button--arcana:hover .icon:first-child:before {
+  transform: scale(1.18) rotate(-20deg);
+}
+.panel-item a.button--arcana:hover .icon:last-child:before {
+  transform: scale(1.18) rotate(20deg);
 }
 .panel-item a.button--arcana:hover,
 .panel-item a.button--arcana:focus-visible {
   background: linear-gradient(135deg, #ff5a14, var(--accent));
   border-color: var(--accent);
   box-shadow: 0 10px 26px rgba(245, 73, 0, 0.38);
+}
+
+/* ===== Sezione "Arcana Domine": logo, tagline e intro ===== */
+.arcana-hero {
+  margin-top: 14px;
+  padding: 28px 18px 20px;
+  text-align: center;
+  background:
+    radial-gradient(120% 100% at 50% 0%, var(--accent-soft), transparent 65%),
+    var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow-sm);
+}
+.arcana-logo {
+  display: block;
+  width: min(320px, 82%);
+  height: auto;
+  margin: 0 auto;
+  /* il PNG ha fondo bianco: multiply lo fonde con la pergamena */
+  mix-blend-mode: multiply;
+}
+.arcana-tagline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 16px 0 0;
+  font-family: Cinzel, serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.arcana-tagline::before,
+.arcana-tagline::after {
+  content: "";
+  flex: 0 0 36px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--border-strong));
+}
+.arcana-tagline::after {
+  background: linear-gradient(to left, transparent, var(--border-strong));
+}
+.panel-section header.arcana-intro {
+  max-width: 56ch;
+  margin: 18px auto 0;
+  font-size: 13px;
+  line-height: 1.65;
+  text-align: center;
 }
 
 /* ===== Desktop: sidebar fissa a sinistra, contenuto a destra =====
