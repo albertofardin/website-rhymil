@@ -10,7 +10,6 @@ if ('serviceWorker' in navigator) {
 
 /* ----------------------- PWA install: bottone ----------------------- */
 const installBtn = document.getElementById('installBtn');
-const version = document.getElementById('version'); // se lo usi in pagina
 
 function isStandalone(){
   return window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
@@ -21,10 +20,8 @@ function isMobileUA(){
 if (installBtn) {
   const shouldShow = !isStandalone() && isMobileUA();
   installBtn.hidden = !shouldShow;
-  if (version) version.style.display = shouldShow ? 'none' : '';
   window.addEventListener('appinstalled', () => {
     installBtn.hidden = true;
-    if (version) version.style.display = '';
   });
 }
 
@@ -61,8 +58,8 @@ const sheet = document.getElementById('uiPanelSheet');
 const panel = sheet.querySelector('.panel-panel');
 const pContent = sheet.querySelector('.panel-content');
 
-function openSheet(){ sheet.classList.add('is-open'); sheet.setAttribute('aria-hidden','false'); document.documentElement.style.overflow='hidden'; setTimeout(()=>panel.focus({preventScroll:true}),0); }
-function closeSheet(){ sheet.classList.remove('is-open'); sheet.setAttribute('aria-hidden','true'); document.documentElement.style.overflow=''; }
+function openSheet(){ sheet.classList.add('is-open'); sheet.setAttribute('aria-hidden','false'); document.documentElement.style.overflow='hidden'; panel.scrollTop = 0; setTimeout(()=>panel.focus({preventScroll:true}),0); }
+function closeSheet(){ sheet.classList.remove('is-open'); sheet.setAttribute('aria-hidden','true'); document.documentElement.style.overflow=''; panel.style.transform=''; }
 sheet.addEventListener('click', e => { if (e.target.closest('[data-panel-close]')) closeSheet(); });
 window.addEventListener('keydown', e => { if (e.key === 'Escape' && sheet.classList.contains('is-open')) closeSheet(); });
 
@@ -84,12 +81,71 @@ document.addEventListener('click', (e) => {
 });
 
 
+/* ------------- Panel: trascina verso il basso per chiudere ---------- */
+let dragStartY = null;
+let dragDelta = 0;
+
+panel.addEventListener('touchstart', (e) => {
+  // solo su layout mobile (<800px il transform base è translateY puro)
+  // e solo se il contenuto del panel è scrollato in cima
+  if (window.innerWidth >= 800 || panel.scrollTop > 0) return;
+  dragStartY = e.touches[0].clientY;
+  dragDelta = 0;
+}, { passive: true });
+
+panel.addEventListener('touchmove', (e) => {
+  if (dragStartY === null) return;
+  dragDelta = Math.max(0, e.touches[0].clientY - dragStartY);
+  if (dragDelta === 0) return;
+  panel.style.transition = 'none';
+  panel.style.transform = `translateY(${dragDelta}px)`;
+}, { passive: true });
+
+panel.addEventListener('touchend', () => {
+  if (dragStartY === null) return;
+  panel.style.transition = '';
+  if (dragDelta > 110) closeSheet();
+  else panel.style.transform = '';
+  dragStartY = null;
+  dragDelta = 0;
+});
+
+/* ---------------------- Animazioni di entrata ----------------------- */
+const io = 'IntersectionObserver' in window
+  ? new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+        io.unobserve(entry.target);
+      });
+    }, { threshold: 0.12 })
+  : null;
+
+document
+  .querySelectorAll('#header .inner, #main > .actions, #main .factions')
+  .forEach((group) => {
+    Array.from(group.children).forEach((el, i) => {
+      if (el.tagName === 'HR') return;
+      el.classList.add('reveal');
+      el.style.setProperty('--reveal-delay', `${Math.min(i, 10) * 70}ms`);
+      if (io) io.observe(el);
+      else el.classList.add('is-visible');
+    });
+  });
+
+/* indice per l'entrata a cascata dei thumbnail (vedi CSS .panel-section.is-active) */
+document.querySelectorAll('.pswp-gallery').forEach((gallery) => {
+  gallery.querySelectorAll('a').forEach((a, i) => {
+    a.style.setProperty('--i', Math.min(i, 14));
+  });
+});
+
 /* ----------------------- PhotoSwipe Lightbox ------------------------ */
 
 /* Inizializza una sola istanza, funziona anche su gallery nascoste (sono nel DOM) */
 const lightbox = new PhotoSwipeLightbox({
   gallery: '.pswp-gallery',
-  children: 'a',
+  children: 'a:not(.thumb-add)', // la card "Aggiungi il tuo PG" non è una slide
   pswpModule: () => import('/photoswipe/photoswipe.esm.js')
 });
 lightbox.init();

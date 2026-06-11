@@ -15,6 +15,7 @@ Questo sito raccoglie le illustrazioni dei personaggi della campagna LARP **Rhym
 - Completamente realizzato con **HTML**, **CSS** e **JavaScript**, senza framework esterni.
 - L’**index.html** si popola dinamicamente tramite file **JSON** presenti nella cartella `rhymil`.
 - Include uno script (`generateRhymil.js`) che genera l’index a partire dai JSON.
+- Include uno script (`generateImages.js`) che, partendo dagli originali in `rhymil_images/`, genera le versioni **WebP** servite dal sito: `rhymil_images/large/` (lightbox, max 1080px) e `rhymil_images/thumb/` (griglia, 360px).
 
 ---
 
@@ -38,3 +39,16 @@ Questo sito raccoglie le illustrazioni dei personaggi della campagna LARP **Rhym
    node generateRhymil.js
    ```
 6. Dopo il comando, l’**index.html** viene aggiornato automaticamente partendo dai JSON contenuti in `rhymil`.
+
+## Aggiungere o aggiornare le illustrazioni
+
+1. Metti l’immagine originale (PNG/JPG, idealmente 1080×1350) in `rhymil_images/`.
+2. Installa le dipendenze (solo la prima volta):
+   ```bash
+   npm install
+   ```
+3. Genera le versioni WebP (è incrementale: converte solo i file nuovi o modificati):
+   ```bash
+   node generateImages.js
+   ```
+4. Aggiungi il personaggio al JSON della sua fazione in `rhymil/` e rigenera l’index con `node generateRhymil.js`.

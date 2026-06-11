@@ -1,0 +1,11 @@
+{
+  "name": "website-rhymil",
+  "private": true,
+  "scripts": {
+    "images": "node generateImages.js",
+    "html": "node generateRhymil.js"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.2"
+  }
+}

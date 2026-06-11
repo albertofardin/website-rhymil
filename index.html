@@ -5,12 +5,11 @@
     <link rel="manifest" href="./images/icons/manifest.webmanifest" />
     <link rel="icon" href="./images/icons/favicon.ico" type="image/x-icon" />
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="photoswipe/photoswipe.css" />
     <link rel="stylesheet" href="/photoswipe/photoswipe-caption-plugin.css" />
@@ -90,7 +89,7 @@
       name="msapplication-TileImage"
       content="./images/icons/ms-icon-144x144.png"
     />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#f6f1e7" />
 
     <!-- Base -->
     <meta property="og:type" content="website" />
@@ -98,7 +97,7 @@
     <meta property="og:title" content="RHYMIL" />
     <meta
       property="og:description"
-      content="Centralizzatore dei link ed illustrazioni della campagna Rhymil."
+      content="Link utili e illustrazioni dei personaggi della campagna di Gioco dal Vivo RHYMIL – Una Nuova Era, in un'unica pagina."
     />
     <meta
       property="og:image"
@@ -111,7 +110,7 @@
     <meta name="twitter:title" content="RHYMIL" />
     <meta
       name="twitter:description"
-      content="Centralizzatore dei link ed illustrazioni della campagna Rhymil."
+      content="Link utili e illustrazioni dei personaggi della campagna di Gioco dal Vivo RHYMIL – Una Nuova Era, in un'unica pagina."
     />
     <meta
       name="twitter:image"
@@ -121,16 +120,17 @@
   <body>
     <header id="header">
       <div class="inner">
-        <p class="version">v1.18</p>
-        <a href="#" class="image logo"><img src="./images/avatar.png" /></a>
+        <div class="image logo">
+          <img src="./images/avatar.png" alt="Rhymil – Una Nuova Era" />
+        </div>
         <p class="description">
-          Benvenuto su Rhymil, il sito web centralizzatore di link ed
-          illustrazioni della campagna Rhymil un’unica pagina, semplice e
-          accessibile a tutti.
+          Benvenuti su Rhymil: i link utili e le illustrazioni dei personaggi
+          della campagna, raccolti in un’unica pagina semplice e accessibile a
+          tutti.
           <br />
-          Questo sito è un progetto nato dall’iniziativa dei giocatori, in
-          collaborazione con l’autore dell’ambientazione e i master della
-          campagna di Gioco dal Vivo “RHYMIL - UNA NUOVA ERA".
+          Un progetto nato dall’iniziativa dei giocatori, in collaborazione con
+          l’autore dell’ambientazione e i master della campagna di Gioco dal
+          Vivo “RHYMIL – UNA NUOVA ERA”.
         </p>
       </div>
     </header>
@@ -164,18 +164,13 @@
             <span>Dashboard</span></a
           >
         </li>
-        <li class="panel-item">
-          <a
-            class="button"
-            data-panel-open
-            data-panel-target="#section-arcanadomine"
-            href="#"
-          >
-            <span class="icon solid fa-square"></span>
-            <span>Arcana Domine</span>
-          </a>
-        </li>
         <hr />
+        <li class="panel-item">
+          <a href="https://wa.me/3453293560" target="_blank">
+            <span class="icon brands fa-whatsapp" style="color: #25d366"></span>
+            <span>Contatta il Master per partecipare</span></a
+          >
+        </li>
         <li class="panel-item">
           <a
             class="button"
@@ -198,9 +193,9 @@
           >
         </li>
         <li class="panel-item">
-          <a href="https://wa.me/3453293560" target="_blank">
-            <span class="icon brands fa-whatsapp" style="color: #25d366"></span>
-            <span>Lorenzo HeadMaster di Rhymil</span></a
+          <a href="https://www.youtube.com/@RHYMILGIOCODIRUOLO" target="_blank">
+            <span class="icon brands fa-youtube" style="color: #ff0000"></span>
+            <span>YouTube</span></a
           >
         </li>
         <hr />
@@ -216,27 +211,6 @@
         </li>
       </ul>
       <div class="factions">
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         <article>
                   <a
                     href="#"
@@ -302,21 +276,19 @@
                 </article>
 </div>
       <ul class="actions">
+        <hr />
         <li class="panel-item">
           <a
-            class="button"
+            class="button button--arcana"
             data-panel-open
-            data-panel-target="#section-webmaster"
+            data-panel-target="#section-arcanadomine"
             href="#"
           >
-            <span class="icon solid fa-pen"></span>
-            <span>Richiedi una modifica</span>
+            <span class="icon solid fa-dice-d20"></span>
+            <span>Entra in Arcana Domine – Associazione LARP</span>
           </a>
         </li>
       </ul>
-      <div class="footer">
-        <small>© <span id="year"></span> Rhymil</small>
-      </div>
     </div>
 
     <!-- =================== Panel unico riutilizzabile (già nel DOM) =================== -->
@@ -334,48 +306,6 @@
           ✕
         </button>
         <div class="panel-content">
-          <section id="section-webmaster" class="panel-section">
-            <h3 class="panel-title">📩 Richiedi una modifica</h3>
-            <header class="major">
-              <p style="margin: 0">
-                Se desideri aggiungere, modificare o rimuovere qualcosa sei nel
-                posto giusto! Il sito e le sue illustrazioni sono curate da
-                Alberto, che puoi contattare direttamente per:
-              </p>
-              <ul style="margin: 10px">
-                <li style="list-style: initial">
-                  Richiedere l’aggiunta del tuo PG (inviando foto, nome, realtà
-                  politica e breve descrizione)
-                </li>
-                <li style="list-style: initial">
-                  Proporre miglioramenti o correzioni
-                </li>
-                <li style="list-style: initial">
-                  Condividere idee e suggerimenti per rendere il sito sempre più
-                  completo 🌟
-                </li>
-              </ul>
-            </header>
-            <ul class="panel-list">
-              <li class="panel-item">
-                <a href="https://wa.me/3488638006" target="_blank">
-                  <span
-                    class="icon brands fa-whatsapp"
-                    style="color: #25d366"
-                  ></span>
-                  <span>Contatta Alberto</span></a
-                >
-              </li>
-            </ul>
-            <img
-              class="webmaster"
-              src="/images/webmaster.png"
-              width="110"
-              loading="lazy"
-              style="position: absolute; right: 60px; bottom: 0px"
-            />
-          </section>
-
           <section id="section-docs" class="panel-section">
             <h3 class="panel-title">📚 Tomi Ufficiali</h3>
             <ul class="panel-list">
@@ -431,9 +361,13 @@
             <h3 class="panel-title">ℹ️ Arcana Domine</h3>
             <header class="major">
               <p>
-                Arcana Domine è un’associazione no-profit di Gioco di Ruolo dal
-                Vivo, attiva nel Triveneto dal 2004, che ospita la campagna
-                fantasy "Rhymil - Una Nuova Era".
+                Arcana Domine è l’associazione no-profit di Gioco di Ruolo dal
+                Vivo che organizza diverse campagne tra cui RHYMIL. Attiva nel
+                Triveneto dal 2004, accoglie giocatori di ogni esperienza: che
+                tu sia un veterano del LARP o alla tua prima avventura, troverai
+                una community pronta a darti il benvenuto. Scopri
+                l’associazione, consulta il calendario dei live e unisciti alla
+                chat per partecipare al prossimo evento.
               </p>
             </header>
             <ul class="panel-list">
@@ -469,7 +403,6 @@
 
           
   
-  
   <section id="section-stato-del-popolo-libero" class="panel-section">
     <h3 class="panel-title">
       ✊ Stato del Popolo Libero
@@ -478,9 +411,10 @@
       <p>Non sono semplici ribelli. Sono madri, figli, artigiani e soldati che hanno detto “basta”. Hanno visto crollare torri, bruciare promesse e spezzare catene, eppure si sono rialzati. Lo Stato del Popolo Libero non ha una corona né un dogma, ma ha memoria, orgoglio e fame di giustizia. C’è chi guida con la parola, chi difende con la lama, chi trama nell’ombra per il bene comune. Con mani callose, cuori testardi e sogni che non vogliono più nascondere, hanno trasformato la rinuncia in coraggio.</p>
     </header>
     <div class="pswp-gallery" id="gallery--stato-del-popolo-libero">
+      <h4 class="gallery-title">Giocatori</h4>
       
-  <a href="/rhymil_images/plibero_savannah.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Savannah Morr">
-    <img src="/rhymil_thumbs/plibero_savannah.png?version=1.18" width="110" alt="Savannah Morr" loading="lazy" />
+  <a href="/rhymil_images/large/plibero_savannah.webp?v=4bc9be0a" data-pswp-width="1080" data-pswp-height="1350" title="Savannah Morr">
+    <img src="/rhymil_images/thumb/plibero_savannah.webp?v=eb7c7e98" width="110" alt="Savannah Morr" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Savannah Morr</span>
       <span class="myimage-owner">- Micol Stivanello</span><br />
@@ -488,8 +422,8 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/plibero_linhardt.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Linhardt Aegis">
-    <img src="/rhymil_thumbs/plibero_linhardt.png?version=1.18" width="110" alt="Linhardt Aegis" loading="lazy" />
+  <a href="/rhymil_images/large/plibero_linhardt.webp?v=f3a895d7" data-pswp-width="1080" data-pswp-height="1350" title="Linhardt Aegis">
+    <img src="/rhymil_images/thumb/plibero_linhardt.webp?v=5932def6" width="110" alt="Linhardt Aegis" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Linhardt Aegis</span>
       <span class="myimage-owner">- Andrea Di Vico</span><br />
@@ -497,8 +431,8 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/plibero_nefah.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Nefah Nersora">
-    <img src="/rhymil_thumbs/plibero_nefah.png?version=1.18" width="110" alt="Nefah Nersora" loading="lazy" />
+  <a href="/rhymil_images/large/plibero_nefah.webp?v=7ace9237" data-pswp-width="1080" data-pswp-height="1350" title="Nefah Nersora">
+    <img src="/rhymil_images/thumb/plibero_nefah.webp?v=b0461b36" width="110" alt="Nefah Nersora" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Nefah Nersora</span>
       <span class="myimage-owner">- Martina Bortolat</span><br />
@@ -506,8 +440,8 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/plibero_lucien.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Lucien">
-    <img src="/rhymil_thumbs/plibero_lucien.png?version=1.18" width="110" alt="Lucien" loading="lazy" />
+  <a href="/rhymil_images/large/plibero_lucien.webp?v=98f791f8" data-pswp-width="1080" data-pswp-height="1350" title="Lucien">
+    <img src="/rhymil_images/thumb/plibero_lucien.webp?v=27976a88" width="110" alt="Lucien" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Lucien</span>
       <span class="myimage-owner">- Alessandro Beolchi</span><br />
@@ -515,8 +449,8 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/plibero_floren.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Floren">
-    <img src="/rhymil_thumbs/plibero_floren.png?version=1.18" width="110" alt="Floren" loading="lazy" />
+  <a href="/rhymil_images/large/plibero_floren.webp?v=582be515" data-pswp-width="1080" data-pswp-height="1350" title="Floren">
+    <img src="/rhymil_images/thumb/plibero_floren.webp?v=5057e5f8" width="110" alt="Floren" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Floren</span>
       <span class="myimage-owner">- Francesco Paltrinieri</span><br />
@@ -524,8 +458,8 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/plibero_alkib.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Alkib &#39;Topo&#39; Moss">
-    <img src="/rhymil_thumbs/plibero_alkib.png?version=1.18" width="110" alt="Alkib &#39;Topo&#39; Moss" loading="lazy" />
+  <a href="/rhymil_images/large/plibero_alkib.webp?v=c0efc69b" data-pswp-width="1080" data-pswp-height="1350" title="Alkib &#39;Topo&#39; Moss">
+    <img src="/rhymil_images/thumb/plibero_alkib.webp?v=1adbd9c8" width="110" alt="Alkib &#39;Topo&#39; Moss" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Alkib &#39;Topo&#39; Moss</span>
       <span class="myimage-owner">- Tommaso Parolo</span><br />
@@ -533,8 +467,8 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/plibero_mallacht.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Mallacht Barbabianca">
-    <img src="/rhymil_thumbs/plibero_mallacht.png?version=1.18" width="110" alt="Mallacht Barbabianca" loading="lazy" />
+  <a href="/rhymil_images/large/plibero_mallacht.webp?v=93cad468" data-pswp-width="1080" data-pswp-height="1350" title="Mallacht Barbabianca">
+    <img src="/rhymil_images/thumb/plibero_mallacht.webp?v=f46a0866" width="110" alt="Mallacht Barbabianca" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Mallacht Barbabianca</span>
       <span class="myimage-owner">- Pietro Burato</span><br />
@@ -542,8 +476,8 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/plibero_eryn.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Eryn">
-    <img src="/rhymil_thumbs/plibero_eryn.png?version=1.18" width="110" alt="Eryn" loading="lazy" />
+  <a href="/rhymil_images/large/plibero_eryn.webp?v=c941b84c" data-pswp-width="1080" data-pswp-height="1350" title="Eryn">
+    <img src="/rhymil_images/thumb/plibero_eryn.webp?v=a5c2f4eb" width="110" alt="Eryn" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Eryn</span>
       <span class="myimage-owner">- Elena Milanese</span><br />
@@ -551,8 +485,8 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/plibero_lecandel.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Lecandel Purrfect">
-    <img src="/rhymil_thumbs/plibero_lecandel.png?version=1.18" width="110" alt="Lecandel Purrfect" loading="lazy" />
+  <a href="/rhymil_images/large/plibero_lecandel.webp?v=fd234a5d" data-pswp-width="1080" data-pswp-height="1350" title="Lecandel Purrfect">
+    <img src="/rhymil_images/thumb/plibero_lecandel.webp?v=a5c1658a" width="110" alt="Lecandel Purrfect" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Lecandel Purrfect</span>
       <span class="myimage-owner">- Luca Milanese</span><br />
@@ -560,8 +494,8 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/plibero_morwen.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Morwen">
-    <img src="/rhymil_thumbs/plibero_morwen.png?version=1.18" width="110" alt="Morwen" loading="lazy" />
+  <a href="/rhymil_images/large/plibero_morwen.webp?v=16a3ac44" data-pswp-width="1080" data-pswp-height="1350" title="Morwen">
+    <img src="/rhymil_images/thumb/plibero_morwen.webp?v=106b40bf" width="110" alt="Morwen" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Morwen</span>
       <span class="myimage-owner">- Jessica Ballotta</span><br />
@@ -569,18 +503,22 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/plibero_duncan.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Duncan">
-    <img src="/rhymil_thumbs/plibero_duncan.png?version=1.18" width="110" alt="Duncan" loading="lazy" />
+  <a href="/rhymil_images/large/plibero_duncan.webp?v=ed007420" data-pswp-width="1080" data-pswp-height="1350" title="Duncan">
+    <img src="/rhymil_images/thumb/plibero_duncan.webp?v=e6e1bf46" width="110" alt="Duncan" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Duncan</span>
       <span class="myimage-owner">- Cristiano Padovani</span><br />
       <span class="myimage-desc"></span>
     </span>
   </a>
-        <hr/>
-        
-  <a href="/rhymil_images/plibero_edgard.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Edgard Hosch">
-    <img src="/rhymil_thumbs/plibero_edgard.png?version=1.18" width="110" alt="Edgard Hosch" loading="lazy" />
+  <a class="thumb-add" href="https://forms.gle/bpCPzV4x4QBi88eN8" target="_blank" rel="noopener" aria-label="Aggiungi il tuo PG">
+    <span class="icon solid fa-user-plus"></span>
+    <span>Aggiungi<br />il tuo PG</span>
+  </a>
+      <h4 class="gallery-title">Master</h4>
+      
+  <a href="/rhymil_images/large/plibero_edgard.webp?v=5a30e812" data-pswp-width="1080" data-pswp-height="1350" title="Edgard Hosch">
+    <img src="/rhymil_images/thumb/plibero_edgard.webp?v=6aaf2d8b" width="110" alt="Edgard Hosch" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Edgard Hosch</span>
       <span class="myimage-owner">- master Tobi</span><br />
@@ -588,8 +526,8 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/plibero_sasha.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Sasha Waivyr">
-    <img src="/rhymil_thumbs/plibero_sasha.png?version=1.18" width="110" alt="Sasha Waivyr" loading="lazy" />
+  <a href="/rhymil_images/large/plibero_sasha.webp?v=3c41b30b" data-pswp-width="1080" data-pswp-height="1350" title="Sasha Waivyr">
+    <img src="/rhymil_images/thumb/plibero_sasha.webp?v=f3f1ccac" width="110" alt="Sasha Waivyr" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Sasha Waivyr</span>
       <span class="myimage-owner">- master Silvia</span><br />
@@ -597,8 +535,8 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/plibero_gheed.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Gheed">
-    <img src="/rhymil_thumbs/plibero_gheed.png?version=1.18" width="110" alt="Gheed" loading="lazy" />
+  <a href="/rhymil_images/large/plibero_gheed.webp?v=2074105a" data-pswp-width="1080" data-pswp-height="1350" title="Gheed">
+    <img src="/rhymil_images/thumb/plibero_gheed.webp?v=ce5430d7" width="110" alt="Gheed" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Gheed</span>
       
@@ -606,8 +544,8 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/plibero_katerina.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Katerina Bellarom">
-    <img src="/rhymil_thumbs/plibero_katerina.png?version=1.18" width="110" alt="Katerina Bellarom" loading="lazy" />
+  <a href="/rhymil_images/large/plibero_katerina.webp?v=9c776f1a" data-pswp-width="1080" data-pswp-height="1350" title="Katerina Bellarom">
+    <img src="/rhymil_images/thumb/plibero_katerina.webp?v=b4ea3d93" width="110" alt="Katerina Bellarom" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Katerina Bellarom</span>
       
@@ -619,7 +557,6 @@
 
           
   
-  
   <section id="section-terre-barbariche" class="panel-section">
     <h3 class="panel-title">
       🏺 Terre Barbariche
@@ -628,9 +565,10 @@
       <p>Non sono semplici guerrieri. Sono capi clan, sciamani e campioni temprati da sabbia, gelo e sole implacabile. Un tempo divise, le Terre Sabbiose, le Terre Calde e le Terre Fredde si sono temporaneamente unite in una sola forza. Essere della tribù non è solo sopravvivere, ma guidare e proteggere un popolo tra lande ostili. Alcuni parlano con gli spiriti, altri brandiscono la lama. Ogni volto porta con sé una promessa: resistere e mantenere viva la propria gente.</p>
     </header>
     <div class="pswp-gallery" id="gallery--terre-barbariche">
+      <h4 class="gallery-title">Giocatori</h4>
       
-  <a href="/rhymil_images/tribu_milten.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Milten">
-    <img src="/rhymil_thumbs/tribu_milten.png?version=1.18" width="110" alt="Milten" loading="lazy" />
+  <a href="/rhymil_images/large/tribu_milten.webp?v=b5c0d468" data-pswp-width="1080" data-pswp-height="1350" title="Milten">
+    <img src="/rhymil_images/thumb/tribu_milten.webp?v=554ee7de" width="110" alt="Milten" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Milten</span>
       <span class="myimage-owner">- Tiziano Termini</span><br />
@@ -638,8 +576,8 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/tribu_quinu.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Quinu">
-    <img src="/rhymil_thumbs/tribu_quinu.png?version=1.18" width="110" alt="Quinu" loading="lazy" />
+  <a href="/rhymil_images/large/tribu_quinu.webp?v=4afc52bd" data-pswp-width="1080" data-pswp-height="1350" title="Quinu">
+    <img src="/rhymil_images/thumb/tribu_quinu.webp?v=64e99c44" width="110" alt="Quinu" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Quinu</span>
       <span class="myimage-owner">- Linda Tagliaferro</span><br />
@@ -647,18 +585,22 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/tribu_artenos.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Artenos">
-    <img src="/rhymil_thumbs/tribu_artenos.png?version=1.18" width="110" alt="Artenos" loading="lazy" />
+  <a href="/rhymil_images/large/tribu_artenos.webp?v=ae4c8ce3" data-pswp-width="1080" data-pswp-height="1350" title="Artenos">
+    <img src="/rhymil_images/thumb/tribu_artenos.webp?v=7233d36e" width="110" alt="Artenos" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Artenos</span>
       <span class="myimage-owner">- Dario Vitale</span><br />
       <span class="myimage-desc">Guerriero brutale, gelido come il ghiaccio, la sua ascia danese è sempre assetata di sangue</span>
     </span>
   </a>
-        <hr/>
-        
-  <a href="/rhymil_images/tribu_hathor.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Hathor">
-    <img src="/rhymil_thumbs/tribu_hathor.png?version=1.18" width="110" alt="Hathor" loading="lazy" />
+  <a class="thumb-add" href="https://forms.gle/bpCPzV4x4QBi88eN8" target="_blank" rel="noopener" aria-label="Aggiungi il tuo PG">
+    <span class="icon solid fa-user-plus"></span>
+    <span>Aggiungi<br />il tuo PG</span>
+  </a>
+      <h4 class="gallery-title">Master</h4>
+      
+  <a href="/rhymil_images/large/tribu_hathor.webp?v=c3a13d65" data-pswp-width="1080" data-pswp-height="1350" title="Hathor">
+    <img src="/rhymil_images/thumb/tribu_hathor.webp?v=84db0c34" width="110" alt="Hathor" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Hathor</span>
       <span class="myimage-owner">- master Tobi</span><br />
@@ -666,8 +608,8 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/tribu_selikand.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Selikand">
-    <img src="/rhymil_thumbs/tribu_selikand.png?version=1.18" width="110" alt="Selikand" loading="lazy" />
+  <a href="/rhymil_images/large/tribu_selikand.webp?v=035c5212" data-pswp-width="1080" data-pswp-height="1350" title="Selikand">
+    <img src="/rhymil_images/thumb/tribu_selikand.webp?v=eb580d28" width="110" alt="Selikand" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Selikand</span>
       
@@ -675,8 +617,8 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/tribu_yamanos.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Yamanos">
-    <img src="/rhymil_thumbs/tribu_yamanos.png?version=1.18" width="110" alt="Yamanos" loading="lazy" />
+  <a href="/rhymil_images/large/tribu_yamanos.webp?v=e43c5807" data-pswp-width="1080" data-pswp-height="1350" title="Yamanos">
+    <img src="/rhymil_images/thumb/tribu_yamanos.webp?v=e812db97" width="110" alt="Yamanos" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Yamanos</span>
       
@@ -684,8 +626,8 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/tribu_eiyda.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Eiyda">
-    <img src="/rhymil_thumbs/tribu_eiyda.png?version=1.18" width="110" alt="Eiyda" loading="lazy" />
+  <a href="/rhymil_images/large/tribu_eiyda.webp?v=868af65c" data-pswp-width="1080" data-pswp-height="1350" title="Eiyda">
+    <img src="/rhymil_images/thumb/tribu_eiyda.webp?v=3ad7d5fa" width="110" alt="Eiyda" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Eiyda</span>
       
@@ -693,8 +635,8 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/tribu_selhea.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Selhea">
-    <img src="/rhymil_thumbs/tribu_selhea.png?version=1.18" width="110" alt="Selhea" loading="lazy" />
+  <a href="/rhymil_images/large/tribu_selhea.webp?v=1f56260b" data-pswp-width="1080" data-pswp-height="1350" title="Selhea">
+    <img src="/rhymil_images/thumb/tribu_selhea.webp?v=4a3117de" width="110" alt="Selhea" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Selhea</span>
       
@@ -702,8 +644,8 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/tribu_zareb.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Zareb">
-    <img src="/rhymil_thumbs/tribu_zareb.png?version=1.18" width="110" alt="Zareb" loading="lazy" />
+  <a href="/rhymil_images/large/tribu_zareb.webp?v=e5f4ab99" data-pswp-width="1080" data-pswp-height="1350" title="Zareb">
+    <img src="/rhymil_images/thumb/tribu_zareb.webp?v=e4c82be7" width="110" alt="Zareb" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Zareb</span>
       
@@ -715,7 +657,6 @@
 
           
   
-  
   <section id="section-ordine-clericale" class="panel-section">
     <h3 class="panel-title">
       📜 Ordine Clericale
@@ -724,9 +665,10 @@
       <p>Non sono semplici predicatori. Sono eruditi, curatori e custodi della parola divina. Essere sacerdote significa fede, studio e sacrificio. Alcuni scrivono, altri guariscono, altri guidano con voce ferma. Hanno lasciato case e certezze per servire Ewylion, portando la sua luce dove regnava l’ombra. Non brandiscono lame, ma parole più taglienti dell’acciaio, e mani che curano anche quando il corpo è stanco. Sono la voce della Dea Madre, lì dove serve essere ascoltata.</p>
     </header>
     <div class="pswp-gallery" id="gallery--ordine-clericale">
+      <h4 class="gallery-title">Giocatori</h4>
       
-  <a href="/rhymil_images/chierici_delphine.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Delphine Belinfer">
-    <img src="/rhymil_thumbs/chierici_delphine.png?version=1.18" width="110" alt="Delphine Belinfer" loading="lazy" />
+  <a href="/rhymil_images/large/chierici_delphine.webp?v=efcf7c65" data-pswp-width="1080" data-pswp-height="1350" title="Delphine Belinfer">
+    <img src="/rhymil_images/thumb/chierici_delphine.webp?v=85cd843e" width="110" alt="Delphine Belinfer" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Delphine Belinfer</span>
       <span class="myimage-owner">- Adriana Pierro</span><br />
@@ -734,8 +676,8 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/chierici_simon.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Simon Ashen">
-    <img src="/rhymil_thumbs/chierici_simon.png?version=1.18" width="110" alt="Simon Ashen" loading="lazy" />
+  <a href="/rhymil_images/large/chierici_simon.webp?v=7ca9a92f" data-pswp-width="1080" data-pswp-height="1350" title="Simon Ashen">
+    <img src="/rhymil_images/thumb/chierici_simon.webp?v=dc972b35" width="110" alt="Simon Ashen" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Simon Ashen</span>
       <span class="myimage-owner">- Eddy Berardi</span><br />
@@ -743,8 +685,8 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/chierici_odo.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Odo">
-    <img src="/rhymil_thumbs/chierici_odo.png?version=1.18" width="110" alt="Odo" loading="lazy" />
+  <a href="/rhymil_images/large/chierici_odo.webp?v=9fdba224" data-pswp-width="1080" data-pswp-height="1350" title="Odo">
+    <img src="/rhymil_images/thumb/chierici_odo.webp?v=fcd33be5" width="110" alt="Odo" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Odo</span>
       <span class="myimage-owner">- Alex Granzotto</span><br />
@@ -752,27 +694,31 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/chierici_ahryn.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Ahryn">
-    <img src="/rhymil_thumbs/chierici_ahryn.png?version=1.18" width="110" alt="Ahryn" loading="lazy" />
+  <a href="/rhymil_images/large/chierici_ahryn.webp?v=5ca57f0e" data-pswp-width="1080" data-pswp-height="1350" title="Ahryn">
+    <img src="/rhymil_images/thumb/chierici_ahryn.webp?v=947f08cd" width="110" alt="Ahryn" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Ahryn</span>
-      
+      <span class="myimage-owner">- Dario Pavan</span><br />
       <span class="myimage-desc"></span>
     </span>
   </a>
 
-  <a href="/rhymil_images/chierici_elian.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Elian Valcrest">
-    <img src="/rhymil_thumbs/chierici_elian.png?version=1.18" width="110" alt="Elian Valcrest" loading="lazy" />
+  <a href="/rhymil_images/large/chierici_elian.webp?v=389d8a94" data-pswp-width="1080" data-pswp-height="1350" title="Elian Valcrest">
+    <img src="/rhymil_images/thumb/chierici_elian.webp?v=66678a0d" width="110" alt="Elian Valcrest" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Elian Valcrest</span>
       <span class="myimage-owner">- Joel Corbolino</span><br />
       <span class="myimage-desc">Buono e gentile se non provocato, amante del silenzio e del rispetto delle norme e delle regole. Autorevole quando è ora di applicare l’autorità ecclesiale. Orfano dalla nascita e cresciuto da una coppia di genitori adottivi. Riesce a trovare la soluzione con la diplomazia. Odia i bulli e le persone prepotenti e li punisce.</span>
     </span>
   </a>
-        <hr/>
-        
-  <a href="/rhymil_images/chierici_ezekiel.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Padre Ezekiel">
-    <img src="/rhymil_thumbs/chierici_ezekiel.png?version=1.18" width="110" alt="Padre Ezekiel" loading="lazy" />
+  <a class="thumb-add" href="https://forms.gle/bpCPzV4x4QBi88eN8" target="_blank" rel="noopener" aria-label="Aggiungi il tuo PG">
+    <span class="icon solid fa-user-plus"></span>
+    <span>Aggiungi<br />il tuo PG</span>
+  </a>
+      <h4 class="gallery-title">Master</h4>
+      
+  <a href="/rhymil_images/large/chierici_ezekiel.webp?v=59c6aec9" data-pswp-width="1080" data-pswp-height="1350" title="Padre Ezekiel">
+    <img src="/rhymil_images/thumb/chierici_ezekiel.webp?v=11117625" width="110" alt="Padre Ezekiel" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Padre Ezekiel</span>
       <span class="myimage-owner">- master Tobi</span><br />
@@ -780,8 +726,8 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/chierici_raphael.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Padre Raphael">
-    <img src="/rhymil_thumbs/chierici_raphael.png?version=1.18" width="110" alt="Padre Raphael" loading="lazy" />
+  <a href="/rhymil_images/large/chierici_raphael.webp?v=52eab937" data-pswp-width="1080" data-pswp-height="1350" title="Padre Raphael">
+    <img src="/rhymil_images/thumb/chierici_raphael.webp?v=086f19c5" width="110" alt="Padre Raphael" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Padre Raphael</span>
       <span class="myimage-owner">- master Jonny</span><br />
@@ -789,8 +735,8 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/chierici_meber.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Me’Ber Roccialuce">
-    <img src="/rhymil_thumbs/chierici_meber.png?version=1.18" width="110" alt="Me’Ber Roccialuce" loading="lazy" />
+  <a href="/rhymil_images/large/chierici_meber.webp?v=0e15b4ae" data-pswp-width="1080" data-pswp-height="1350" title="Me’Ber Roccialuce">
+    <img src="/rhymil_images/thumb/chierici_meber.webp?v=b069c537" width="110" alt="Me’Ber Roccialuce" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Me’Ber Roccialuce</span>
       <span class="myimage-owner">- master Jenny</span><br />
@@ -798,8 +744,8 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/chierici_primoinquisitore.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Primo Inquisitore">
-    <img src="/rhymil_thumbs/chierici_primoinquisitore.png?version=1.18" width="110" alt="Primo Inquisitore" loading="lazy" />
+  <a href="/rhymil_images/large/chierici_primoinquisitore.webp?v=8c5f4160" data-pswp-width="1080" data-pswp-height="1350" title="Primo Inquisitore">
+    <img src="/rhymil_images/thumb/chierici_primoinquisitore.webp?v=a36ddba5" width="110" alt="Primo Inquisitore" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Primo Inquisitore</span>
       <span class="myimage-owner">- master Tobi</span><br />
@@ -811,7 +757,6 @@
 
           
   
-  
   <section id="section-ordine-dei-maghi" class="panel-section">
     <h3 class="panel-title">
       🔮 Ordine dei Maghi
@@ -820,9 +765,10 @@
       <p>Non sono semplici studiosi. Sono custodi di segreti, interpreti di simboli e ricercatori di verità. L’Ordine non vive solo nei tomi polverosi: nasce tra le stelle scrutate, tra formule che piegano la realtà e tra parole che possono cambiare il mondo. Essere mago significa tessere il filo invisibile che unisce il visibile all’invisibile. Hanno lasciato la sicurezza delle biblioteche per sfidare l’ignoto. Alcuni cercano potere, altri risposte, altri ancora solo la verità. Ma tutti portano la conoscenza della Trama dove il mondo ne ha bisogno.</p>
     </header>
     <div class="pswp-gallery" id="gallery--ordine-dei-maghi">
+      <h4 class="gallery-title">Giocatori</h4>
       
-  <a href="/rhymil_images/maghi_julius.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Julius Reynhold">
-    <img src="/rhymil_thumbs/maghi_julius.png?version=1.18" width="110" alt="Julius Reynhold" loading="lazy" />
+  <a href="/rhymil_images/large/maghi_julius.webp?v=3966a527" data-pswp-width="1080" data-pswp-height="1350" title="Julius Reynhold">
+    <img src="/rhymil_images/thumb/maghi_julius.webp?v=39109fb6" width="110" alt="Julius Reynhold" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Julius Reynhold</span>
       <span class="myimage-owner">- Samuele Lamon</span><br />
@@ -830,8 +776,8 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/maghi_gwin.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Gwin Lionlike">
-    <img src="/rhymil_thumbs/maghi_gwin.png?version=1.18" width="110" alt="Gwin Lionlike" loading="lazy" />
+  <a href="/rhymil_images/large/maghi_gwin.webp?v=73389c0d" data-pswp-width="1080" data-pswp-height="1350" title="Gwin Lionlike">
+    <img src="/rhymil_images/thumb/maghi_gwin.webp?v=ce9b4d39" width="110" alt="Gwin Lionlike" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Gwin Lionlike</span>
       <span class="myimage-owner">- Dario Piana</span><br />
@@ -839,18 +785,22 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/maghi_keldan.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Keldan">
-    <img src="/rhymil_thumbs/maghi_keldan.png?version=1.18" width="110" alt="Keldan" loading="lazy" />
+  <a href="/rhymil_images/large/maghi_keldan.webp?v=cbc27cc2" data-pswp-width="1080" data-pswp-height="1350" title="Keldan">
+    <img src="/rhymil_images/thumb/maghi_keldan.webp?v=97e897cc" width="110" alt="Keldan" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Keldan</span>
       <span class="myimage-owner">- Alessandro</span><br />
       <span class="myimage-desc"></span>
     </span>
   </a>
-        <hr/>
-        
-  <a href="/rhymil_images/maghi_geor.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Geor Dun">
-    <img src="/rhymil_thumbs/maghi_geor.png?version=1.18" width="110" alt="Geor Dun" loading="lazy" />
+  <a class="thumb-add" href="https://forms.gle/bpCPzV4x4QBi88eN8" target="_blank" rel="noopener" aria-label="Aggiungi il tuo PG">
+    <span class="icon solid fa-user-plus"></span>
+    <span>Aggiungi<br />il tuo PG</span>
+  </a>
+      <h4 class="gallery-title">Master</h4>
+      
+  <a href="/rhymil_images/large/maghi_geor.webp?v=d64bef96" data-pswp-width="1080" data-pswp-height="1350" title="Geor Dun">
+    <img src="/rhymil_images/thumb/maghi_geor.webp?v=b28c29f0" width="110" alt="Geor Dun" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Geor Dun</span>
       <span class="myimage-owner">- master Alessio</span><br />
@@ -858,8 +808,8 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/maghi_agnes.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Agnes Roboris">
-    <img src="/rhymil_thumbs/maghi_agnes.png?version=1.18" width="110" alt="Agnes Roboris" loading="lazy" />
+  <a href="/rhymil_images/large/maghi_agnes.webp?v=71481722" data-pswp-width="1080" data-pswp-height="1350" title="Agnes Roboris">
+    <img src="/rhymil_images/thumb/maghi_agnes.webp?v=4b36b28f" width="110" alt="Agnes Roboris" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Agnes Roboris</span>
       
@@ -867,8 +817,8 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/maghi_felitya.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Felitya">
-    <img src="/rhymil_thumbs/maghi_felitya.png?version=1.18" width="110" alt="Felitya" loading="lazy" />
+  <a href="/rhymil_images/large/maghi_felitya.webp?v=24906662" data-pswp-width="1080" data-pswp-height="1350" title="Felitya">
+    <img src="/rhymil_images/thumb/maghi_felitya.webp?v=dcc553e9" width="110" alt="Felitya" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Felitya</span>
       
@@ -880,7 +830,6 @@
 
           
   
-  
   <section id="section-ordine-dei-paladini" class="panel-section">
     <h3 class="panel-title">
       🛡️ Ordine dei Paladini
@@ -889,9 +838,10 @@
       <p>Non sono semplici guerrieri. Sono voti viventi, scudi santi e mani tese nel buio. Essere paladino significa alzare lo sguardo e giurare “Io ci sarò”, anche quando nessuno lo chiede. Alcuni portano sollievo, altri fiamma, altri silenzio, ma tutti combattono per qualcosa di più grande di loro. Non sono santi, né eroi: sono persone che hanno scelto la luce, sono spade che proteggono e mani che sollevano, perché la giustizia possa brillare dove il buio pensava di aver vinto.</p>
     </header>
     <div class="pswp-gallery" id="gallery--ordine-dei-paladini">
+      <h4 class="gallery-title">Giocatori</h4>
       
-  <a href="/rhymil_images/paladini_hermes.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Hermes Calighe">
-    <img src="/rhymil_thumbs/paladini_hermes.png?version=1.18" width="110" alt="Hermes Calighe" loading="lazy" />
+  <a href="/rhymil_images/large/paladini_hermes.webp?v=7449ac1e" data-pswp-width="1080" data-pswp-height="1350" title="Hermes Calighe">
+    <img src="/rhymil_images/thumb/paladini_hermes.webp?v=96ed284f" width="110" alt="Hermes Calighe" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Hermes Calighe</span>
       <span class="myimage-owner">- Mattia De Zorzi</span><br />
@@ -899,8 +849,8 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/paladini_ansem.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Ansem Towermoon">
-    <img src="/rhymil_thumbs/paladini_ansem.png?version=1.18" width="110" alt="Ansem Towermoon" loading="lazy" />
+  <a href="/rhymil_images/large/paladini_ansem.webp?v=ebd663c8" data-pswp-width="1080" data-pswp-height="1350" title="Ansem Towermoon">
+    <img src="/rhymil_images/thumb/paladini_ansem.webp?v=e443d388" width="110" alt="Ansem Towermoon" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Ansem Towermoon</span>
       <span class="myimage-owner">- Thomas Tomè</span><br />
@@ -908,8 +858,8 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/paladini_boreas.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Boreas Bonaventura">
-    <img src="/rhymil_thumbs/paladini_boreas.png?version=1.18" width="110" alt="Boreas Bonaventura" loading="lazy" />
+  <a href="/rhymil_images/large/paladini_boreas.webp?v=466e1a2b" data-pswp-width="1080" data-pswp-height="1350" title="Boreas Bonaventura">
+    <img src="/rhymil_images/thumb/paladini_boreas.webp?v=39f161e0" width="110" alt="Boreas Bonaventura" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Boreas Bonaventura</span>
       <span class="myimage-owner">- Cora Oian</span><br />
@@ -917,8 +867,8 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/paladini_walfinas.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Walfinas">
-    <img src="/rhymil_thumbs/paladini_walfinas.png?version=1.18" width="110" alt="Walfinas" loading="lazy" />
+  <a href="/rhymil_images/large/paladini_walfinas.webp?v=3495ac2f" data-pswp-width="1080" data-pswp-height="1350" title="Walfinas">
+    <img src="/rhymil_images/thumb/paladini_walfinas.webp?v=818d939b" width="110" alt="Walfinas" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Walfinas</span>
       
@@ -926,18 +876,22 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/paladini_beltranius.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Beltranius Ioleii Gautstafr">
-    <img src="/rhymil_thumbs/paladini_beltranius.png?version=1.18" width="110" alt="Beltranius Ioleii Gautstafr" loading="lazy" />
+  <a href="/rhymil_images/large/paladini_beltranius.webp?v=5019ecd9" data-pswp-width="1080" data-pswp-height="1350" title="Beltranius Ioleii Gautstafr">
+    <img src="/rhymil_images/thumb/paladini_beltranius.webp?v=d787e76a" width="110" alt="Beltranius Ioleii Gautstafr" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Beltranius Ioleii Gautstafr</span>
       <span class="myimage-owner">- Cristian Castellet</span><br />
       <span class="myimage-desc"></span>
     </span>
   </a>
-        <hr/>
-        
-  <a href="/rhymil_images/paladini_teodor.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Teodor Kilkan">
-    <img src="/rhymil_thumbs/paladini_teodor.png?version=1.18" width="110" alt="Teodor Kilkan" loading="lazy" />
+  <a class="thumb-add" href="https://forms.gle/bpCPzV4x4QBi88eN8" target="_blank" rel="noopener" aria-label="Aggiungi il tuo PG">
+    <span class="icon solid fa-user-plus"></span>
+    <span>Aggiungi<br />il tuo PG</span>
+  </a>
+      <h4 class="gallery-title">Master</h4>
+      
+  <a href="/rhymil_images/large/paladini_teodor.webp?v=22fc9cc5" data-pswp-width="1080" data-pswp-height="1350" title="Teodor Kilkan">
+    <img src="/rhymil_images/thumb/paladini_teodor.webp?v=bc9945aa" width="110" alt="Teodor Kilkan" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Teodor Kilkan</span>
       <span class="myimage-owner">- master Lorenzo</span><br />
@@ -945,8 +899,8 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/paladini_gilidian.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Gilidian Ayrtor">
-    <img src="/rhymil_thumbs/paladini_gilidian.png?version=1.18" width="110" alt="Gilidian Ayrtor" loading="lazy" />
+  <a href="/rhymil_images/large/paladini_gilidian.webp?v=16682f80" data-pswp-width="1080" data-pswp-height="1350" title="Gilidian Ayrtor">
+    <img src="/rhymil_images/thumb/paladini_gilidian.webp?v=fc6ce29b" width="110" alt="Gilidian Ayrtor" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Gilidian Ayrtor</span>
       <span class="myimage-owner">- master Alessandro</span><br />
@@ -954,8 +908,8 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/paladini_gerard.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Gerard Holdren">
-    <img src="/rhymil_thumbs/paladini_gerard.png?version=1.18" width="110" alt="Gerard Holdren" loading="lazy" />
+  <a href="/rhymil_images/large/paladini_gerard.webp?v=3fcd3e1e" data-pswp-width="1080" data-pswp-height="1350" title="Gerard Holdren">
+    <img src="/rhymil_images/thumb/paladini_gerard.webp?v=892a3600" width="110" alt="Gerard Holdren" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Gerard Holdren</span>
       <span class="myimage-owner">- master Alberto</span><br />
@@ -963,8 +917,8 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/paladini_raldoron.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Raldoron Graft">
-    <img src="/rhymil_thumbs/paladini_raldoron.png?version=1.18" width="110" alt="Raldoron Graft" loading="lazy" />
+  <a href="/rhymil_images/large/paladini_raldoron.webp?v=ebd6694e" data-pswp-width="1080" data-pswp-height="1350" title="Raldoron Graft">
+    <img src="/rhymil_images/thumb/paladini_raldoron.webp?v=1e92300d" width="110" alt="Raldoron Graft" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Raldoron Graft</span>
       <span class="myimage-owner">- master Alberto</span><br />
@@ -976,7 +930,6 @@
 
           
   
-  
   <section id="section-ordine-dei-cavalieri" class="panel-section">
     <h3 class="panel-title">
       ⚔️ Ordine dei Cavalieri
@@ -985,9 +938,10 @@
       <p>Non sono semplici soldati. Sono strateghi, duellanti e comandanti temprati dal dovere. Essere cavaliere è tracciare la linea tra il caos e l’ordine, tra la parola data e il tradimento. Alcuni combattono in sella, altri a piedi, altri ancora vincono guerre con i loro piani prima che la battaglia inizi. Dietro ogni volto c’è un giuramento: difendere, proteggere, mantenere la legge. Le loro spade e i loro scudi non inseguono gloria, ma la pace che solo la giustizia può donare.</p>
     </header>
     <div class="pswp-gallery" id="gallery--ordine-dei-cavalieri">
+      <h4 class="gallery-title">Giocatori</h4>
       
-  <a href="/rhymil_images/cavalieri_rodrigo.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Rodrigo Herrera">
-    <img src="/rhymil_thumbs/cavalieri_rodrigo.png?version=1.18" width="110" alt="Rodrigo Herrera" loading="lazy" />
+  <a href="/rhymil_images/large/cavalieri_rodrigo.webp?v=9313e7cb" data-pswp-width="1080" data-pswp-height="1350" title="Rodrigo Herrera">
+    <img src="/rhymil_images/thumb/cavalieri_rodrigo.webp?v=3d72cab6" width="110" alt="Rodrigo Herrera" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Rodrigo Herrera</span>
       <span class="myimage-owner">- Adriano Vitale</span><br />
@@ -995,8 +949,8 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/cavalieri_beruthiel.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Beruthiel">
-    <img src="/rhymil_thumbs/cavalieri_beruthiel.png?version=1.18" width="110" alt="Beruthiel" loading="lazy" />
+  <a href="/rhymil_images/large/cavalieri_beruthiel.webp?v=fcf68ce8" data-pswp-width="1080" data-pswp-height="1350" title="Beruthiel">
+    <img src="/rhymil_images/thumb/cavalieri_beruthiel.webp?v=05193cb1" width="110" alt="Beruthiel" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Beruthiel</span>
       <span class="myimage-owner">- Angelica Cavalli</span><br />
@@ -1004,18 +958,22 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/cavalieri_eryndal.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Eryndal Thalen">
-    <img src="/rhymil_thumbs/cavalieri_eryndal.png?version=1.18" width="110" alt="Eryndal Thalen" loading="lazy" />
+  <a href="/rhymil_images/large/cavalieri_eryndal.webp?v=7bbc2bd2" data-pswp-width="1080" data-pswp-height="1350" title="Eryndal Thalen">
+    <img src="/rhymil_images/thumb/cavalieri_eryndal.webp?v=e5ff5fd2" width="110" alt="Eryndal Thalen" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Eryndal Thalen</span>
       <span class="myimage-owner">- Offi Christopher</span><br />
       <span class="myimage-desc">Lui era un cavaliere senza coraggio, ma con più fede di qualunque paladino. Nella paura, era guidato dalla speranza: la speranza di farcela, di resistere, di ritrovare ciò che aveva perduto lungo il cammino. Non combatteva per gloria né per onore, ma per ciò che restava in piedi quando tutto il resto crollava. Ogni sua freccia valeva più di ogni dubbio che lo attraversava, ogni respiro era una scelta, ogni passo una sfida silenziosa. E non mancava mai il bersaglio, anche se esitava a scoccare per primo, se non quando farlo significava salvare gli altri. Non era l’assenza di paura a renderlo forte, ma il fatto che, nonostante essa, continuasse ad avanzare. E forse era proprio questo che lo rendeva degno del nome di cavaliere.</span>
     </span>
   </a>
-        <hr/>
-        
-  <a href="/rhymil_images/cavalieri_eleonor.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Eleonor De Lervis">
-    <img src="/rhymil_thumbs/cavalieri_eleonor.png?version=1.18" width="110" alt="Eleonor De Lervis" loading="lazy" />
+  <a class="thumb-add" href="https://forms.gle/bpCPzV4x4QBi88eN8" target="_blank" rel="noopener" aria-label="Aggiungi il tuo PG">
+    <span class="icon solid fa-user-plus"></span>
+    <span>Aggiungi<br />il tuo PG</span>
+  </a>
+      <h4 class="gallery-title">Master</h4>
+      
+  <a href="/rhymil_images/large/cavalieri_eleonor.webp?v=324b4d88" data-pswp-width="1080" data-pswp-height="1350" title="Eleonor De Lervis">
+    <img src="/rhymil_images/thumb/cavalieri_eleonor.webp?v=cda681e1" width="110" alt="Eleonor De Lervis" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Eleonor De Lervis</span>
       
@@ -1023,8 +981,8 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/cavalieri_gildarts.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Gildarts Solcoferreo">
-    <img src="/rhymil_thumbs/cavalieri_gildarts.png?version=1.18" width="110" alt="Gildarts Solcoferreo" loading="lazy" />
+  <a href="/rhymil_images/large/cavalieri_gildarts.webp?v=32050609" data-pswp-width="1080" data-pswp-height="1350" title="Gildarts Solcoferreo">
+    <img src="/rhymil_images/thumb/cavalieri_gildarts.webp?v=58e077b5" width="110" alt="Gildarts Solcoferreo" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Gildarts Solcoferreo</span>
       
@@ -1036,7 +994,6 @@
 
           
   
-  
   <section id="section-fratellanza-dei-pirati" class="panel-section">
     <h3 class="panel-title">
       🏴‍☠️ Nuova Fratellanza dei Pirati
@@ -1045,9 +1002,10 @@
       <p>Non sono semplici pirati. Sono capitani, strateghi, visionari e avventurieri pronti a rischiare tutto. La Fratellanza non è solo una bandiera, ma una realtà politica nata dalle onde. Alcuni governano con l’astuzia, altri con la sciabola. Scrivono la leggenda vivendo ogni battaglia, ogni intrigo e ogni rotta proibita. Uniti per dare vita ai mari, ai porti e a ogni storia che inizia con una vela all’orizzonte.</p>
     </header>
     <div class="pswp-gallery" id="gallery--fratellanza-dei-pirati">
+      <h4 class="gallery-title">Giocatori</h4>
       
-  <a href="/rhymil_images/pirati_barbabrace.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Barbabrace">
-    <img src="/rhymil_thumbs/pirati_barbabrace.png?version=1.18" width="110" alt="Barbabrace" loading="lazy" />
+  <a href="/rhymil_images/large/pirati_barbabrace.webp?v=897e4502" data-pswp-width="1080" data-pswp-height="1350" title="Barbabrace">
+    <img src="/rhymil_images/thumb/pirati_barbabrace.webp?v=933a6ecf" width="110" alt="Barbabrace" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Barbabrace</span>
       <span class="myimage-owner">- Alberto Fardin</span><br />
@@ -1055,8 +1013,8 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/pirati_fred.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Fred Rayles">
-    <img src="/rhymil_thumbs/pirati_fred.png?version=1.18" width="110" alt="Fred Rayles" loading="lazy" />
+  <a href="/rhymil_images/large/pirati_fred.webp?v=ee5d5b36" data-pswp-width="1080" data-pswp-height="1350" title="Fred Rayles">
+    <img src="/rhymil_images/thumb/pirati_fred.webp?v=658f5659" width="110" alt="Fred Rayles" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Fred Rayles</span>
       <span class="myimage-owner">- Daniele De Castro</span><br />
@@ -1064,8 +1022,8 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/pirati_roy.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Roy Backler">
-    <img src="/rhymil_thumbs/pirati_roy.png?version=1.18" width="110" alt="Roy Backler" loading="lazy" />
+  <a href="/rhymil_images/large/pirati_roy.webp?v=80ad1af3" data-pswp-width="1080" data-pswp-height="1350" title="Roy Backler">
+    <img src="/rhymil_images/thumb/pirati_roy.webp?v=babbffbf" width="110" alt="Roy Backler" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Roy Backler</span>
       <span class="myimage-owner">- Davide Zanon</span><br />
@@ -1073,8 +1031,8 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/pirati_elijah.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Elijah">
-    <img src="/rhymil_thumbs/pirati_elijah.png?version=1.18" width="110" alt="Elijah" loading="lazy" />
+  <a href="/rhymil_images/large/pirati_elijah.webp?v=d727a9af" data-pswp-width="1080" data-pswp-height="1350" title="Elijah">
+    <img src="/rhymil_images/thumb/pirati_elijah.webp?v=58b6eb8b" width="110" alt="Elijah" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Elijah</span>
       <span class="myimage-owner">- Simone Ripaccioli</span><br />
@@ -1082,18 +1040,22 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/pirati_liv.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Liv">
-    <img src="/rhymil_thumbs/pirati_liv.png?version=1.18" width="110" alt="Liv" loading="lazy" />
+  <a href="/rhymil_images/large/pirati_liv.webp?v=7ceefa43" data-pswp-width="1080" data-pswp-height="1350" title="Liv">
+    <img src="/rhymil_images/thumb/pirati_liv.webp?v=4230894a" width="110" alt="Liv" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Liv</span>
       <span class="myimage-owner">- Nicolò Arena</span><br />
       <span class="myimage-desc">Buttato nella Spedizione dal suo ex-capitano più per liberarsi di lui che per reale fiducia. Impiccione, chiacchierone, sempre con quel mezzo sorriso che sa più di guaio che di amicizia, si infila dove non dovrebbe e scopre quello che altri preferirebbero tenere nascosto. Non è chiaro se sia un peso morto da scaricare alla prima occasione o una lama pronta a colpire nel momento giusto. Ma una cosa è certa, se è ancora vivo, un motivo c’è.</span>
     </span>
   </a>
-        <hr/>
-        
-  <a href="/rhymil_images/pirati_taritas.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Taritas">
-    <img src="/rhymil_thumbs/pirati_taritas.png?version=1.18" width="110" alt="Taritas" loading="lazy" />
+  <a class="thumb-add" href="https://forms.gle/bpCPzV4x4QBi88eN8" target="_blank" rel="noopener" aria-label="Aggiungi il tuo PG">
+    <span class="icon solid fa-user-plus"></span>
+    <span>Aggiungi<br />il tuo PG</span>
+  </a>
+      <h4 class="gallery-title">Master</h4>
+      
+  <a href="/rhymil_images/large/pirati_taritas.webp?v=997f0ace" data-pswp-width="1080" data-pswp-height="1350" title="Taritas">
+    <img src="/rhymil_images/thumb/pirati_taritas.webp?v=9bb24148" width="110" alt="Taritas" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Taritas</span>
       <span class="myimage-owner">- master Lorenzo</span><br />
@@ -1101,8 +1063,8 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/pirati_kess.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Kess">
-    <img src="/rhymil_thumbs/pirati_kess.png?version=1.18" width="110" alt="Kess" loading="lazy" />
+  <a href="/rhymil_images/large/pirati_kess.webp?v=2100eb9c" data-pswp-width="1080" data-pswp-height="1350" title="Kess">
+    <img src="/rhymil_images/thumb/pirati_kess.webp?v=97ae69fc" width="110" alt="Kess" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Kess</span>
       <span class="myimage-owner">- master Jenny</span><br />
@@ -1110,8 +1072,8 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/pirati_isabela.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Isabela">
-    <img src="/rhymil_thumbs/pirati_isabela.png?version=1.18" width="110" alt="Isabela" loading="lazy" />
+  <a href="/rhymil_images/large/pirati_isabela.webp?v=5ba3d3c4" data-pswp-width="1080" data-pswp-height="1350" title="Isabela">
+    <img src="/rhymil_images/thumb/pirati_isabela.webp?v=21ad689d" width="110" alt="Isabela" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Isabela</span>
       <span class="myimage-owner">- master Silvia</span><br />
@@ -1119,8 +1081,8 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/pirati_vane.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Vane">
-    <img src="/rhymil_thumbs/pirati_vane.png?version=1.18" width="110" alt="Vane" loading="lazy" />
+  <a href="/rhymil_images/large/pirati_vane.webp?v=1dbf1d66" data-pswp-width="1080" data-pswp-height="1350" title="Vane">
+    <img src="/rhymil_images/thumb/pirati_vane.webp?v=1b592744" width="110" alt="Vane" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Vane</span>
       
@@ -1128,8 +1090,8 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/pirati_akkor.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Akkor">
-    <img src="/rhymil_thumbs/pirati_akkor.png?version=1.18" width="110" alt="Akkor" loading="lazy" />
+  <a href="/rhymil_images/large/pirati_akkor.webp?v=694b2664" data-pswp-width="1080" data-pswp-height="1350" title="Akkor">
+    <img src="/rhymil_images/thumb/pirati_akkor.webp?v=d20c4140" width="110" alt="Akkor" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Akkor</span>
       <span class="myimage-owner">- master Tobi</span><br />
@@ -1137,8 +1099,8 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/pirati_sarmana.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Sarmana">
-    <img src="/rhymil_thumbs/pirati_sarmana.png?version=1.18" width="110" alt="Sarmana" loading="lazy" />
+  <a href="/rhymil_images/large/pirati_sarmana.webp?v=73641fdc" data-pswp-width="1080" data-pswp-height="1350" title="Sarmana">
+    <img src="/rhymil_images/thumb/pirati_sarmana.webp?v=534d4c16" width="110" alt="Sarmana" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Sarmana</span>
       <span class="myimage-owner">- master Jenny</span><br />
@@ -1146,8 +1108,8 @@
     </span>
   </a>
 
-  <a href="/rhymil_images/pirati_rey.png?version=1.18" data-pswp-width="1080" data-pswp-height="1350" title="Rey">
-    <img src="/rhymil_thumbs/pirati_rey.png?version=1.18" width="110" alt="Rey" loading="lazy" />
+  <a href="/rhymil_images/large/pirati_rey.webp?v=ebc9cadb" data-pswp-width="1080" data-pswp-height="1350" title="Rey">
+    <img src="/rhymil_images/thumb/pirati_rey.webp?v=d48edf42" width="110" alt="Rey" loading="lazy" />
     <span class="pswp-caption-content">
       <span class="myimage-name">Rey</span>
       <span class="myimage-owner">- master Silvia</span><br />
@@ -1257,11 +1219,5 @@
 
     <!-- Script -->
     <script type="module" src="./js/app.js"></script>
-    <script defer>
-      document.addEventListener("DOMContentLoaded", () => {
-        const y = document.getElementById("year");
-        if (y) y.textContent = new Date().getFullYear();
-      });
-    </script>
   </body>
 </html>

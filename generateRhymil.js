@@ -6,6 +6,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const crypto = require("crypto");
 
 // ---- Config/Target ---------------------------------------------------------
 const TARGET = [
@@ -56,11 +57,32 @@ function loadJsonLoose(p) {
   return JSON.parse(s);
 }
 
+// Hash breve del contenuto del file: l'URL cambia solo se cambia l'immagine,
+// così un bump di versione del sito non invalida la cache delle immagini.
+const hashCache = new Map();
+function fileHash(relPath) {
+  if (hashCache.has(relPath)) return hashCache.get(relPath);
+  let h = "missing";
+  try {
+    h = crypto
+      .createHash("md5")
+      .update(fs.readFileSync(relPath))
+      .digest("hex")
+      .slice(0, 8);
+  } catch {
+    console.warn(`⚠️  Immagine mancante: ${relPath}`);
+  }
+  hashCache.set(relPath, h);
+  return h;
+}
+
 // ---- Markup builders -------------------------------------------------------
-function anchorFor(version, item) {
+function anchorFor(item) {
   const imgName = (item.image || "").replace(/\.(jpg|jpeg|png|webp)$/i, "");
-  const hrefImage = `/rhymil_images/${imgName}.png?version=${version}`;
-  const hrefThumb = `/rhymil_thumbs/${imgName}.png?version=${version}`;
+  const largePath = `./rhymil_images/large/${imgName}.webp`;
+  const thumbPath = `./rhymil_images/thumb/${imgName}.webp`;
+  const hrefImage = `/rhymil_images/large/${imgName}.webp?v=${fileHash(largePath)}`;
+  const hrefThumb = `/rhymil_images/thumb/${imgName}.webp?v=${fileHash(thumbPath)}`;
   const name = escapeHtml(item.name || "");
   const owner = escapeHtml(item.owner || "");
   const text = escapeHtml(item.text || "");
@@ -76,7 +98,9 @@ function anchorFor(version, item) {
   </a>`;
 }
 
-function buildSection(slug, version, data) {
+function buildSection(slug, data) {
+  const players = [].concat(data.players || []);
+  const masters = [].concat(data.masters || []);
   return `
   <section id="section-${slug}" class="panel-section">
     <h3 class="panel-title">
@@ -86,15 +110,14 @@ function buildSection(slug, version, data) {
       <p>${escapeHtml(data.text)}</p>
     </header>
     <div class="pswp-gallery" id="gallery--${slug}">
-      ${[]
-        .concat(data.players || [])
-        .map((p) => anchorFor(version, p))
-        .join("\n")}
-        <hr/>
-        ${[]
-          .concat(data.masters || [])
-          .map((p) => anchorFor(version, p))
-          .join("\n")}
+      <h4 class="gallery-title">Giocatori</h4>
+      ${players.map((p) => anchorFor(p)).join("\n")}
+  <a class="thumb-add" href="https://forms.gle/bpCPzV4x4QBi88eN8" target="_blank" rel="noopener" aria-label="Aggiungi il tuo PG">
+    <span class="icon solid fa-user-plus"></span>
+    <span>Aggiungi<br />il tuo PG</span>
+  </a>
+      ${masters.length === 0 ? "" : `<h4 class="gallery-title">Master</h4>`}
+      ${masters.map((p) => anchorFor(p)).join("\n")}
     </div>
   </section>`;
 }
@@ -166,6 +189,9 @@ function upsertArticle(html, slug, articleHtml) {
   );
   inner = inner.replace(itemRe, "").trimEnd();
 
+  // 4b) collassa le righe vuote accumulate dalle rimozioni precedenti
+  inner = inner.replace(/(\n[ \t]*)+\n/g, "\n");
+
   // 5) calcola l'indentazione da usare per il nuovo article
   const indentMatch = /\n([ \t]*)<article\b/.exec(inner);
   const indent = indentMatch ? indentMatch[1] : "        "; // 8 spazi default
@@ -233,19 +259,6 @@ async function main() {
 
   let html = fs.readFileSync(htmlPath, "utf8");
 
-  const refVersion =
-    /(<p\s+class=["']version["'][^>]*>[\s\S]*?\b[vV])(\d+)(?:[.,](\d+))?([\s\S]*?<\/p>)/i;
-  const matchVersion = html.match(refVersion);
-  if (!matchVersion) {
-    console.warn("⚠️  no version found");
-    return html;
-  }
-
-  const major = parseInt(matchVersion[2], 10);
-  const minor = matchVersion[3] ? parseInt(matchVersion[3], 10) : 0;
-  const currVersion = `${major}.${minor}`;
-  const nextVersion = `${major}.${minor + 1}`;
-
   for (const slug of TARGET) {
     const jsonPath = path.join(dir, `${slug}.json`);
     if (!fs.existsSync(jsonPath)) {
@@ -261,7 +274,7 @@ async function main() {
       continue;
     }
 
-    const sectionHtml = buildSection(slug, nextVersion, data);
+    const sectionHtml = buildSection(slug, data);
     const articleHtml = buildArticle(slug);
 
     html = upsertSection(html, slug, sectionHtml);
@@ -269,9 +282,6 @@ async function main() {
 
     console.log(`✅ Update: ${slug}`);
   }
-
-  console.log(`🔢 Versione: ${currVersion} → ${nextVersion}`);
-  html = html.replace(refVersion, `$1${nextVersion}$4`);
 
   fs.writeFileSync(outPath, html, "utf8");
   console.log(`🏁 File scritto: ${outPath}`);
