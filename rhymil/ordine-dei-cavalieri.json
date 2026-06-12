@@ -55,6 +55,13 @@
       "owner": "Master Lorenzo",
       "quote": "",
       "image": "cavalieri_alexander"
+    },
+    {
+      "name": "Leonard",
+      "text": "Primo Capo",
+      "owner": "Master Davide",
+      "quote": "",
+      "image": "cavalieri_leonard"
     }
   ]
 }

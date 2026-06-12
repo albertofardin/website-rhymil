@@ -3,6 +3,7 @@
 
 /* ===== Design tokens — tema light "pergamena" ===== */
 :root {
+  color-scheme: light;
   --bg: #f6f1e7;
   --surface: #fffdf8;
   --surface-2: #f1eadb;
@@ -15,7 +16,34 @@
   --accent-soft: rgba(245, 73, 0, 0.1);
   --shadow-sm: 0 2px 8px rgba(59, 47, 36, 0.07);
   --shadow-md: 0 10px 28px rgba(59, 47, 36, 0.13);
+  /* superfici "vetro" semitrasparenti (card descrizione, frecce, toggle) */
+  --glass: rgba(255, 253, 248, 0.85);
+  --glass-strong: rgba(255, 253, 248, 0.92);
+  --glass-border: rgba(255, 255, 255, 0.65);
+  /* dissolvenza dell'hero verso il colore pagina */
+  --hero-fade: rgba(246, 241, 231, 0.55);
   --ease-spring: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* ===== Design tokens — tema dark "taverna" ===== */
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #1d1812;
+  --surface: #28211a;
+  --surface-2: #322a20;
+  --border: #443928;
+  --border-strong: #5a4b33;
+  --text: #ece3d3;
+  --muted: #a8987f;
+  --accent: #ff5a14;
+  --accent-deep: #ff7a3d;
+  --accent-soft: rgba(255, 90, 20, 0.14);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 10px 28px rgba(0, 0, 0, 0.5);
+  --glass: rgba(40, 33, 26, 0.85);
+  --glass-strong: rgba(40, 33, 26, 0.92);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --hero-fade: rgba(29, 24, 18, 0.6);
 }
 
 /* Reset */
@@ -154,6 +182,9 @@ html {
 
 body {
   background: var(--bg);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 body,
@@ -232,6 +263,41 @@ h6 {
   transform: none;
 }
 
+/* ===== Toggle tema light/dark (ancorato all'header) ===== */
+.theme-toggle {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 3; /* sopra immagine, velo e .inner dell'header */
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--glass-strong);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  color: var(--text);
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform 0.2s var(--ease-spring),
+    border-color 0.2s ease,
+    background-color 0.3s ease;
+}
+.theme-toggle .icon:before {
+  font-size: 16px;
+  color: var(--accent);
+}
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  border-color: rgba(245, 73, 0, 0.5);
+  transform: scale(1.1) rotate(15deg);
+}
+.theme-toggle:active {
+  transform: scale(0.94);
+}
+
 /* ===== Hero header (a tutta larghezza, sfuma nella pagina) ===== */
 #header {
   position: relative;
@@ -263,7 +329,7 @@ h6 {
     to bottom,
     rgba(31, 24, 21, 0.35) 0%,
     rgba(31, 24, 21, 0.15) 45%,
-    rgba(246, 241, 231, 0.55) 82%,
+    var(--hero-fade) 82%,
     var(--bg) 100%
   );
   z-index: 1;
@@ -310,10 +376,10 @@ h6 {
   margin: 1.6em auto 0;
   max-width: 38em;
   color: var(--text);
-  background: rgba(255, 253, 248, 0.85);
+  background: var(--glass);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.65);
+  border: 1px solid var(--glass-border);
   border-radius: 16px;
   padding: 1.1em 1.4em;
   box-shadow: var(--shadow-md);
@@ -398,7 +464,9 @@ ul.actions li .icon:before {
 
 @media (min-width: 737px) {
   ul.actions {
-    grid-template-columns: 1fr 1fr;
+    /* minmax(0, …) ignora il min-content dei testi nowrap: colonne sempre
+       della stessa larghezza, il testo in eccesso va in ellipsis */
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   }
   ul.actions hr {
     grid-column: 1 / -1;
@@ -416,6 +484,10 @@ ul.actions li .icon:before {
   }
   /* un bottone rimasto solo dopo un separatore occupa tutta la riga */
   ul.actions hr + li:last-child {
+    grid-column: 1 / -1;
+  }
+  /* il bottone "Installa l'App" occupa sempre tutta la riga */
+  ul.actions #installBtn {
     grid-column: 1 / -1;
   }
 }
@@ -850,7 +922,7 @@ ul.actions li .icon:before {
   height: 40px;
   border-radius: 50%;
   border: 1px solid var(--border);
-  background: rgba(255, 253, 248, 0.92);
+  background: var(--glass-strong);
   color: var(--text);
   line-height: 1;
   cursor: pointer;
@@ -1295,6 +1367,17 @@ hr {
   /* il PNG ha fondo bianco: multiply lo fonde con la pergamena */
   mix-blend-mode: multiply;
 }
+/* in dark si usa la variante bianca del logo (su fondo trasparente) */
+.arcana-logo--dark {
+  display: none;
+  mix-blend-mode: normal;
+}
+[data-theme="dark"] .arcana-logo--light {
+  display: none;
+}
+[data-theme="dark"] .arcana-logo--dark {
+  display: block;
+}
 .arcana-tagline {
   display: flex;
   align-items: center;
@@ -1327,8 +1410,10 @@ hr {
 }
 
 /* ===== Desktop: sidebar fissa a sinistra, contenuto a destra =====
-   Così bottoni e fazioni sono visibili subito, senza scroll. */
-@media (min-width: 981px) {
+   Così bottoni e fazioni sono visibili subito, senza scroll.
+   Da 1100px in su: iPad Pro in verticale (1024px) usa il layout mobile,
+   in orizzontale (1366px) quello desktop. */
+@media (min-width: 1100px) {
   #header {
     position: fixed;
     top: 0;

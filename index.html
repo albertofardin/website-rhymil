@@ -7,6 +7,19 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <!-- tema: applicato prima del paint per evitare flash del tema sbagliato -->
+    <script>
+      (function () {
+        var theme = localStorage.getItem("theme");
+        if (theme !== "light" && theme !== "dark") {
+          theme = window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+        }
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
+
     <!-- style -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -117,6 +130,14 @@
   </head>
   <body>
     <header id="header">
+      <button
+        id="themeToggle"
+        class="theme-toggle"
+        type="button"
+        aria-label="Cambia tema"
+      >
+        <span class="icon solid fa-moon"></span>
+      </button>
       <div class="inner">
         <div class="image logo">
           <img src="./images/avatar.png" alt="Rhymil – Una Nuova Era" />
@@ -363,9 +384,15 @@
             <h3 class="panel-title">ℹ️ Arcana Domine</h3>
             <div class="arcana-hero">
               <img
-                class="arcana-logo"
+                class="arcana-logo arcana-logo--light"
                 src="./images/ad_logoB.png"
                 alt="Logo Arcana Domine"
+              />
+              <img
+                class="arcana-logo arcana-logo--dark"
+                src="./images/ad_logoW.png"
+                alt="Logo Arcana Domine"
+                loading="lazy"
               />
               <p class="arcana-tagline">Gioco di Ruolo dal Vivo</p>
             </div>
@@ -808,9 +835,14 @@
     <img src="/rhymil_images/_thumb/cavalieri_thalion.webp?v=e6c94c6b" width="110" alt="Thalion Dirk" loading="lazy" />
   </a>
 
-  <a class="is-dead" href="/rhymil_images/_large/cavalieri_alexander.webp?v=e32c9462" title="Alexander" data-name="Alexander" data-owner="Master Lorenzo" data-desc="Capitano">
+  <a class="is-dead" href="/rhymil_images/_large/cavalieri_alexander.webp?v=bcff6f0e" title="Alexander" data-name="Alexander" data-owner="Master Lorenzo" data-desc="Capitano">
     <span class="thumb-name">Alexander</span>
-    <img src="/rhymil_images/_thumb/cavalieri_alexander.webp?v=36e25068" width="110" alt="Alexander" loading="lazy" />
+    <img src="/rhymil_images/_thumb/cavalieri_alexander.webp?v=bf8abac2" width="110" alt="Alexander" loading="lazy" />
+  </a>
+
+  <a class="is-dead" href="/rhymil_images/_large/cavalieri_leonard.webp?v=b87c2295" title="Leonard" data-name="Leonard" data-owner="Master Davide" data-desc="Primo Capo">
+    <span class="thumb-name">Leonard</span>
+    <img src="/rhymil_images/_thumb/cavalieri_leonard.webp?v=87f6a63e" width="110" alt="Leonard" loading="lazy" />
   </a>
     </div>
   </section>

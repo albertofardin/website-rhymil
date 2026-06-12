@@ -5,6 +5,33 @@ if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("js/sw.js").catch(console.error);
 }
 
+/* -------------------------- Tema light/dark ------------------------- */
+// il tema iniziale è già applicato da uno script inline nell'<head>
+// (localStorage o prefers-color-scheme) per evitare flash al caricamento
+const themeToggle = document.getElementById("themeToggle");
+const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+
+function applyTheme(theme) {
+  document.documentElement.dataset.theme = theme;
+  themeColorMeta.content = theme === "dark" ? "#1d1812" : "#f6f1e7";
+  const icon = themeToggle.querySelector(".icon");
+  icon.classList.toggle("fa-moon", theme !== "dark");
+  icon.classList.toggle("fa-sun", theme === "dark");
+  themeToggle.setAttribute(
+    "aria-label",
+    theme === "dark" ? "Passa al tema chiaro" : "Passa al tema scuro",
+  );
+}
+
+applyTheme(document.documentElement.dataset.theme || "light");
+
+themeToggle.addEventListener("click", () => {
+  const next =
+    document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+  localStorage.setItem("theme", next);
+  applyTheme(next);
+});
+
 /* ----------------------- PWA install: bottone ----------------------- */
 const installBtn = document.getElementById("installBtn");
 
