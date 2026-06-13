@@ -153,6 +153,12 @@ body {
   line-height: 1;
 }
 
+/* ripristina il grassetto azzerato dal reset (font: inherit) */
+strong,
+b {
+  font-weight: 700;
+}
+
 ol,
 ul {
   list-style: none;
@@ -374,7 +380,7 @@ h6 {
 /* descrizione come card "vetro" sopra l'immagine */
 .description {
   margin: 1.6em auto 0;
-  max-width: 38em;
+  max-width: 45em;
   color: var(--text);
   background: var(--glass);
   -webkit-backdrop-filter: blur(10px);
