@@ -30,21 +30,35 @@
       "name": "Eleonor De Lervis",
       "text": "Capitana del Corpo Navale dell' Ordine dei Cavalieri",
       "owner": "",
-      "image": "cavalieri_eleonor",
-      "quote": "Sotto la mia guida, nessuno piega la spada."
+      "quote": "Sotto la mia guida, nessuno piega la spada.",
+      "image": "cavalieri_eleonor"
     },
     {
       "name": "Gildarts Solcoferreo",
       "text": "Capitano",
       "owner": "",
-      "image": "cavalieri_gildarts",
-      "quote": "L'onore si forgia nel coraggio."
+      "quote": "L'onore si forgia nel coraggio.",
+      "image": "cavalieri_gildarts"
+    },
+    {
+      "name": "Juniper Daedreem",
+      "text": "Giovane alchimista della Via Bianca, attualmente assunta come consulente dall'Ordine dei Cavalieri. È curiosa, perspicace, ed entusiasta del suo lavoro. Adora collaborare con altri studiosi a progetti alchemici e medici, e quando inizia a parlare non si ferma più!",
+      "owner": "master Bea",
+      "quote": "Non è affascinante, la sperimentazione? 🤩",
+      "image": "cavalieri_juniper"
     }
   ],
   "dead": [
     {
+      "name": "Kael",
+      "text": "Durante il disastro di Folbon perì in prima linea contro dei non morti dove gli venne succhiata via l'anima e combattè contro quelli che prima erano i suoi alleati come non morto.  É stato sepolto a Folbon.",
+      "owner": "Francesco Antoniazzi",
+      "quote": "Morto nel disonore e senza aver avuto la sua vendetta",
+      "image": "cavalieri_kael"
+    },
+    {
       "name": "Thalion Dirk",
-      "text": "Cavaliere dal cuore irrequieto, cresciuto nel fango ma rivolto verso la luce. Affrontò il mondo con una lama affilata, un sorriso beffardo e l’onore che imparò a conquistarsi da solo",
+      "text": "Cavaliere dal cuore irrequieto, cresciuto nel fango ma rivolto verso la luce. Affrontò il mondo con una lama affilata, un sorriso beffardo e l’onore che imparò a conquistarsi da solo.",
       "owner": "Offi Christopher",
       "quote": "Nato tra i vicoli, morto da cavaliere. L’onore fu la sua ultima conquista.",
       "image": "cavalieri_thalion"

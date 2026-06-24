@@ -23,6 +23,20 @@
       "owner": "Alessandro",
       "quote": "È tempo di applicare la teoria.",
       "image": "maghi_keldan"
+    },
+    {
+      "name": "Alduin",
+      "text": "",
+      "owner": "Mauro Ceola",
+      "quote": "",
+      "image": "maghi_alduin"
+    },
+    {
+      "name": "Iris Himring",
+      "text": "Allontanata dalla famiglia e costretta a costruirsi un nuovo nome, Iris ha trovato nello studio dell’alchimia la propria strada. Specializzata nella preparazione di tonici, ma affascinata dai veleni, è curiosa oltre ogni prudenza e talvolta confonde la fiducia nelle proprie capacità con l’eccesso di sicurezza.",
+      "owner": "Emma",
+      "quote": "Ogni cosa esiste due volte: per ciò che è e per ciò che può diventare.",
+      "image": "maghi_iris"
     }
   ],
   "masters": [
