@@ -37,6 +37,20 @@
       "owner": "Emma",
       "quote": "Ogni cosa esiste due volte: per ciò che è e per ciò che può diventare.",
       "image": "maghi_iris"
+    },
+    {
+      "name": "Aelyra",
+      "text": "Maga mezzelfa che crede sia importante proteggere la Vita.",
+      "owner": "Silvia",
+      "quote": "Il potere della Vita, il potere della Morte. Quale grande responsabilità saper usare la magia.",
+      "image": "maghi_aelyra"
+    },
+    {
+      "name": "Markus Terraginiris",
+      "text": "Guerriero arcano che unisce la spada alla magia sulla via della Vita in tutte le sue sfaccettature. Come preservarla e come reciderla",
+      "owner": "Marcello Sabbioni ",
+      "quote": "La Via è tracciata, ora lanciati!",
+      "image": "maghi_markus"
     }
   ],
   "masters": [

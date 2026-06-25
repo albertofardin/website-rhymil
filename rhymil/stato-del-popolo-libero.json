@@ -18,18 +18,18 @@
       "image": "plibero_linhardt"
     },
     {
-      "name": "Nefah Nersora",
-      "text": "",
-      "owner": "Martina Bortolat",
-      "quote": "Il pericolo non fa rumore. Neanche io.",
-      "image": "plibero_nefah"
-    },
-    {
       "name": "Lucien",
       "text": "",
       "owner": "Alessandro Beolchi",
       "quote": "Non parlo. Pronuncio sentenze.",
       "image": "plibero_lucien"
+    },
+    {
+      "name": "Nefah Nersora",
+      "text": "",
+      "owner": "Martina Bortolat",
+      "quote": "Il pericolo non fa rumore. Neanche io.",
+      "image": "plibero_nefah"
     },
     {
       "name": "Floren",
@@ -82,9 +82,9 @@
     },
     {
       "name": "Zahralam",
-      "text": "",
+      "text": "Arrivata per caso su Rhymil, non ricorda quasi nulla di chi era prima. Ma un sogno e un flauto che le é rimasto sono un indizio che probabilmente era una musicante. Nel tempo, però, ha scoperto che non solo la buona musica può far addormentare o sognare, ma anche alcuni tipi di miscugli fatti con le erbe. Ecco perché si é unita agli Eruditi: la curiosità di scoprire nuove ricette per, quella che lei chiama, \"la via dei sogni\". E, oltre a farlo lei, dare anche ad altri i mezzi per fare sognare... La durata dei sogni? Chi lo sa...",
       "owner": "Eleonora",
-      "quote": "",
+      "quote": "Confidate nei sogni, perché in essi è celata la porta dell’eternità",
       "image": "plibero_zahralam"
     }
   ],
