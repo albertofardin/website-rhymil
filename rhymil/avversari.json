@@ -1,0 +1,16 @@
+{
+  "icon": "",
+  "name": "Avversari",
+  "text": "",
+  "players": [],
+  "masters": [
+    {
+      "name": "ComingSoon",
+      "text": "",
+      "owner": "",
+      "quote": "",
+      "image": "comingsoon"
+    }
+  ],
+  "dead": []
+}

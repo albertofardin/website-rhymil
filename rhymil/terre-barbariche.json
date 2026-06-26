@@ -36,28 +36,28 @@
     {
       "name": "Selikand",
       "text": "Campione delle Terre Sabbiose",
-      "owner": "",
+      "owner": "master Ismael",
       "quote": "Le dune cambiano, ma il guerriero resta.",
       "image": "tribu_selikand"
     },
     {
       "name": "Yamanos",
       "text": "Gran Sciamano delle Terre Fredde",
-      "owner": "",
+      "owner": "master Ismael",
       "quote": "Nel silenzio, gli spiriti gridano più forte.",
       "image": "tribu_yamanos"
     },
     {
       "name": "Eiyda",
       "text": "Somma Sciamana Terre Fredde",
-      "owner": "",
+      "owner": "master Bea",
       "quote": "Il respiro che congela è una preghiera al cielo.",
       "image": "tribu_eiyda"
     },
     {
       "name": "Selhea",
       "text": "Campionessa delle Terre Fredde",
-      "owner": "",
+      "owner": "master Meg",
       "quote": "Il freddo non accoglie, mette alla prova.",
       "image": "tribu_selhea"
     },
