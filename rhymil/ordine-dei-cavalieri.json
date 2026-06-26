@@ -29,14 +29,14 @@
     {
       "name": "Eleonor De Lervis",
       "text": "Capitana del Corpo Navale dell' Ordine dei Cavalieri",
-      "owner": "",
+      "owner": "master Bea",
       "quote": "Sotto la mia guida, nessuno piega la spada.",
       "image": "cavalieri_eleonor"
     },
     {
       "name": "Gildarts Solcoferreo",
       "text": "Capitano",
-      "owner": "",
+      "owner": "master Mike",
       "quote": "L'onore si forgia nel coraggio.",
       "image": "cavalieri_gildarts"
     },
@@ -66,14 +66,14 @@
     {
       "name": "Alexander",
       "text": "Capitano",
-      "owner": "Master Lorenzo",
+      "owner": "master Lorenzo",
       "quote": "",
       "image": "cavalieri_alexander"
     },
     {
       "name": "Leonard",
       "text": "Primo Capo",
-      "owner": "Master Davide",
+      "owner": "master Davide",
       "quote": "",
       "image": "cavalieri_leonard"
     }
