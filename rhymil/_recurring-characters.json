@@ -1,0 +1,71 @@
+{
+  "icon": "🎭",
+  "name": "Personaggi Ricorrenti",
+  "text": "Lungo le strade di Rhymil si incrociano volti che tornano di racconto in racconto: alleati e avversari, mercanti e mentori. Sono i comprimari che danno colore al mondo e legano insieme le storie degli eroi.",
+  "other": [
+    {
+      "name": "Capo dell'Ombra",
+      "text": "",
+      "owner": "master Lorenzo",
+      "quote": "",
+      "image": "other_capoombra"
+    },
+    {
+      "name": "John Morriver",
+      "text": "",
+      "owner": "master Gian",
+      "quote": "",
+      "image": "other_morriver"
+    },
+    {
+      "name": "Nox",
+      "text": "Changeling alchimista che ha preso il posto del Capitano Vane per 16 anni, prima di provare a prendere il controllo della nuova fratellanza e cadere nel tentativo. Assetato di vendetta, cinico, maniaco della perfezione e genialmente folle, ora è tornato come non-morto e collabora con Lucian Vorhan.",
+      "owner": "master Bea",
+      "quote": "Chi non supera i limiti non sa fare scienza. Continuate a vivere nell'ignoranza, stolti!",
+      "image": "other_nox"
+    },
+    {
+      "name": "Ingrid Magnus",
+      "text": "",
+      "owner": "master Jenny",
+      "quote": "",
+      "image": "other_ingrid"
+    },
+    {
+      "name": "Zehra Cendres",
+      "text": "",
+      "owner": "master Jenny",
+      "quote": "",
+      "image": "other_zehra"
+    },
+    {
+      "name": "Ismirir",
+      "text": "",
+      "owner": "master Mike",
+      "quote": "",
+      "image": "other_ismirir"
+    },
+    {
+      "name": "Cartomante",
+      "text": "",
+      "owner": "master Mike",
+      "quote": "",
+      "image": "other_cartomante"
+    },
+    {
+      "name": "Alaren",
+      "text": "druido del circolo della palma scossa",
+      "owner": "master Alberto",
+      "quote": "",
+      "image": "other_alaren"
+    },
+    {
+      "name": "Amdir",
+      "text": "fratello di Taritas",
+      "owner": "master Lorenzo",
+      "quote": "",
+      "image": "other_amdir"
+    }
+  ],
+  "dead": []
+}

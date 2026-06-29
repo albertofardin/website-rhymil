@@ -508,6 +508,12 @@ ul.actions li .icon:before {
 .factions + .actions {
   margin-top: 1.5em;
 }
+.factions .factions-divider {
+  grid-column: 1 / -1;
+  width: 100%;
+  margin: 0.5em 0;
+  border: 0;
+}
 .factions article {
   width: 100%;
   margin: 0;

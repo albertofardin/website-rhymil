@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "serve -l 8080",
     "images": "node generateImages.js",
-    "html": "node generateRhymil.js"
+    "html": "node generateRhymil.js",
+    "build": "npm run images && npm run html"
   },
   "devDependencies": {
     "puppeteer-core": "^25.1.0",

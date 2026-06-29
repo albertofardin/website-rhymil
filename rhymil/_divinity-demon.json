@@ -1,0 +1,61 @@
+{
+  "icon": "✨",
+  "name": "Divinità e Demoni",
+  "text": "Sopra Rhymil vegliano le Divinità, fiamma e mistero che plasmano il destino dei mortali, mentre nell'ombra si agitano i Demoni, tentatori nati dal chaos. Tra la loro luce e la loro oscurità si gioca la sorte del mondo.",
+  "divinity": [
+    {
+      "name": "Asket",
+      "text": "",
+      "owner": "master Tobi",
+      "quote": "",
+      "image": "divinity_asket"
+    },
+    {
+      "name": "Ara’Ghelyn",
+      "text": "Lei è l’ultima. Ha creato tutte creature aberranti che vengono considerate malvagie. E’ la voce fuori dal coro che non rappresenta necessariamente la malvagità, ma il chaos, poiché considerata viziata ed incapace di rispettare le regole. Accusata spesso di essere un istigatrice che riesce a manipolare le menti per creare scompiglio in un mondo estremamente monotono.",
+      "owner": "master Silvia",
+      "quote": "",
+      "image": "divinity_araghelyn"
+    }
+  ],
+  "guardian": [
+    {
+      "name": "Antico Druido",
+      "text": "",
+      "owner": "master Gian",
+      "quote": "",
+      "image": "guardian_druido"
+    },
+    {
+      "name": "Hara",
+      "text": "",
+      "owner": "",
+      "quote": "",
+      "image": "guardian_hara"
+    }
+  ],
+  "demon": [
+    {
+      "name": "Arklas",
+      "text": "demone maggiore",
+      "owner": "master Mike",
+      "quote": "",
+      "image": "demon_arklas"
+    },
+    {
+      "name": "Argumos",
+      "text": "demone minore",
+      "owner": "master Lorenzo",
+      "quote": "",
+      "image": "demon_argumos"
+    },
+    {
+      "name": "Divoratore",
+      "text": "demone minore",
+      "owner": "",
+      "quote": "",
+      "image": "demon_divoratore"
+    }
+  ],
+  "dead": []
+}

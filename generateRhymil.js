@@ -9,6 +9,11 @@ const path = require("path");
 const crypto = require("crypto");
 
 // ---- Config/Target ---------------------------------------------------------
+// Ordine delle sezioni. "_hr" inserisce un divisore: tutto ciò che viene DOPO
+// è una sezione "speciale" (vetrina) — senza giocatori né pulsante "aggiungi
+// PG". Ogni sezione speciale mostra uno o più gruppi di schede, ciascuno con
+// un titolo opzionale, letti da chiavi diverse del JSON.
+const HR = "_hr";
 const TARGET = [
   "ordine-dei-paladini",
   "ordine-dei-cavalieri",
@@ -17,7 +22,28 @@ const TARGET = [
   "fratellanza-dei-pirati",
   "stato-del-popolo-libero",
   "terre-barbariche",
+  HR,
+  "_divinity-demon",
+  "_recurring-characters",
 ];
+
+// Per ogni sezione speciale: i gruppi di schede da mostrare, in ordine.
+// `key` è la chiave dell'array nel JSON, `title` l'intestazione (vuota = nessuna),
+// `extraClass` eventuali classi sugli anchor (es. "is-dead" per i caduti).
+const SPECIAL_GROUPS = {
+  "_divinity-demon": [
+    { key: "divinity", title: "Divinità" },
+    { key: "guardian", title: "Guardiani dell'Equilibrio" },
+    { key: "demon", title: "Demoni" },
+  ],
+  "_recurring-characters": [
+    { key: "other", title: "" },
+    { key: "dead", title: "☠️ Caduti", extraClass: "is-dead" },
+  ],
+};
+
+const hrAt = TARGET.indexOf(HR);
+const SHOWCASE = new Set(hrAt >= 0 ? TARGET.slice(hrAt + 1) : []);
 
 // ---- Utils -----------------------------------------------------------------
 function parseArgs(argv) {
@@ -113,8 +139,51 @@ function anchorFor(item, shortName = false, extraClass = "") {
   </a>`;
 }
 
+function thumbs(items, shortName = false, extraClass = "") {
+  return []
+    .concat(items || [])
+    .map((p) => anchorFor(p, shortName, extraClass))
+    .join("\n");
+}
+
+function deadHeading(dead) {
+  return dead.length === 0 ? "" : `<h4 class="gallery-title">☠️ Caduti</h4>`;
+}
+
+// Sezioni "speciali" (vetrina): niente giocatori né pulsante "aggiungi PG".
+// Mostrano i gruppi di schede definiti in SPECIAL_GROUPS, ciascuno con il
+// proprio titolo opzionale, leggendo le chiavi indicate dal JSON.
+function buildShowcaseSection(slug, data) {
+  const groups = SPECIAL_GROUPS[slug] || [];
+  const body = groups
+    .map((g) => {
+      const items = [].concat(data[g.key] || []);
+      if (items.length === 0) return "";
+      const heading = g.title
+        ? `<h4 class="gallery-title">${g.title}</h4>`
+        : "";
+      return `${heading}\n${thumbs(items, false, g.extraClass || "")}`;
+    })
+    .filter(Boolean)
+    .join("\n");
+
+  return `
+  <section id="section-${slug}" class="panel-section">
+    <h3 class="panel-title">
+      ${escapeHtml(data.icon) + " " + escapeHtml(data.name)}
+    </h3>
+    <header>
+      <p>${escapeHtml(data.text)}</p>
+    </header>
+    <div class="char-gallery" id="gallery--${slug}" data-faction-icon="${escapeHtml(data.icon)}" data-faction-name="${escapeHtml(data.name)}">
+      ${body}
+    </div>
+  </section>`;
+}
+
 function buildSection(slug, data) {
-  const players = [].concat(data.players || []);
+  if (SHOWCASE.has(slug)) return buildShowcaseSection(slug, data);
+
   const masters = [].concat(data.masters || []);
   const dead = [].concat(data.dead || []);
   return `
@@ -127,15 +196,15 @@ function buildSection(slug, data) {
     </header>
     <div class="char-gallery" id="gallery--${slug}" data-faction-icon="${escapeHtml(data.icon)}" data-faction-name="${escapeHtml(data.name)}">
       <h4 class="gallery-title">Giocatori</h4>
-      ${players.map((p) => anchorFor(p, true)).join("\n")}
+      ${thumbs(data.players, true)}
   <a class="thumb-add" href="https://forms.gle/bpCPzV4x4QBi88eN8" target="_blank" rel="noopener" aria-label="Aggiungi il tuo PG">
     <span class="icon solid fa-user-plus"></span>
     <span>Modifica<br/>personaggi</span>
   </a>
       ${masters.length === 0 ? "" : `<h4 class="gallery-title">Master</h4>`}
-      ${masters.map((p) => anchorFor(p)).join("\n")}
-      ${dead.length === 0 ? "" : `<h4 class="gallery-title">☠️ Caduti</h4>`}
-      ${dead.map((p) => anchorFor(p, false, "is-dead")).join("\n")}
+      ${thumbs(masters)}
+      ${deadHeading(dead)}
+      ${thumbs(dead, false, "is-dead")}
     </div>
   </section>`;
 }
@@ -150,7 +219,7 @@ function buildArticle(slug) {
             data-panel-open
             data-panel-target="#section-${slug}"
           >
-            <img src="./rhymil/${slug}.png" />
+            <img src="./rhymil/${slug}.webp" />
           </a>
         </article>`;
 }
@@ -229,6 +298,56 @@ function upsertArticle(html, slug, articleHtml) {
   return html.slice(0, afterOpenIdx) + inner + html.slice(closeStart);
 }
 
+// Inserisce/riposiziona l'<hr/> divisorio dentro .factions.
+// Rimuove eventuali divisori già presenti e lo riaccoda nella posizione
+// corrente del ciclo (così l'ordine rispetta TARGET).
+function upsertFactionsDivider(html) {
+  const openRe = /<div\s+class=["']factions["'][^>]*>/i;
+  const openMatch = openRe.exec(html);
+  if (!openMatch) {
+    console.warn("⚠️ .factions non trovata, <hr/> non inserito.");
+    return html;
+  }
+
+  const afterOpenIdx = openMatch.index + openMatch[0].length;
+
+  // Trova la </div> che chiude proprio questa .factions usando un contatore
+  const tagRe = /<\/?div\b[^>]*>/gi;
+  tagRe.lastIndex = afterOpenIdx;
+  let depth = 1;
+  let closeStart = -1;
+  for (let m; (m = tagRe.exec(html)); ) {
+    if (m[0][1] === "/") depth--;
+    else depth++;
+    if (depth === 0) {
+      closeStart = m.index;
+      break;
+    }
+  }
+  if (closeStart === -1) {
+    console.warn("⚠️ Chiusura </div> di .factions non trovata, <hr/> saltato.");
+    return html;
+  }
+
+  let inner = html.slice(afterOpenIdx, closeStart).replace(/\r\n/g, "\n");
+
+  // Rimuove eventuali divisori già presenti per evitare duplicati
+  inner = inner.replace(
+    /[ \t]*<hr\b[^>]*class="factions-divider"[^>]*>\n?/gi,
+    "",
+  );
+  inner = inner.replace(/(\n[ \t]*)+\n/g, "\n").trimEnd();
+
+  // Riusa l'indentazione degli <article> esistenti
+  const indentMatch = /\n([ \t]*)<article\b/.exec(inner);
+  const indent = indentMatch ? indentMatch[1] : "        ";
+
+  if (!inner.endsWith("\n")) inner += "\n";
+  inner += `${indent}<hr class="factions-divider" />\n`;
+
+  return html.slice(0, afterOpenIdx) + inner + html.slice(closeStart);
+}
+
 // Inserisce o sostituisce una section con id specifico
 function upsertSection(html, slug, newSection) {
   const sectionRegex = new RegExp(
@@ -267,11 +386,17 @@ function upsertSection(html, slug, newSection) {
 // a nessun personaggio dei JSON.
 function cleanupOrphanImages(imagesDir, usedNames) {
   if (!fs.existsSync(imagesDir)) {
-    console.warn(`⚠️  Cartella immagini non trovata: ${imagesDir} (salto pulizia)`);
+    console.warn(
+      `⚠️  Cartella immagini non trovata: ${imagesDir} (salto pulizia)`,
+    );
     return;
   }
 
-  const dirs = [imagesDir, path.join(imagesDir, "_large"), path.join(imagesDir, "_thumb")];
+  const dirs = [
+    imagesDir,
+    path.join(imagesDir, "_large"),
+    path.join(imagesDir, "_thumb"),
+  ];
   let removed = 0;
 
   for (const d of dirs) {
@@ -310,6 +435,10 @@ async function main() {
   let parseErrors = 0;
 
   for (const slug of TARGET) {
+    if (slug === HR) {
+      html = upsertFactionsDivider(html);
+      continue;
+    }
     const jsonPath = path.join(dir, `${slug}.json`);
     if (!fs.existsSync(jsonPath)) {
       console.warn(`⚠️  JSON mancante per "${slug}": ${jsonPath} (salto)`);
@@ -328,6 +457,9 @@ async function main() {
     for (const item of [].concat(
       data.players || [],
       data.masters || [],
+      data.divinity || [],
+      data.demon || [],
+      data.other || [],
       data.dead || [],
     )) {
       const imgName = (item.image || "").replace(/\.(jpg|jpeg|png|webp)$/i, "");
