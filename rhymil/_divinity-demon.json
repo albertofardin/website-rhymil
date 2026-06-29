@@ -21,14 +21,14 @@
   "guardian": [
     {
       "name": "Antico Druido",
-      "text": "",
+      "text": "Nessuno conosce il suo vero nome. Da quattromila anni veglia sull'Equilibrio di Rhymil attraverso la Pietra Madre, l'Artefatto che connette ogni angolo della terra al suo cuore pulsante. Inaccessibile ai più, interviene nel mondo solo quando l'Equilibrio stesso è in pericolo.",
       "owner": "master Gian",
       "quote": "",
       "image": "guardian_druido"
     },
     {
       "name": "Hara",
-      "text": "",
+      "text": "Sorella dell'Antico Druido, ha nome e volto, ma dimora oltre la soglia della morte. Accoglie le anime di chi perisce nei mari e nei fiumi, le purifica e le conduce al Trono degli Abissi.",
       "owner": "",
       "quote": "",
       "image": "guardian_hara"
@@ -37,21 +37,21 @@
   "demon": [
     {
       "name": "Arklas",
-      "text": "demone maggiore",
+      "text": "Demone maggiore",
       "owner": "master Mike",
       "quote": "",
       "image": "demon_arklas"
     },
     {
       "name": "Argumos",
-      "text": "demone minore",
+      "text": "Demone minore",
       "owner": "master Lorenzo",
       "quote": "",
       "image": "demon_argumos"
     },
     {
       "name": "Divoratore",
-      "text": "demone minore",
+      "text": "Demone minore - il miglio amico di Simon!",
       "owner": "",
       "quote": "",
       "image": "demon_divoratore"

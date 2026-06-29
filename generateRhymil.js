@@ -454,16 +454,16 @@ async function main() {
       continue;
     }
 
-    for (const item of [].concat(
-      data.players || [],
-      data.masters || [],
-      data.divinity || [],
-      data.demon || [],
-      data.other || [],
-      data.dead || [],
-    )) {
-      const imgName = (item.image || "").replace(/\.(jpg|jpeg|png|webp)$/i, "");
-      if (imgName) usedImages.add(imgName);
+    // Raccoglie le immagini da TUTTI gli array di schede del JSON, così
+    // l'aggiunta di nuovi gruppi (es. "guardian") non richiede di toccare
+    // questo elenco e non causa cancellazioni di immagini ancora referenziate.
+    for (const value of Object.values(data)) {
+      if (!Array.isArray(value)) continue;
+      for (const item of value) {
+        const img = item && typeof item === "object" ? item.image : null;
+        const imgName = (img || "").replace(/\.(jpg|jpeg|png|webp)$/i, "");
+        if (imgName) usedImages.add(imgName);
+      }
     }
 
     const sectionHtml = buildSection(slug, data);
