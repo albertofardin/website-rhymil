@@ -1,0 +1,697 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generatore illustrazioni · Rhymil</title>
+    <link rel="icon" href="/images/icons/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lora:400,700|Cinzel:600,700&display=swap"
+    />
+    <link rel="stylesheet" href="/css/fontawesome-all.min.css" />
+    <style>
+      :root {
+        --bg: #14121a;
+        --bg-2: #0f0d15;
+        --panel: #1e1b28;
+        --panel-2: #26222f;
+        --accent: #c9a24b;
+        --accent-hover: #e0b95c;
+        --accent-soft: rgba(201, 162, 75, 0.15);
+        --text: #ece7f2;
+        --muted: #9a93a8;
+        --border: #37313f;
+        --danger: #e05c5c;
+        --ok: #6fcf97;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: "Lora", Georgia, serif;
+        background:
+          radial-gradient(
+            ellipse at 50% -10%,
+            rgba(201, 162, 75, 0.12),
+            transparent 55%
+          ),
+          radial-gradient(ellipse at 50% 120%, #1a1622, transparent 60%),
+          var(--bg);
+        background-attachment: fixed;
+        color: var(--text);
+        line-height: 1.6;
+        padding: 32px 16px 64px;
+      }
+      .wrap {
+        max-width: 720px;
+        margin: 0 auto;
+      }
+
+      /* ---------- Hero ---------- */
+      .hero {
+        text-align: center;
+        margin-bottom: 32px;
+      }
+
+      h1 {
+        font-family: "Cinzel", serif;
+        font-weight: 700;
+        font-size: 1.9rem;
+        letter-spacing: 0.5px;
+        margin: 0 0 6px;
+        background: linear-gradient(180deg, #f4e3ad, var(--accent));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        text-shadow: 0 2px 24px rgba(201, 162, 75, 0.25);
+      }
+      .subtitle {
+        color: var(--muted);
+        margin: 0 auto;
+        max-width: 480px;
+        font-size: 0.95rem;
+      }
+      .divider {
+        width: 180px;
+        height: 1px;
+        margin: 20px auto 0;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          var(--accent),
+          transparent
+        );
+        position: relative;
+      }
+      .divider::after {
+        content: "\2726";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: var(--accent);
+        background: var(--bg);
+        padding: 0 10px;
+        font-size: 12px;
+      }
+
+      /* ---------- Panels & fields ---------- */
+      .panel {
+        background: linear-gradient(180deg, var(--panel), #1b1824);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 22px;
+        margin-bottom: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+      }
+      label {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-family: "Cinzel", serif;
+        font-weight: 600;
+        margin-bottom: 8px;
+        font-size: 0.92rem;
+        color: #f0e6cf;
+      }
+      label .icon {
+        color: var(--accent);
+        font-size: 0.95rem;
+        width: 18px;
+        text-align: center;
+      }
+      label .opt {
+        color: var(--muted);
+        font-family: "Lora", serif;
+        font-weight: 400;
+        font-size: 0.8rem;
+      }
+      .hint {
+        display: block;
+        color: var(--muted);
+        font-weight: 400;
+        font-size: 0.82rem;
+        margin: 0 0 8px 26px;
+      }
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 11px 13px;
+        background: var(--panel-2);
+        border: 1px solid var(--border);
+        border-radius: 9px;
+        color: var(--text);
+        font-family: "Lora", serif;
+        font-size: 0.98rem;
+        transition:
+          border-color 0.15s,
+          box-shadow 0.15s;
+      }
+      input:focus {
+        outline: none;
+        border-color: var(--accent);
+        box-shadow: 0 0 0 3px var(--accent-soft);
+      }
+      .field {
+        margin-bottom: 22px;
+      }
+      .field:last-of-type {
+        margin-bottom: 0;
+      }
+
+      /* ---------- Reference badge ---------- */
+      .reference {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin: 12px 0 0 0;
+        padding: 10px 12px;
+        background: var(--accent-soft);
+        border: 1px dashed rgba(201, 162, 75, 0.4);
+        border-radius: 10px;
+      }
+      .reference img {
+        width: 46px;
+        height: 46px;
+        object-fit: cover;
+        border-radius: 8px;
+        border: 1px solid var(--border);
+        flex-shrink: 0;
+      }
+      .reference span {
+        font-size: 0.82rem;
+        color: var(--muted);
+      }
+      .reference strong {
+        color: #f0e6cf;
+      }
+
+      /* ---------- Dropzone ---------- */
+      .dropzone {
+        border: 2px dashed var(--border);
+        border-radius: 12px;
+        padding: 30px 20px;
+        text-align: center;
+        color: var(--muted);
+        cursor: pointer;
+        transition:
+          border-color 0.15s,
+          background 0.15s,
+          transform 0.1s;
+      }
+      .dropzone:hover,
+      .dropzone.drag {
+        border-color: var(--accent);
+        background: var(--accent-soft);
+      }
+      .dropzone.drag {
+        transform: scale(1.01);
+      }
+      .dropzone .drop-icon {
+        font-size: 30px;
+        color: var(--accent);
+        margin-bottom: 10px;
+        display: block;
+      }
+      .dropzone input {
+        display: none;
+      }
+
+      .previews {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 14px;
+      }
+      .thumb {
+        position: relative;
+        width: 88px;
+        height: 88px;
+        border-radius: 10px;
+        overflow: hidden;
+        border: 1px solid var(--border);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      }
+      .thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .thumb button {
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        background: rgba(0, 0, 0, 0.65);
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        width: 22px;
+        height: 22px;
+        cursor: pointer;
+        line-height: 1;
+        font-size: 11px;
+        display: grid;
+        place-items: center;
+      }
+      .thumb button:hover {
+        background: var(--danger);
+      }
+
+      /* ---------- Submit ---------- */
+      button.primary {
+        width: 100%;
+        margin-top: 4px;
+        padding: 15px;
+        background: linear-gradient(180deg, var(--accent-hover), var(--accent));
+        color: #1a1410;
+        border: none;
+        border-radius: 11px;
+        font-family: "Cinzel", serif;
+        font-size: 1.02rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        transition:
+          filter 0.15s,
+          transform 0.1s,
+          box-shadow 0.15s;
+        box-shadow: 0 8px 22px rgba(201, 162, 75, 0.25);
+      }
+      button.primary:hover:not(:disabled) {
+        filter: brightness(1.06);
+        box-shadow: 0 10px 28px rgba(201, 162, 75, 0.4);
+      }
+      button.primary:active:not(:disabled) {
+        transform: translateY(1px);
+      }
+      button.primary:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        box-shadow: none;
+      }
+
+      /* ---------- Status ---------- */
+      .status {
+        margin-top: 16px;
+        font-size: 0.9rem;
+        min-height: 1.2em;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        justify-content: center;
+        text-align: center;
+      }
+      .status:empty {
+        display: none;
+      }
+      .status.error {
+        color: var(--danger);
+      }
+      .status.ok {
+        color: var(--ok);
+      }
+      .status.working {
+        color: var(--accent-hover);
+      }
+
+      /* ---------- Result ---------- */
+      .result {
+        text-align: center;
+      }
+      .result h2 {
+        font-family: "Cinzel", serif;
+        font-size: 1.15rem;
+        color: #f0e6cf;
+        margin: 0 0 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+      .result h2 .icon {
+        color: var(--accent);
+      }
+      .result img {
+        max-width: 100%;
+        border-radius: 12px;
+        border: 1px solid var(--border);
+        box-shadow: 0 12px 34px rgba(0, 0, 0, 0.5);
+      }
+      .result .actions {
+        margin-top: 18px;
+      }
+      .result a {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        padding: 11px 22px;
+        background: var(--panel-2);
+        color: var(--text);
+        border: 1px solid var(--border);
+        border-radius: 9px;
+        text-decoration: none;
+        font-family: "Cinzel", serif;
+        font-weight: 600;
+        font-size: 0.9rem;
+        transition: border-color 0.15s;
+      }
+      .result a:hover {
+        border-color: var(--accent);
+      }
+      .result a .icon {
+        color: var(--accent);
+      }
+
+      .spinner {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        border: 2px solid rgba(255, 255, 255, 0.25);
+        border-top-color: var(--accent-hover);
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      .hidden {
+        display: none;
+      }
+
+      .backlink {
+        text-align: center;
+        margin-top: 8px;
+      }
+      .backlink a {
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 0.85rem;
+      }
+      .backlink a:hover {
+        color: var(--accent);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="hero">
+        <h1>Fucina delle Illustrazioni</h1>
+        <p class="subtitle">
+          Carica una o più foto del tuo personaggio, compila i campi e l'AI
+          forgerà un'illustrazione nello stile di Rhymil.
+        </p>
+      </header>
+
+      <form id="genForm" class="panel">
+        <div class="field">
+          <label for="name">
+            <span class="icon fas fa-user"></span>
+            Personaggio <span class="opt">— ruolo + nome</span>
+          </label>
+          <span class="hint">
+            Es: "caloroso chierico Omar", "severo mago Darius", "maledetto
+            pirata John"
+          </span>
+          <input type="text" id="name" required placeholder="Personaggio..." />
+        </div>
+
+        <div class="field">
+          <label for="pose">
+            <span class="icon fas fa-feather-alt"></span>
+            Posa e oggetti <span class="opt">(opzionale)</span>
+          </label>
+          <span class="hint">
+            Es: "con la spada sguainata", "seduto con un boccale in mano"
+          </span>
+          <input type="text" id="pose" placeholder="Posa e oggetti..." />
+        </div>
+
+        <div class="field">
+          <label>
+            <span class="icon fas fa-images"></span>
+            Foto del personaggio
+          </label>
+          <span class="hint">Una o più immagini da cui partire.</span>
+          <div class="dropzone" id="dropzone">
+            <input type="file" id="fileInput" accept="image/*" multiple />
+            <span class="drop-icon icon fas fa-cloud-upload-alt"></span>
+            <span id="dropLabel"
+              >Trascina qui le immagini o clicca per sceglierle</span
+            >
+          </div>
+          <div class="previews" id="previews"></div>
+
+          <div class="reference">
+            <img src="./isabela.png" alt="Riferimento di stile" />
+            <span>
+              <strong>Riferimento di stile automatico:</strong> l'illustrazione
+              <code>isabela.png</code> viene sempre allegata per mantenere lo
+              stile.
+            </span>
+          </div>
+        </div>
+
+        <button type="submit" class="primary" id="submitBtn">
+          <span class="icon fas fa-magic"></span>
+          <span>Forgia l'illustrazione</span>
+        </button>
+        <div class="status" id="status"></div>
+      </form>
+
+      <div class="panel result hidden" id="resultPanel">
+        <h2><span class="icon fas fa-palette"></span> La tua illustrazione</h2>
+        <img id="resultImg" alt="Illustrazione generata" />
+        <div class="actions">
+          <a id="downloadLink" download="illustrazione.png">
+            <span class="icon fas fa-download"></span>
+            <span>Scarica di nuovo</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="backlink">
+        <a href="/"
+          ><span class="icon fas fa-arrow-left"></span> Torna a Rhymil</a
+        >
+      </div>
+    </div>
+
+    <script>
+      "use strict";
+
+      // ⬇️ INCOLLA QUI LA TUA OPENAI API KEY (tra le virgolette).
+      const API_KEY = "sk-INCOLLA-LA-TUA-CHIAVE-QUI";
+
+      const OPENAI_ENDPOINT = "https://api.openai.com/v1/images/edits";
+      const MODEL = "gpt-image-1";
+      const PROMPT_URL = "./prompt.txt";
+      const PIRATA_URL = "./isabela.png";
+
+      const els = {
+        form: document.getElementById("genForm"),
+        name: document.getElementById("name"),
+        pose: document.getElementById("pose"),
+        fileInput: document.getElementById("fileInput"),
+        dropzone: document.getElementById("dropzone"),
+        dropLabel: document.getElementById("dropLabel"),
+        previews: document.getElementById("previews"),
+        submitBtn: document.getElementById("submitBtn"),
+        status: document.getElementById("status"),
+        resultPanel: document.getElementById("resultPanel"),
+        resultImg: document.getElementById("resultImg"),
+        downloadLink: document.getElementById("downloadLink"),
+      };
+
+      // --- File selection & previews -----------------------------------------
+      let selectedFiles = [];
+
+      function refreshPreviews() {
+        els.previews.innerHTML = "";
+        selectedFiles.forEach((file, i) => {
+          const thumb = document.createElement("div");
+          thumb.className = "thumb";
+          const img = document.createElement("img");
+          img.src = URL.createObjectURL(file);
+          img.onload = () => URL.revokeObjectURL(img.src);
+          const rm = document.createElement("button");
+          rm.type = "button";
+          rm.innerHTML = '<span class="icon fas fa-times"></span>';
+          rm.title = "Rimuovi";
+          rm.onclick = () => {
+            selectedFiles.splice(i, 1);
+            refreshPreviews();
+          };
+          thumb.append(img, rm);
+          els.previews.appendChild(thumb);
+        });
+        els.dropLabel.textContent = selectedFiles.length
+          ? `${selectedFiles.length} immagine/i selezionata/e — clicca per aggiungerne`
+          : "Trascina qui le immagini o clicca per sceglierle";
+      }
+
+      function addFiles(fileList) {
+        for (const f of fileList)
+          if (f.type.startsWith("image/")) selectedFiles.push(f);
+        refreshPreviews();
+      }
+
+      els.dropzone.addEventListener("click", () => els.fileInput.click());
+      els.fileInput.addEventListener("change", (e) => addFiles(e.target.files));
+      ["dragenter", "dragover"].forEach((ev) =>
+        els.dropzone.addEventListener(ev, (e) => {
+          e.preventDefault();
+          els.dropzone.classList.add("drag");
+        }),
+      );
+      ["dragleave", "drop"].forEach((ev) =>
+        els.dropzone.addEventListener(ev, (e) => {
+          e.preventDefault();
+          els.dropzone.classList.remove("drag");
+        }),
+      );
+      els.dropzone.addEventListener("drop", (e) =>
+        addFiles(e.dataTransfer.files),
+      );
+
+      // --- Helpers ------------------------------------------------------------
+      const STATUS_ICON = {
+        error: '<span class="icon fas fa-exclamation-triangle"></span>',
+        ok: '<span class="icon fas fa-check-circle"></span>',
+      };
+      function setStatus(msg, kind = "", spinner = false) {
+        els.status.className = "status " + kind;
+        const icon = spinner
+          ? '<span class="spinner"></span>'
+          : STATUS_ICON[kind] || "";
+        els.status.innerHTML = icon + "<span>" + msg + "</span>";
+      }
+
+      async function buildPrompt() {
+        let template;
+        try {
+          const res = await fetch(PROMPT_URL, { cache: "no-store" });
+          if (!res.ok) throw new Error(res.status);
+          template = await res.text();
+        } catch (e) {
+          throw new Error(
+            "Impossibile leggere prompt.txt. Apri la pagina tramite un web server (es. `npm run dev`), non con file://.",
+          );
+        }
+        const name = els.name.value.trim();
+        const pose = els.pose.value.trim();
+        return (
+          template
+            .replaceAll("<name>", name)
+            // Se la posa è vuota, togliamo il frammento "magari <pose>" in modo pulito.
+            .replaceAll(
+              "magari <pose>",
+              pose ? "magari " + pose : "una posa a tema",
+            )
+            .replaceAll("<pose>", pose || "una posa a tema")
+        );
+      }
+
+      async function fetchPirataFile() {
+        const res = await fetch(PIRATA_URL, { cache: "no-store" });
+        if (!res.ok)
+          throw new Error(
+            "Impossibile caricare isabela.png (stato " + res.status + ").",
+          );
+        const blob = await res.blob();
+        return new File([blob], "isabela.png", { type: "image/png" });
+      }
+
+      // --- Submit -------------------------------------------------------------
+      els.form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const apiKey = API_KEY.trim();
+        if (!apiKey || apiKey.includes("INCOLLA"))
+          return setStatus(
+            "Chiave API non configurata: modifica la costante API_KEY nel file.",
+            "error",
+          );
+        if (!els.name.value.trim())
+          return setStatus("Il campo personaggio è obbligatorio.", "error");
+        if (selectedFiles.length === 0)
+          return setStatus("Allega almeno una foto del personaggio.", "error");
+
+        els.submitBtn.disabled = true;
+        els.resultPanel.classList.add("hidden");
+
+        try {
+          setStatus(
+            "Preparo prompt e immagini di riferimento…",
+            "working",
+            true,
+          );
+          const prompt = await buildPrompt();
+          const pirataFile = await fetchPirataFile();
+
+          const form = new FormData();
+          form.append("model", MODEL);
+          form.append("prompt", prompt);
+          form.append("size", "1024x1024");
+          // isabela.png come primo riferimento di stile, poi le foto caricate.
+          form.append("image[]", pirataFile);
+          selectedFiles.forEach((f) => form.append("image[]", f));
+
+          setStatus(
+            "Invio a ChatGPT e attendo l'immagine generata…",
+            "working",
+            true,
+          );
+          const res = await fetch(OPENAI_ENDPOINT, {
+            method: "POST",
+            headers: { Authorization: "Bearer " + apiKey },
+            body: form,
+          });
+
+          const data = await res.json();
+          if (!res.ok) {
+            throw new Error(
+              data?.error?.message || "Errore API (" + res.status + ").",
+            );
+          }
+
+          const b64 = data?.data?.[0]?.b64_json;
+          if (!b64) throw new Error("La risposta non contiene un'immagine.");
+
+          const dataUrl = "data:image/png;base64," + b64;
+          els.resultImg.src = dataUrl;
+
+          // Download automatico.
+          const safe =
+            els.name.value.trim().replace(/[^\w\-]+/g, "_") || "illustrazione";
+          const filename = safe + ".png";
+          els.downloadLink.href = dataUrl;
+          els.downloadLink.download = filename;
+          const a = document.createElement("a");
+          a.href = dataUrl;
+          a.download = filename;
+          document.body.appendChild(a);
+          a.click();
+          a.remove();
+
+          els.resultPanel.classList.remove("hidden");
+          els.resultPanel.scrollIntoView({ behavior: "smooth" });
+          setStatus("Immagine generata e scaricata!", "ok");
+        } catch (err) {
+          setStatus(err.message || String(err), "error");
+        } finally {
+          els.submitBtn.disabled = false;
+        }
+      });
+    </script>
+  </body>
+</html>
