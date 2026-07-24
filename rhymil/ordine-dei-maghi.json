@@ -48,9 +48,16 @@
     {
       "name": "Markus Terraginiris",
       "text": "Guerriero arcano che unisce la spada alla magia sulla via della Vita in tutte le sue sfaccettature. Come preservarla e come reciderla",
-      "owner": "Marcello Sabbioni ",
+      "owner": "Marcello Sabbioni",
       "quote": "La Via è tracciata, ora lanciati!",
       "image": "maghi_markus"
+    },
+    {
+      "name": "Deimos",
+      "text": "",
+      "owner": "Simone Viscontini",
+      "quote": "",
+      "image": "maghi_deimos"
     }
   ],
   "masters": [
