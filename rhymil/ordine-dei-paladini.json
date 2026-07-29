@@ -37,6 +37,13 @@
       "owner": "Adriana Pierro",
       "quote": "Ogni sorriso è una piccola benedizione.",
       "image": "paladini_delphine"
+    },
+    {
+      "name": "Quil Valtheris",
+      "text": "",
+      "owner": "Emanuele Stramare",
+      "quote": "",
+      "image": "paladini_quil"
     }
   ],
   "masters": [
@@ -55,9 +62,15 @@
     },
     {
       "name": "Gerard Holdren",
-      "text": "Tenente. Holdren è sempre stato uno stacanovista, ha sempre messo la sua vocazione prima di ogni cosa, anche della vita privata. Tanto quanto ligio e zelante è anche alla mano con una battuta pronta per sdrammatizzare, è sempre gentile e disponibile e difficilmente perde le staffe, pure nel cuore della battaglia! La sua fredda calma è sempre stato un motivo di disagio tra i suoi colleghi. ",
+      "text": "Tenente. Holdren è sempre stato uno stacanovista, ha sempre messo la sua vocazione prima di ogni cosa, anche della vita privata. Tanto quanto ligio e zelante è anche alla mano con una battuta pronta per sdrammatizzare, è sempre gentile e disponibile e difficilmente perde le staffe, pure nel cuore della battaglia! La sua fredda calma è sempre stato un motivo di disagio tra i suoi colleghi.",
       "owner": "master Alberto",
       "image": "paladini_gerard"
+    },
+    {
+      "name": "Sereia",
+      "text": "Sereia è una cacciatrice di demoni novizia. La sua specialità ha un nome solo: Arklas, il Demone Maggiore. È stata notata dal Primo Paladino e accolta come affiliata dei Paladini, nonostante il suo atteggiamento ed i suoi metodi non seguano necessariamente la metodologia ed il modo di pensare dell'Ordine.",
+      "owner": "master Silvia",
+      "image": "paladini_sereia"
     }
   ],
   "dead": [
