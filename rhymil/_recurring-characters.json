@@ -26,7 +26,7 @@
     },
     {
       "name": "Nox",
-      "text": "Changeling alchimista che ha preso il posto del Capitano Vane per 16 anni, prima di provare a prendere il controllo della nuova fratellanza e cadere nel tentativo. Assetato di vendetta, cinico, maniaco della perfezione e genialmente folle, ora è tornato come non-morto e collabora con Lucian Vorhan.",
+      "text": "Changeling alchimista che ha preso il posto del Capitano Vane per 16 anni, prima di provare a prendere il controllo della nuova fratellanza e cadere nel tentativo. Assetato di vendetta, cinico, maniaco della perfezione e genialmente folle, ora è tornato come non-morto e collabora con l'alchimista Rosso Lucian.",
       "owner": "master Bea",
       "quote": "Chi non supera i limiti non sa fare scienza. Continuate a vivere nell'ignoranza, stolti!",
       "image": "other_nox"
@@ -79,6 +79,13 @@
       "owner": "master Jenny",
       "quote": "",
       "image": "other_rahira"
+    },
+    {
+      "name": "Lady Boniemme ",
+      "text": "",
+      "owner": "master Jenny",
+      "quote": "Tutti hanno un prezzo",
+      "image": "other_boniemme"
     }
   ],
   "dead": []
